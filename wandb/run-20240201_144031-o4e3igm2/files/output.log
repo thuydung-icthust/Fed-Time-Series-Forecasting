@@ -1,0 +1,471 @@
+INFO logger 2024-02-01 14:40:36,525 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 14:40:36,525 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 14:40:36,525 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 14:40:36,526 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 14:40:36,528 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 14:40:36,528 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 14:40:36,529 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 14:40:36,529 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 14:40:36,532 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 14:40:36,533 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 14:40:36,533 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 14:40:36,533 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 14:40:36,534 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 14:40:36,535 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 14:40:36,535 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 14:40:36,535 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 14:40:36,535 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-01 14:40:38,446 | server.py:71 | Initializing client manager...
+INFO logger 2024-02-01 14:40:38,446 | server.py:78 | Registering clients...
+INFO logger 2024-02-01 14:40:38,446 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-01 14:40:38,447 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-01 14:40:38,447 | server.py:82 | Client manager initialized!
+INFO logger 2024-02-01 14:40:38,448 | server.py:64 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-01 14:40:38,448 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+INFO logger 2024-02-01 14:40:40,439 | server.py:96 | Starting FL rounds
+INFO logger 2024-02-01 14:40:40,440 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-01 14:40:41,378 | train_utils.py:153 | Best Loss: 0.0002896100798708915
+INFO logger 2024-02-01 14:40:42,099 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-01 14:40:43,284 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-01 14:40:43,704 | train_utils.py:153 | Best Loss: 0.00016069088518115633
+INFO logger 2024-02-01 14:40:43,936 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+INFO logger 2024-02-01 14:40:44,292 | train_utils.py:153 | Best Loss: 0.0004772753332202372
+INFO logger 2024-02-01 14:40:44,672 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-01 14:40:45,451 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-01 14:40:46,023 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+INFO logger 2024-02-01 14:40:46,306 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-01 14:40:46,677 | train_utils.py:153 | Best Loss: 6.096589588222728e-05
+INFO logger 2024-02-01 14:40:47,062 | train_utils.py:153 | Best Loss: 0.0005857830156425113
+INFO logger 2024-02-01 14:40:47,859 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-01 14:40:48,826 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-01 14:40:49,287 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+INFO logger 2024-02-01 14:40:49,351 | server.py:212 | [Global round 1] Aggregating local models...
+INFO logger 2024-02-01 14:40:49,352 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_4']
+INFO logger 2024-02-01 14:40:49,519 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0004809247939957408, mse: 0.06133069843053818, rmse: 0.24765035519970122, mae: 0.11310426890850067, nrmse: 1.3834809405764679
+INFO logger 2024-02-01 14:40:49,597 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00044601554478578573, mse: 0.05678709223866463, rmse: 0.23830042433588872, mae: 0.18413716554641724, nrmse: 4.0910549223263235
+INFO logger 2024-02-01 14:40:49,629 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 3.33237336050935e-05, mse: 0.004089637193828821, rmse: 0.06395027125688225, mae: 0.04985421150922775, nrmse: 0.8229830721208593
+INFO logger 2024-02-01 14:40:49,641 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_2', 'PobleSec_2', 'ElBorn_1', 'LesCorts_4', 'ElBorn_4', 'LesCorts_3', 'PobleSec_4', 'PobleSec_0', 'ElBorn_0', 'LesCorts_0', 'LesCorts_1', 'PobleSec_1', 'PobleSec_3', 'LesCorts_2', 'ElBorn_3']
+INFO logger 2024-02-01 14:40:49,840 | train_utils.py:153 | Best Loss: 2.1843800089515495e-05
+INFO logger 2024-02-01 14:40:50,577 | train_utils.py:153 | Best Loss: 0.00040731977506386715
+INFO logger 2024-02-01 14:40:51,098 | train_utils.py:153 | Best Loss: 2.141024791950513e-05
+INFO logger 2024-02-01 14:40:51,480 | train_utils.py:153 | Best Loss: 0.00010179635205398701
+INFO logger 2024-02-01 14:40:51,811 | train_utils.py:153 | Best Loss: 1.956797826355818e-05
+INFO logger 2024-02-01 14:40:52,179 | train_utils.py:153 | Best Loss: 0.000279914534634404
+INFO logger 2024-02-01 14:40:52,903 | train_utils.py:153 | Best Loss: 0.00039026581827096465
+INFO logger 2024-02-01 14:40:53,902 | train_utils.py:153 | Best Loss: 0.00038815691110157354
+INFO logger 2024-02-01 14:40:54,261 | train_utils.py:153 | Best Loss: 2.821628173030373e-05
+INFO logger 2024-02-01 14:40:54,680 | train_utils.py:153 | Best Loss: 0.0003977967821039826
+INFO logger 2024-02-01 14:40:55,089 | train_utils.py:153 | Best Loss: 0.00013210251927375793
+INFO logger 2024-02-01 14:40:56,069 | train_utils.py:153 | Best Loss: 0.0003790548616858918
+INFO logger 2024-02-01 14:40:57,318 | train_utils.py:153 | Best Loss: 0.00039399609395016836
+INFO logger 2024-02-01 14:40:57,982 | train_utils.py:153 | Best Loss: 9.930992484697255e-05
+INFO logger 2024-02-01 14:40:58,235 | train_utils.py:153 | Best Loss: 3.1872006000474026e-05
+INFO logger 2024-02-01 14:40:58,298 | server.py:212 | [Global round 2] Aggregating local models...
+INFO logger 2024-02-01 14:40:58,299 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_1']
+INFO logger 2024-02-01 14:40:58,477 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0004090194827620321, mse: 0.0521516427397728, rmse: 0.228367341666388, mae: 0.09466510266065598, nrmse: 1.2736935304887889
+INFO logger 2024-02-01 14:40:58,534 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0002748331202096061, mse: 0.03501587361097336, rmse: 0.1871252885394525, mae: 0.14065781235694885, nrmse: 2.99977890315281
+INFO logger 2024-02-01 14:40:58,557 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.1790971353803063e-05, mse: 0.001436850754544139, rmse: 0.03790581425776445, mae: 0.02841162122786045, nrmse: 0.6264012167654719
+INFO logger 2024-02-01 14:40:58,562 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_0', 'LesCorts_4', 'PobleSec_0', 'ElBorn_3', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'ElBorn_4', 'ElBorn_0', 'PobleSec_2', 'LesCorts_1', 'PobleSec_4', 'ElBorn_2', 'ElBorn_1', 'PobleSec_1']
+INFO logger 2024-02-01 14:40:58,851 | train_utils.py:153 | Best Loss: 0.00025190673894466754
+INFO logger 2024-02-01 14:40:59,364 | train_utils.py:153 | Best Loss: 0.00011571211813900031
+INFO logger 2024-02-01 14:41:00,297 | train_utils.py:153 | Best Loss: 0.00036473763607970373
+INFO logger 2024-02-01 14:41:00,844 | train_utils.py:153 | Best Loss: 1.99870434747154e-05
+INFO logger 2024-02-01 14:41:01,178 | train_utils.py:153 | Best Loss: 0.00020558140118067203
+INFO logger 2024-02-01 14:41:01,630 | train_utils.py:153 | Best Loss: 0.00010004253191356029
+INFO logger 2024-02-01 14:41:02,744 | train_utils.py:153 | Best Loss: 0.00037252308819149657
+INFO logger 2024-02-01 14:41:03,176 | train_utils.py:153 | Best Loss: 1.9969038607930575e-05
+INFO logger 2024-02-01 14:41:03,426 | train_utils.py:153 | Best Loss: 1.347084669733717e-05
+INFO logger 2024-02-01 14:41:04,197 | train_utils.py:153 | Best Loss: 0.00037980582829066147
+INFO logger 2024-02-01 14:41:04,918 | train_utils.py:153 | Best Loss: 9.377258002610975e-05
+INFO logger 2024-02-01 14:41:05,787 | train_utils.py:153 | Best Loss: 0.00036738455203897134
+INFO logger 2024-02-01 14:41:06,307 | train_utils.py:153 | Best Loss: 1.492896575620173e-05
+INFO logger 2024-02-01 14:41:06,652 | train_utils.py:153 | Best Loss: 1.8034845557972646e-05
+INFO logger 2024-02-01 14:41:07,534 | train_utils.py:153 | Best Loss: 0.00036231797199520304
+INFO logger 2024-02-01 14:41:07,710 | server.py:212 | [Global round 3] Aggregating local models...
+INFO logger 2024-02-01 14:41:07,711 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_4']
+INFO logger 2024-02-01 14:41:07,886 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00037492730823440815, mse: 0.04779467731714249, rmse: 0.21861993805950655, mae: 0.08667639642953873, nrmse: 1.228208117407889
+INFO logger 2024-02-01 14:41:07,952 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00021795361464140578, mse: 0.027764376252889633, rmse: 0.16662645724160866, mae: 0.12227831780910492, nrmse: 2.2278864654097874
+INFO logger 2024-02-01 14:41:07,991 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 8.742819773033261e-06, mse: 0.00105559010989964, rmse: 0.03248984625847959, mae: 0.02330651320517063, nrmse: 0.5683575668841776
+INFO logger 2024-02-01 14:41:07,996 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_2', 'PobleSec_3', 'LesCorts_0', 'ElBorn_3', 'PobleSec_2', 'ElBorn_1', 'PobleSec_1', 'LesCorts_3', 'LesCorts_4', 'LesCorts_1', 'ElBorn_4', 'PobleSec_4', 'ElBorn_0', 'ElBorn_2', 'PobleSec_0']
+INFO logger 2024-02-01 14:41:08,315 | train_utils.py:153 | Best Loss: 9.842737842002632e-05
+INFO logger 2024-02-01 14:41:09,401 | train_utils.py:153 | Best Loss: 0.0003618675701349504
+INFO logger 2024-02-01 14:41:10,236 | train_utils.py:153 | Best Loss: 0.0001577053924379816
+INFO logger 2024-02-01 14:41:10,656 | train_utils.py:153 | Best Loss: 2.007094588117215e-05
+INFO logger 2024-02-01 14:41:11,610 | train_utils.py:153 | Best Loss: 0.0003659205704993444
+INFO logger 2024-02-01 14:41:12,072 | train_utils.py:153 | Best Loss: 1.3011129269857805e-05
+INFO logger 2024-02-01 14:41:13,137 | train_utils.py:153 | Best Loss: 0.0003497961021989115
+INFO logger 2024-02-01 14:41:13,789 | train_utils.py:153 | Best Loss: 0.00017341010120005635
+INFO logger 2024-02-01 14:41:14,390 | train_utils.py:153 | Best Loss: 0.00010402565474801681
+INFO logger 2024-02-01 14:41:14,971 | train_utils.py:153 | Best Loss: 8.995736025311924e-05
+INFO logger 2024-02-01 14:41:15,245 | train_utils.py:153 | Best Loss: 1.332188837212209e-05
+INFO logger 2024-02-01 14:41:16,006 | train_utils.py:153 | Best Loss: 0.00035783295717647695
+INFO logger 2024-02-01 14:41:16,554 | train_utils.py:153 | Best Loss: 1.1186422510207564e-05
+INFO logger 2024-02-01 14:41:16,854 | train_utils.py:153 | Best Loss: 1.0539240421443854e-05
+INFO logger 2024-02-01 14:41:17,763 | train_utils.py:153 | Best Loss: 0.0003589026717557095
+INFO logger 2024-02-01 14:41:17,895 | server.py:212 | [Global round 4] Aggregating local models...
+INFO logger 2024-02-01 14:41:17,896 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-01 14:41:18,171 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003608431488891521, mse: 0.04599108546972275, rmse: 0.21445532278244517, mae: 0.0842110738158226, nrmse: 1.2043903568268122
+INFO logger 2024-02-01 14:41:18,206 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00019591525013215447, mse: 0.024954820051789284, rmse: 0.15797094685982382, mae: 0.11339779943227768, nrmse: 2.132349033449563
+INFO logger 2024-02-01 14:41:18,230 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 7.737570446196062e-06, mse: 0.0009328769519925117, rmse: 0.0305430344267316, mae: 0.021316759288311005, nrmse: 0.5287483080481284
+INFO logger 2024-02-01 14:41:18,235 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_3', 'LesCorts_2', 'ElBorn_1', 'ElBorn_4', 'PobleSec_4', 'PobleSec_1', 'PobleSec_2', 'LesCorts_0', 'LesCorts_1', 'LesCorts_4', 'PobleSec_0', 'ElBorn_2', 'PobleSec_3', 'ElBorn_0', 'ElBorn_3']
+INFO logger 2024-02-01 14:41:18,560 | train_utils.py:153 | Best Loss: 0.00015882728553284504
+INFO logger 2024-02-01 14:41:19,039 | train_utils.py:153 | Best Loss: 9.706741769400518e-05
+INFO logger 2024-02-01 14:41:19,312 | train_utils.py:153 | Best Loss: 1.2871955736801208e-05
+INFO logger 2024-02-01 14:41:19,638 | train_utils.py:153 | Best Loss: 1.2943517205255908e-05
+INFO logger 2024-02-01 14:41:20,333 | train_utils.py:153 | Best Loss: 0.00035252112770585095
+INFO logger 2024-02-01 14:41:21,803 | train_utils.py:153 | Best Loss: 0.00034430036354282005
+INFO logger 2024-02-01 14:41:22,786 | train_utils.py:153 | Best Loss: 0.00035805218242563485
+INFO logger 2024-02-01 14:41:23,943 | train_utils.py:153 | Best Loss: 0.00013982316843991042
+INFO logger 2024-02-01 14:41:25,196 | train_utils.py:153 | Best Loss: 9.024754024998486e-05
+INFO logger 2024-02-01 14:41:25,719 | train_utils.py:153 | Best Loss: 9.675330413663379e-05
+INFO logger 2024-02-01 14:41:26,715 | train_utils.py:153 | Best Loss: 0.0003510616825504859
+INFO logger 2024-02-01 14:41:27,112 | train_utils.py:153 | Best Loss: 1.0929221837389944e-05
+INFO logger 2024-02-01 14:41:27,987 | train_utils.py:153 | Best Loss: 0.0003542168114488343
+INFO logger 2024-02-01 14:41:28,423 | train_utils.py:153 | Best Loss: 1.265926705279662e-05
+INFO logger 2024-02-01 14:41:28,945 | train_utils.py:153 | Best Loss: 1.7605063529091254e-05
+INFO logger 2024-02-01 14:41:28,988 | server.py:212 | [Global round 5] Aggregating local models...
+INFO logger 2024-02-01 14:41:28,990 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-01 14:41:29,066 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003526344074772334, mse: 0.04494005814194679, rmse: 0.2119907029611129, mae: 0.08224908262491226, nrmse: 1.1924446430593534
+INFO logger 2024-02-01 14:41:29,117 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00018165649642639558, mse: 0.023132573813199997, rmse: 0.15209396376319476, mae: 0.10758902877569199, nrmse: 1.9312516383026495
+INFO logger 2024-02-01 14:41:29,158 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 7.70096724756188e-06, mse: 0.0009276027558371425, rmse: 0.030456571636301128, mae: 0.021306823939085007, nrmse: 0.5112287210082518
+INFO logger 2024-02-01 14:41:29,168 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_4', 'ElBorn_3', 'ElBorn_4', 'ElBorn_2', 'PobleSec_3', 'PobleSec_1', 'ElBorn_0', 'PobleSec_2', 'PobleSec_0', 'LesCorts_3', 'LesCorts_0', 'ElBorn_1', 'LesCorts_2', 'PobleSec_4', 'LesCorts_1']
+INFO logger 2024-02-01 14:41:29,544 | train_utils.py:153 | Best Loss: 9.423838291801948e-05
+INFO logger 2024-02-01 14:41:29,801 | train_utils.py:153 | Best Loss: 1.3769613685770239e-05
+INFO logger 2024-02-01 14:41:30,310 | train_utils.py:153 | Best Loss: 1.19055043467307e-05
+INFO logger 2024-02-01 14:41:30,606 | train_utils.py:153 | Best Loss: 1.042423101146548e-05
+INFO logger 2024-02-01 14:41:31,328 | train_utils.py:153 | Best Loss: 0.0003509898040824988
+INFO logger 2024-02-01 14:41:32,437 | train_utils.py:153 | Best Loss: 0.00034104246532500493
+INFO logger 2024-02-01 14:41:32,968 | train_utils.py:153 | Best Loss: 9.075445482948264e-06
+INFO logger 2024-02-01 14:41:33,672 | train_utils.py:153 | Best Loss: 0.0003528782366004985
+INFO logger 2024-02-01 14:41:34,858 | train_utils.py:153 | Best Loss: 0.00034515895449930406
+INFO logger 2024-02-01 14:41:35,441 | train_utils.py:153 | Best Loss: 0.0001406008003235996
+INFO logger 2024-02-01 14:41:35,948 | train_utils.py:153 | Best Loss: 0.00012717452271275047
+INFO logger 2024-02-01 14:41:36,386 | train_utils.py:153 | Best Loss: 1.0517371564221698e-05
+INFO logger 2024-02-01 14:41:36,715 | train_utils.py:153 | Best Loss: 9.649652001932699e-05
+INFO logger 2024-02-01 14:41:37,535 | train_utils.py:153 | Best Loss: 0.00034962655199090325
+INFO logger 2024-02-01 14:41:37,981 | train_utils.py:153 | Best Loss: 8.924485235992406e-05
+INFO logger 2024-02-01 14:41:38,050 | server.py:212 | [Global round 6] Aggregating local models...
+INFO logger 2024-02-01 14:41:38,052 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-01 14:41:38,202 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034736378305393647, mse: 0.04426541551947594, rmse: 0.21039347784443305, mae: 0.08087809383869171, nrmse: 1.1857447111315513
+INFO logger 2024-02-01 14:41:38,237 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00017113276288915446, mse: 0.021787699311971664, rmse: 0.14760656933880573, mae: 0.10253767669200897, nrmse: 1.779345949397048
+INFO logger 2024-02-01 14:41:38,268 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 7.355000313645867e-06, mse: 0.0008850159356370568, rmse: 0.029749217395371206, mae: 0.020567767322063446, nrmse: 0.5074257813729603
+INFO logger 2024-02-01 14:41:38,272 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_1', 'PobleSec_3', 'LesCorts_3', 'PobleSec_0', 'LesCorts_1', 'PobleSec_2', 'ElBorn_4', 'ElBorn_3', 'PobleSec_4', 'ElBorn_1', 'LesCorts_4', 'LesCorts_2', 'ElBorn_2', 'LesCorts_0', 'ElBorn_0']
+INFO logger 2024-02-01 14:41:38,974 | train_utils.py:153 | Best Loss: 0.00033938952387992555
+INFO logger 2024-02-01 14:41:39,914 | train_utils.py:153 | Best Loss: 0.0003484833512939219
+INFO logger 2024-02-01 14:41:40,456 | train_utils.py:153 | Best Loss: 0.00012889446020779904
+INFO logger 2024-02-01 14:41:41,354 | train_utils.py:153 | Best Loss: 0.00034226490228664216
+INFO logger 2024-02-01 14:41:41,876 | train_utils.py:153 | Best Loss: 8.828542246319877e-05
+INFO logger 2024-02-01 14:41:42,625 | train_utils.py:153 | Best Loss: 0.00035001573779832896
+INFO logger 2024-02-01 14:41:42,950 | train_utils.py:153 | Best Loss: 1.1750893199991813e-05
+INFO logger 2024-02-01 14:41:43,248 | train_utils.py:153 | Best Loss: 1.2936819457799952e-05
+INFO logger 2024-02-01 14:41:44,052 | train_utils.py:153 | Best Loss: 0.00034748935974826376
+INFO logger 2024-02-01 14:41:44,386 | train_utils.py:153 | Best Loss: 1.0971017538992787e-05
+INFO logger 2024-02-01 14:41:44,811 | train_utils.py:153 | Best Loss: 8.952991382698174e-05
+INFO logger 2024-02-01 14:41:45,239 | train_utils.py:153 | Best Loss: 9.703040511036913e-05
+INFO logger 2024-02-01 14:41:45,495 | train_utils.py:153 | Best Loss: 9.96674579154286e-06
+INFO logger 2024-02-01 14:41:45,911 | train_utils.py:153 | Best Loss: 0.00011824456275691284
+INFO logger 2024-02-01 14:41:46,196 | train_utils.py:153 | Best Loss: 9.179782223041902e-06
+INFO logger 2024-02-01 14:41:46,299 | server.py:212 | [Global round 7] Aggregating local models...
+INFO logger 2024-02-01 14:41:46,300 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-01 14:41:46,647 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003441335319900724, mse: 0.04385196417570114, rmse: 0.20940860578233442, mae: 0.07984130829572678, nrmse: 1.1820983617145833
+INFO logger 2024-02-01 14:41:46,683 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00016466184275508013, mse: 0.020960621535778046, rmse: 0.14477783509839498, mae: 0.09906835854053497, nrmse: 1.672055908113113
+INFO logger 2024-02-01 14:41:46,707 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 7.150293776938683e-06, mse: 0.0008597918786108494, rmse: 0.029322207942289225, mae: 0.02020381949841976, nrmse: 0.5072192058702122
+INFO logger 2024-02-01 14:41:46,711 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_0', 'PobleSec_4', 'PobleSec_1', 'LesCorts_0', 'ElBorn_1', 'PobleSec_2', 'PobleSec_3', 'LesCorts_2', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_3', 'ElBorn_0', 'LesCorts_1', 'ElBorn_3']
+INFO logger 2024-02-01 14:41:47,632 | train_utils.py:153 | Best Loss: 0.0003408512890734893
+INFO logger 2024-02-01 14:41:48,408 | train_utils.py:153 | Best Loss: 0.0003465125906486504
+INFO logger 2024-02-01 14:41:49,659 | train_utils.py:153 | Best Loss: 0.0003385282864640137
+INFO logger 2024-02-01 14:41:50,144 | train_utils.py:153 | Best Loss: 0.00011654371737464391
+INFO logger 2024-02-01 14:41:50,445 | train_utils.py:153 | Best Loss: 1.0094527283948868e-05
+INFO logger 2024-02-01 14:41:51,190 | train_utils.py:153 | Best Loss: 0.000348189852097783
+INFO logger 2024-02-01 14:41:52,432 | train_utils.py:153 | Best Loss: 0.0003475630206906596
+INFO logger 2024-02-01 14:41:53,268 | train_utils.py:153 | Best Loss: 9.589954922710986e-05
+INFO logger 2024-02-01 14:41:53,529 | train_utils.py:153 | Best Loss: 1.1828175820702696e-05
+INFO logger 2024-02-01 14:41:53,899 | train_utils.py:153 | Best Loss: 8.691238271404733e-05
+INFO logger 2024-02-01 14:41:54,358 | train_utils.py:153 | Best Loss: 9.320209540678683e-06
+INFO logger 2024-02-01 14:41:54,746 | train_utils.py:153 | Best Loss: 0.0001249728630411259
+INFO logger 2024-02-01 14:41:55,037 | train_utils.py:153 | Best Loss: 8.928421859467482e-06
+INFO logger 2024-02-01 14:41:55,433 | train_utils.py:153 | Best Loss: 8.752007648071045e-05
+INFO logger 2024-02-01 14:41:55,790 | train_utils.py:153 | Best Loss: 1.151850811208054e-05
+INFO logger 2024-02-01 14:41:55,884 | server.py:212 | [Global round 8] Aggregating local models...
+INFO logger 2024-02-01 14:41:55,892 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_1']
+INFO logger 2024-02-01 14:41:56,060 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034159602172027423, mse: 0.04352707043290138, rmse: 0.20863142244854052, mae: 0.07843981683254242, nrmse: 1.1803950218255927
+INFO logger 2024-02-01 14:41:56,116 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001619052257979757, mse: 0.020610840991139412, rmse: 0.14356476235880242, mae: 0.09789814054965973, nrmse: 1.653236587830215
+INFO logger 2024-02-01 14:41:56,139 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.730331514021696e-06, mse: 0.0008091389900073409, rmse: 0.028445368515934908, mae: 0.019235963001847267, nrmse: 0.4971848522239035
+INFO logger 2024-02-01 14:41:56,143 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_1', 'ElBorn_3', 'LesCorts_0', 'ElBorn_2', 'PobleSec_2', 'LesCorts_1', 'ElBorn_0', 'ElBorn_1', 'LesCorts_4', 'LesCorts_2', 'PobleSec_0', 'LesCorts_3', 'PobleSec_4', 'PobleSec_3', 'ElBorn_4']
+INFO logger 2024-02-01 14:41:56,774 | train_utils.py:153 | Best Loss: 0.00033823567462762394
+INFO logger 2024-02-01 14:41:57,293 | train_utils.py:153 | Best Loss: 1.1555757570408896e-05
+INFO logger 2024-02-01 14:41:57,889 | train_utils.py:153 | Best Loss: 0.00011263588597938114
+INFO logger 2024-02-01 14:41:58,160 | train_utils.py:153 | Best Loss: 8.030561097573651e-06
+INFO logger 2024-02-01 14:41:59,045 | train_utils.py:153 | Best Loss: 0.0003474686991636033
+INFO logger 2024-02-01 14:41:59,733 | train_utils.py:153 | Best Loss: 8.850550120396877e-05
+INFO logger 2024-02-01 14:42:00,200 | train_utils.py:153 | Best Loss: 8.940248489199917e-06
+INFO logger 2024-02-01 14:42:00,622 | train_utils.py:153 | Best Loss: 9.988441256016655e-06
+INFO logger 2024-02-01 14:42:01,027 | train_utils.py:153 | Best Loss: 8.572860245119061e-05
+INFO logger 2024-02-01 14:42:01,832 | train_utils.py:153 | Best Loss: 9.610898430562681e-05
+INFO logger 2024-02-01 14:42:02,862 | train_utils.py:153 | Best Loss: 0.00034043518892364706
+INFO logger 2024-02-01 14:42:03,597 | train_utils.py:153 | Best Loss: 0.00012153848305845644
+INFO logger 2024-02-01 14:42:04,788 | train_utils.py:153 | Best Loss: 0.0003461444186684712
+INFO logger 2024-02-01 14:42:06,015 | train_utils.py:153 | Best Loss: 0.00034666051844310924
+INFO logger 2024-02-01 14:42:06,364 | train_utils.py:153 | Best Loss: 1.1750187678150113e-05
+INFO logger 2024-02-01 14:42:06,408 | server.py:212 | [Global round 9] Aggregating local models...
+INFO logger 2024-02-01 14:42:06,409 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_1']
+INFO logger 2024-02-01 14:42:06,594 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034058384111473764, mse: 0.04339805990457535, rmse: 0.20832201012993165, mae: 0.07772161066532135, nrmse: 1.1786428333996204
+INFO logger 2024-02-01 14:42:06,656 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001602714518098738, mse: 0.020399685949087143, rmse: 0.14282746916852915, mae: 0.09656213223934174, nrmse: 1.6370618457122905
+INFO logger 2024-02-01 14:42:06,679 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.837674665741695e-06, mse: 0.0008198643918149173, rmse: 0.02863327420702909, mae: 0.01934041827917099, nrmse: 0.504188503245173
+INFO logger 2024-02-01 14:42:06,679 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_0', 'ElBorn_3', 'LesCorts_4', 'PobleSec_2', 'ElBorn_1', 'LesCorts_1', 'PobleSec_4', 'LesCorts_0', 'PobleSec_1', 'ElBorn_0', 'LesCorts_2', 'ElBorn_4', 'PobleSec_3', 'ElBorn_2', 'LesCorts_3']
+INFO logger 2024-02-01 14:42:07,584 | train_utils.py:153 | Best Loss: 0.00034005487159877195
+INFO logger 2024-02-01 14:42:08,024 | train_utils.py:153 | Best Loss: 1.0963411034975687e-05
+INFO logger 2024-02-01 14:42:08,362 | train_utils.py:153 | Best Loss: 8.415063190932947e-05
+INFO logger 2024-02-01 14:42:09,313 | train_utils.py:153 | Best Loss: 0.000346843670507321
+INFO logger 2024-02-01 14:42:09,936 | train_utils.py:153 | Best Loss: 8.728111969534271e-06
+INFO logger 2024-02-01 14:42:10,415 | train_utils.py:153 | Best Loss: 8.744369066941242e-05
+INFO logger 2024-02-01 14:42:11,390 | train_utils.py:153 | Best Loss: 0.00034623780076971323
+INFO logger 2024-02-01 14:42:11,883 | train_utils.py:153 | Best Loss: 0.00011177507568864228
+INFO logger 2024-02-01 14:42:13,003 | train_utils.py:153 | Best Loss: 0.0003380431618548812
+INFO logger 2024-02-01 14:42:13,637 | train_utils.py:153 | Best Loss: 8.720713234529044e-06
+INFO logger 2024-02-01 14:42:14,114 | train_utils.py:153 | Best Loss: 9.474426893277736e-05
+INFO logger 2024-02-01 14:42:14,454 | train_utils.py:153 | Best Loss: 1.2101002368212178e-05
+INFO logger 2024-02-01 14:42:15,457 | train_utils.py:153 | Best Loss: 0.0003457677907743088
+INFO logger 2024-02-01 14:42:15,968 | train_utils.py:153 | Best Loss: 8.065483057905205e-06
+INFO logger 2024-02-01 14:42:16,462 | train_utils.py:153 | Best Loss: 0.0001206931771100526
+INFO logger 2024-02-01 14:42:16,584 | server.py:212 | [Global round 10] Aggregating local models...
+INFO logger 2024-02-01 14:42:16,585 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-01 14:42:16,804 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003396394984488647, mse: 0.0432761088013649, rmse: 0.2080291056591959, mae: 0.07745260000228882, nrmse: 1.1782715425065304
+INFO logger 2024-02-01 14:42:16,846 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001587106392525507, mse: 0.02019999548792839, rmse: 0.14212668816210552, mae: 0.09724591672420502, nrmse: 1.710998671400131
+INFO logger 2024-02-01 14:42:16,870 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.79248453658929e-06, mse: 0.000814947416074574, rmse: 0.028547283865099565, mae: 0.019212910905480385, nrmse: 0.4982388504238297
+INFO logger 2024-02-01 14:42:16,872 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_3', 'PobleSec_1', 'PobleSec_2', 'ElBorn_0', 'PobleSec_0', 'PobleSec_3', 'LesCorts_3', 'LesCorts_1', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_0', 'PobleSec_4', 'LesCorts_2', 'ElBorn_1']
+INFO logger 2024-02-01 14:42:17,068 | train_utils.py:153 | Best Loss: 1.0951908343530076e-05
+INFO logger 2024-02-01 14:42:18,020 | train_utils.py:153 | Best Loss: 0.00033866944546833284
+INFO logger 2024-02-01 14:42:19,381 | train_utils.py:153 | Best Loss: 0.0003464686028168016
+INFO logger 2024-02-01 14:42:19,817 | train_utils.py:153 | Best Loss: 7.261799233358191e-06
+INFO logger 2024-02-01 14:42:20,900 | train_utils.py:153 | Best Loss: 0.0003399328806980212
+INFO logger 2024-02-01 14:42:22,109 | train_utils.py:153 | Best Loss: 0.0003453126219724576
+INFO logger 2024-02-01 14:42:22,655 | train_utils.py:153 | Best Loss: 0.0001194740765406723
+INFO logger 2024-02-01 14:42:23,124 | train_utils.py:153 | Best Loss: 8.849723571611906e-05
+INFO logger 2024-02-01 14:42:23,486 | train_utils.py:153 | Best Loss: 1.140223317757105e-05
+INFO logger 2024-02-01 14:42:23,892 | train_utils.py:153 | Best Loss: 8.368518924114583e-05
+INFO logger 2024-02-01 14:42:24,267 | train_utils.py:153 | Best Loss: 7.71490383470332e-06
+INFO logger 2024-02-01 14:42:24,598 | train_utils.py:153 | Best Loss: 0.00010871506389366649
+INFO logger 2024-02-01 14:42:25,672 | train_utils.py:153 | Best Loss: 0.0003463759873700365
+INFO logger 2024-02-01 14:42:26,104 | train_utils.py:153 | Best Loss: 9.51196487764256e-05
+INFO logger 2024-02-01 14:42:26,365 | train_utils.py:153 | Best Loss: 1.0068594857123523e-05
+INFO logger 2024-02-01 14:42:26,409 | server.py:212 | [Global round 11] Aggregating local models...
+INFO logger 2024-02-01 14:42:26,410 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-01 14:42:26,486 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00033926786554199976, mse: 0.0432288758456707, rmse: 0.2079155497928683, mae: 0.07742475718259811, nrmse: 1.1801547321373558
+INFO logger 2024-02-01 14:42:26,520 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015447726194087787, mse: 0.01966053806245327, rmse: 0.14021604067457213, mae: 0.0953640565276146, nrmse: 1.6330505080924302
+INFO logger 2024-02-01 14:42:26,543 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.65438858340022e-06, mse: 0.0007997605134733021, rmse: 0.02828003736690074, mae: 0.019165799021720886, nrmse: 0.5003708291100957
+INFO logger 2024-02-01 14:42:26,545 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'ElBorn_2', 'ElBorn_0', 'LesCorts_3', 'LesCorts_2', 'PobleSec_2', 'ElBorn_1', 'PobleSec_4', 'PobleSec_1', 'PobleSec_3', 'LesCorts_0', 'ElBorn_3', 'ElBorn_4', 'LesCorts_4', 'PobleSec_0']
+INFO logger 2024-02-01 14:42:26,928 | train_utils.py:153 | Best Loss: 8.782896139027213e-05
+INFO logger 2024-02-01 14:42:27,246 | train_utils.py:153 | Best Loss: 7.878419417878928e-06
+INFO logger 2024-02-01 14:42:27,609 | train_utils.py:153 | Best Loss: 8.04012620502156e-06
+INFO logger 2024-02-01 14:42:27,963 | train_utils.py:153 | Best Loss: 0.00011833673560915635
+INFO logger 2024-02-01 14:42:28,530 | train_utils.py:153 | Best Loss: 9.441317916215991e-05
+INFO logger 2024-02-01 14:42:29,303 | train_utils.py:153 | Best Loss: 0.00034671270460858355
+INFO logger 2024-02-01 14:42:29,739 | train_utils.py:153 | Best Loss: 8.837127537018922e-06
+INFO logger 2024-02-01 14:42:30,766 | train_utils.py:153 | Best Loss: 0.0003468038421307551
+INFO logger 2024-02-01 14:42:31,667 | train_utils.py:153 | Best Loss: 0.00033914986946510046
+INFO logger 2024-02-01 14:42:32,598 | train_utils.py:153 | Best Loss: 0.00034527884961259883
+INFO logger 2024-02-01 14:42:33,362 | train_utils.py:153 | Best Loss: 0.00010658902431326259
+INFO logger 2024-02-01 14:42:33,642 | train_utils.py:153 | Best Loss: 1.0624240829658824e-05
+INFO logger 2024-02-01 14:42:34,091 | train_utils.py:153 | Best Loss: 1.1280383031752302e-05
+INFO logger 2024-02-01 14:42:34,570 | train_utils.py:153 | Best Loss: 8.444020310852524e-05
+INFO logger 2024-02-01 14:42:35,486 | train_utils.py:153 | Best Loss: 0.00033943201873568805
+INFO logger 2024-02-01 14:42:35,646 | server.py:212 | [Global round 12] Aggregating local models...
+INFO logger 2024-02-01 14:42:35,647 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_2']
+INFO logger 2024-02-01 14:42:36,102 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003393200591140551, mse: 0.04323485493659973, rmse: 0.20792992794833487, mae: 0.07759677618741989, nrmse: 1.1791937455401897
+INFO logger 2024-02-01 14:42:36,139 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015415140575380745, mse: 0.01961556449532509, rmse: 0.14005557645208236, mae: 0.0955091342329979, nrmse: 1.7676605351850287
+INFO logger 2024-02-01 14:42:36,168 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.868499137150745e-06, mse: 0.0008243608172051609, rmse: 0.02871168433243095, mae: 0.019686434417963028, nrmse: 0.5110944110398085
+INFO logger 2024-02-01 14:42:36,172 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'PobleSec_2', 'PobleSec_0', 'ElBorn_2', 'PobleSec_1', 'LesCorts_0', 'LesCorts_3', 'ElBorn_4', 'PobleSec_4', 'LesCorts_2', 'ElBorn_3', 'ElBorn_1', 'LesCorts_1', 'LesCorts_4', 'PobleSec_3']
+INFO logger 2024-02-01 14:42:36,533 | train_utils.py:153 | Best Loss: 7.510565841066593e-06
+INFO logger 2024-02-01 14:42:37,441 | train_utils.py:153 | Best Loss: 0.0003464880792834745
+INFO logger 2024-02-01 14:42:38,397 | train_utils.py:153 | Best Loss: 0.00033957828972928635
+INFO logger 2024-02-01 14:42:38,999 | train_utils.py:153 | Best Loss: 7.4737023599873235e-06
+INFO logger 2024-02-01 14:42:39,744 | train_utils.py:153 | Best Loss: 0.0003396543924234749
+INFO logger 2024-02-01 14:42:40,164 | train_utils.py:153 | Best Loss: 0.00010819525007915558
+INFO logger 2024-02-01 14:42:40,617 | train_utils.py:153 | Best Loss: 0.00011893609478764715
+INFO logger 2024-02-01 14:42:40,884 | train_utils.py:153 | Best Loss: 1.1008507490567502e-05
+INFO logger 2024-02-01 14:42:41,721 | train_utils.py:153 | Best Loss: 0.00034685297566649365
+INFO logger 2024-02-01 14:42:42,226 | train_utils.py:153 | Best Loss: 9.366841043879371e-05
+INFO logger 2024-02-01 14:42:42,510 | train_utils.py:153 | Best Loss: 1.1333582267909793e-05
+INFO logger 2024-02-01 14:42:42,787 | train_utils.py:153 | Best Loss: 9.595241933579643e-06
+INFO logger 2024-02-01 14:42:43,187 | train_utils.py:153 | Best Loss: 8.808226002603551e-05
+INFO logger 2024-02-01 14:42:43,620 | train_utils.py:153 | Best Loss: 8.34754429558804e-05
+INFO logger 2024-02-01 14:42:44,534 | train_utils.py:153 | Best Loss: 0.0003452321691951883
+INFO logger 2024-02-01 14:42:44,834 | server.py:212 | [Global round 13] Aggregating local models...
+INFO logger 2024-02-01 14:42:44,835 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-01 14:42:44,910 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003391162300203729, mse: 0.04320920631289482, rmse: 0.20786824267524567, mae: 0.07717052102088928, nrmse: 1.180831834117985
+INFO logger 2024-02-01 14:42:44,945 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001534030434732701, mse: 0.019522223621606827, rmse: 0.13972195110864588, mae: 0.09483665227890015, nrmse: 1.6480073762339376
+INFO logger 2024-02-01 14:42:44,969 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.801019340319388e-06, mse: 0.0008178362622857094, rmse: 0.02859783667142865, mae: 0.019419565796852112, nrmse: 0.48605618303540193
+INFO logger 2024-02-01 14:42:44,970 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_4', 'PobleSec_3', 'LesCorts_3', 'ElBorn_4', 'PobleSec_0', 'LesCorts_0', 'LesCorts_1', 'PobleSec_1', 'ElBorn_1', 'LesCorts_2', 'ElBorn_0', 'ElBorn_3', 'ElBorn_2', 'PobleSec_4', 'PobleSec_2']
+INFO logger 2024-02-01 14:42:45,365 | train_utils.py:153 | Best Loss: 8.49454581147953e-05
+INFO logger 2024-02-01 14:42:46,309 | train_utils.py:153 | Best Loss: 0.0003463908465300489
+INFO logger 2024-02-01 14:42:47,265 | train_utils.py:153 | Best Loss: 0.00011575553560771091
+INFO logger 2024-02-01 14:42:47,630 | train_utils.py:153 | Best Loss: 1.1142158677243595e-05
+INFO logger 2024-02-01 14:42:48,514 | train_utils.py:153 | Best Loss: 0.00034013011723786125
+INFO logger 2024-02-01 14:42:49,250 | train_utils.py:153 | Best Loss: 0.00010523056949772028
+INFO logger 2024-02-01 14:42:50,016 | train_utils.py:153 | Best Loss: 8.818366423886466e-05
+INFO logger 2024-02-01 14:42:50,877 | train_utils.py:153 | Best Loss: 0.0003396568274286788
+INFO logger 2024-02-01 14:42:51,257 | train_utils.py:153 | Best Loss: 8.826820352193472e-06
+INFO logger 2024-02-01 14:42:51,609 | train_utils.py:153 | Best Loss: 9.304502613335979e-05
+INFO logger 2024-02-01 14:42:51,941 | train_utils.py:153 | Best Loss: 7.759021515823036e-06
+INFO logger 2024-02-01 14:42:52,212 | train_utils.py:153 | Best Loss: 1.0125764200220937e-05
+INFO logger 2024-02-01 14:42:52,567 | train_utils.py:153 | Best Loss: 7.955266254423141e-06
+INFO logger 2024-02-01 14:42:53,396 | train_utils.py:153 | Best Loss: 0.00034790042424794493
+INFO logger 2024-02-01 14:42:54,296 | train_utils.py:153 | Best Loss: 0.00034656700513171633
+INFO logger 2024-02-01 14:42:54,552 | server.py:212 | [Global round 14] Aggregating local models...
+INFO logger 2024-02-01 14:42:54,553 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_1']
+INFO logger 2024-02-01 14:42:54,719 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00033898525180177776, mse: 0.04319213703274727, rmse: 0.20782718068805936, mae: 0.07717686146497726, nrmse: 1.1805325130338356
+INFO logger 2024-02-01 14:42:54,774 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015161410334917625, mse: 0.019291898235678673, rmse: 0.13889527794593548, mae: 0.09462691843509674, nrmse: 1.6994582343058358
+INFO logger 2024-02-01 14:42:54,813 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.978533268402272e-06, mse: 0.0008393672178499401, rmse: 0.028971834906507735, mae: 0.019801024347543716, nrmse: 0.4944092200631366
+INFO logger 2024-02-01 14:42:54,814 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'LesCorts_3', 'ElBorn_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_2', 'LesCorts_0', 'PobleSec_2', 'PobleSec_3', 'PobleSec_1', 'LesCorts_4', 'ElBorn_1', 'LesCorts_1', 'PobleSec_0', 'PobleSec_4']
+INFO logger 2024-02-01 14:42:55,112 | train_utils.py:153 | Best Loss: 7.71180715902308e-06
+INFO logger 2024-02-01 14:42:55,588 | train_utils.py:153 | Best Loss: 0.00011820587866030067
+INFO logger 2024-02-01 14:42:56,049 | train_utils.py:153 | Best Loss: 1.0933754864432242e-05
+INFO logger 2024-02-01 14:42:56,329 | train_utils.py:153 | Best Loss: 7.830776798916792e-06
+INFO logger 2024-02-01 14:42:56,724 | train_utils.py:153 | Best Loss: 1.1263562283132243e-05
+INFO logger 2024-02-01 14:42:57,076 | train_utils.py:153 | Best Loss: 9.316607049600989e-05
+INFO logger 2024-02-01 14:42:57,680 | train_utils.py:153 | Best Loss: 0.0001045643087825057
+INFO logger 2024-02-01 14:42:58,556 | train_utils.py:153 | Best Loss: 0.00034722505489320266
+INFO logger 2024-02-01 14:42:59,542 | train_utils.py:153 | Best Loss: 0.00034608949100466694
+INFO logger 2024-02-01 14:43:00,562 | train_utils.py:153 | Best Loss: 0.0003395535522617224
+INFO logger 2024-02-01 14:43:01,075 | train_utils.py:153 | Best Loss: 8.623335801190234e-05
+INFO logger 2024-02-01 14:43:01,612 | train_utils.py:153 | Best Loss: 9.516426300234049e-06
+INFO logger 2024-02-01 14:43:01,947 | train_utils.py:153 | Best Loss: 8.759569878450306e-05
+INFO logger 2024-02-01 14:43:02,979 | train_utils.py:153 | Best Loss: 0.0003405484361170725
+INFO logger 2024-02-01 14:43:04,288 | train_utils.py:153 | Best Loss: 0.0003481075440452793
+INFO logger 2024-02-01 14:43:04,423 | server.py:212 | [Global round 15] Aggregating local models...
+INFO logger 2024-02-01 14:43:04,425 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_1']
+INFO logger 2024-02-01 14:43:04,599 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003396813285273067, mse: 0.04328150674700737, rmse: 0.20804207927005386, mae: 0.07700876146554947, nrmse: 1.1816554540290183
+INFO logger 2024-02-01 14:43:04,687 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015157749362382494, mse: 0.019287575036287308, rmse: 0.1388797142720538, mae: 0.09360117465257645, nrmse: 1.6807480598042432
+INFO logger 2024-02-01 14:43:04,715 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.897601069531579e-06, mse: 0.0008295889711007476, rmse: 0.028802586187714942, mae: 0.019557837396860123, nrmse: 0.4799579463349881
+INFO logger 2024-02-01 14:43:04,716 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_3', 'PobleSec_0', 'ElBorn_1', 'ElBorn_0', 'LesCorts_4', 'ElBorn_3', 'LesCorts_0', 'PobleSec_1', 'PobleSec_4', 'LesCorts_2', 'LesCorts_3', 'ElBorn_4', 'ElBorn_2', 'PobleSec_2']
+INFO logger 2024-02-01 14:43:05,035 | train_utils.py:153 | Best Loss: 8.736526673899321e-05
+INFO logger 2024-02-01 14:43:05,788 | train_utils.py:153 | Best Loss: 0.00034524930505390006
+INFO logger 2024-02-01 14:43:06,856 | train_utils.py:153 | Best Loss: 0.000341447949974145
+INFO logger 2024-02-01 14:43:07,241 | train_utils.py:153 | Best Loss: 8.204195674864242e-06
+INFO logger 2024-02-01 14:43:07,561 | train_utils.py:153 | Best Loss: 6.763317436935911e-06
+INFO logger 2024-02-01 14:43:08,183 | train_utils.py:153 | Best Loss: 8.578984712234192e-05
+INFO logger 2024-02-01 14:43:08,601 | train_utils.py:153 | Best Loss: 1.0131575546231894e-05
+INFO logger 2024-02-01 14:43:09,167 | train_utils.py:153 | Best Loss: 0.00010642598465504397
+INFO logger 2024-02-01 14:43:10,456 | train_utils.py:153 | Best Loss: 0.0003401135803955629
+INFO logger 2024-02-01 14:43:11,552 | train_utils.py:153 | Best Loss: 0.00034853934350709514
+INFO logger 2024-02-01 14:43:12,086 | train_utils.py:153 | Best Loss: 9.214734928873068e-05
+INFO logger 2024-02-01 14:43:12,522 | train_utils.py:153 | Best Loss: 0.00011678451293676394
+INFO logger 2024-02-01 14:43:13,124 | train_utils.py:153 | Best Loss: 1.107912139735378e-05
+INFO logger 2024-02-01 14:43:13,437 | train_utils.py:153 | Best Loss: 7.84987587130804e-06
+INFO logger 2024-02-01 14:43:14,485 | train_utils.py:153 | Best Loss: 0.00034749588868617426
+INFO logger 2024-02-01 14:43:14,698 | server.py:212 | [Global round 16] Aggregating local models...
+INFO logger 2024-02-01 14:43:14,699 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_1']
+INFO logger 2024-02-01 14:43:14,776 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.000339926311977237, mse: 0.043312035501003265, rmse: 0.20811543792088866, mae: 0.07719174772500992, nrmse: 1.182753423331389
+INFO logger 2024-02-01 14:43:14,811 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015065718557255353, mse: 0.019170645624399185, rmse: 0.13845810060953165, mae: 0.09408710896968842, nrmse: 1.7073511462584865
+INFO logger 2024-02-01 14:43:14,855 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.7830567232981e-06, mse: 0.0008162232115864754, rmse: 0.028569620431263616, mae: 0.019339071586728096, nrmse: 0.4785559277510827
+INFO logger 2024-02-01 14:43:14,856 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_3', 'PobleSec_1', 'LesCorts_4', 'LesCorts_1', 'PobleSec_0', 'ElBorn_0', 'ElBorn_2', 'LesCorts_2', 'PobleSec_2', 'LesCorts_3', 'ElBorn_1', 'ElBorn_3', 'LesCorts_0', 'ElBorn_4', 'PobleSec_4']
+INFO logger 2024-02-01 14:43:15,938 | train_utils.py:153 | Best Loss: 0.0003469791773369345
+INFO logger 2024-02-01 14:43:17,151 | train_utils.py:153 | Best Loss: 0.00034021663248509637
+INFO logger 2024-02-01 14:43:17,839 | train_utils.py:153 | Best Loss: 8.6541299344645e-05
+INFO logger 2024-02-01 14:43:18,491 | train_utils.py:153 | Best Loss: 8.792988904915227e-05
+INFO logger 2024-02-01 14:43:19,472 | train_utils.py:153 | Best Loss: 0.00034147362826084056
+INFO logger 2024-02-01 14:43:20,081 | train_utils.py:153 | Best Loss: 6.896717198854447e-06
+INFO logger 2024-02-01 14:43:20,524 | train_utils.py:153 | Best Loss: 7.684192333959834e-06
+INFO logger 2024-02-01 14:43:21,162 | train_utils.py:153 | Best Loss: 9.237920623054804e-05
+INFO logger 2024-02-01 14:43:22,748 | train_utils.py:153 | Best Loss: 0.00034819976122331197
+INFO logger 2024-02-01 14:43:23,433 | train_utils.py:153 | Best Loss: 0.00011592525961585561
+INFO logger 2024-02-01 14:43:23,828 | train_utils.py:153 | Best Loss: 9.115564972634656e-06
+INFO logger 2024-02-01 14:43:24,251 | train_utils.py:153 | Best Loss: 1.102347691219462e-05
+INFO logger 2024-02-01 14:43:24,766 | train_utils.py:153 | Best Loss: 0.00010450471520058985
+INFO logger 2024-02-01 14:43:25,175 | train_utils.py:153 | Best Loss: 1.1207836813401377e-05
+INFO logger 2024-02-01 14:43:26,061 | train_utils.py:153 | Best Loss: 0.00034896935002628977
+INFO logger 2024-02-01 14:43:26,335 | server.py:212 | [Global round 17] Aggregating local models...
+INFO logger 2024-02-01 14:43:26,336 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-01 14:43:26,616 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003400731945821033, mse: 0.043331801891326904, rmse: 0.20816292150939586, mae: 0.07666920125484467, nrmse: 1.1834769039438482
+INFO logger 2024-02-01 14:43:26,668 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015205388724645982, mse: 0.019348816946148872, rmse: 0.13910002496818205, mae: 0.0934554859995842, nrmse: 1.664670096120459
+INFO logger 2024-02-01 14:43:26,691 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.85587376896022e-06, mse: 0.0008245194330811501, rmse: 0.02871444641780771, mae: 0.019422318786382675, nrmse: 0.47439844371958084
+INFO logger 2024-02-01 14:43:26,696 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'LesCorts_2', 'LesCorts_0', 'ElBorn_4', 'PobleSec_3', 'PobleSec_4', 'LesCorts_1', 'ElBorn_3', 'PobleSec_1', 'PobleSec_2', 'LesCorts_4', 'ElBorn_1', 'LesCorts_3', 'PobleSec_0', 'ElBorn_2']
+INFO logger 2024-02-01 14:43:26,906 | train_utils.py:153 | Best Loss: 6.398101974726353e-06
+INFO logger 2024-02-01 14:43:27,343 | train_utils.py:153 | Best Loss: 9.105749763902385e-05
+INFO logger 2024-02-01 14:43:27,846 | train_utils.py:153 | Best Loss: 0.00010522967715045077
+INFO logger 2024-02-01 14:43:28,135 | train_utils.py:153 | Best Loss: 1.0282858452030823e-05
+INFO logger 2024-02-01 14:43:29,148 | train_utils.py:153 | Best Loss: 0.0003456087779312387
+INFO logger 2024-02-01 14:43:30,323 | train_utils.py:153 | Best Loss: 0.0003493425266553215
+INFO logger 2024-02-01 14:43:30,869 | train_utils.py:153 | Best Loss: 8.707702750808489e-05
+INFO logger 2024-02-01 14:43:31,244 | train_utils.py:153 | Best Loss: 1.0217463199481152e-05
+INFO logger 2024-02-01 14:43:32,279 | train_utils.py:153 | Best Loss: 0.0003406355441291267
+INFO logger 2024-02-01 14:43:33,526 | train_utils.py:153 | Best Loss: 0.00034799642301729225
+INFO logger 2024-02-01 14:43:34,224 | train_utils.py:153 | Best Loss: 8.659823239394273e-05
+INFO logger 2024-02-01 14:43:34,645 | train_utils.py:153 | Best Loss: 7.638351481119936e-06
+INFO logger 2024-02-01 14:43:35,065 | train_utils.py:153 | Best Loss: 0.00011366270605082575
+INFO logger 2024-02-01 14:43:35,973 | train_utils.py:153 | Best Loss: 0.00034189961533480156
+INFO logger 2024-02-01 14:43:36,312 | train_utils.py:153 | Best Loss: 7.826034421132707e-06
+INFO logger 2024-02-01 14:43:36,355 | server.py:212 | [Global round 18] Aggregating local models...
+INFO logger 2024-02-01 14:43:36,356 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-01 14:43:36,452 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034064452380205937, mse: 0.04340379685163498, rmse: 0.2083357790962344, mae: 0.0770563930273056, nrmse: 1.1849759797093482
+INFO logger 2024-02-01 14:43:36,491 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014923681465538535, mse: 0.018989140167832375, rmse: 0.13780108913877415, mae: 0.09332729130983353, nrmse: 1.6869757072780385
+INFO logger 2024-02-01 14:43:36,514 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.720638286450581e-06, mse: 0.0008087767055258155, rmse: 0.028438999727940777, mae: 0.019223490729928017, nrmse: 0.4764896622696181
+INFO logger 2024-02-01 14:43:36,517 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'ElBorn_3', 'PobleSec_4', 'PobleSec_1', 'PobleSec_2', 'LesCorts_3', 'ElBorn_1', 'PobleSec_3', 'PobleSec_0', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_0', 'LesCorts_1', 'LesCorts_2']
+INFO logger 2024-02-01 14:43:36,714 | train_utils.py:153 | Best Loss: 6.626426023802302e-06
+INFO logger 2024-02-01 14:43:36,949 | train_utils.py:153 | Best Loss: 1.0477040122726545e-05
+INFO logger 2024-02-01 14:43:37,916 | train_utils.py:153 | Best Loss: 0.0003495343799490159
+INFO logger 2024-02-01 14:43:38,900 | train_utils.py:153 | Best Loss: 0.0003410288071127858
+INFO logger 2024-02-01 14:43:40,027 | train_utils.py:153 | Best Loss: 0.00034887356425114855
+INFO logger 2024-02-01 14:43:40,643 | train_utils.py:153 | Best Loss: 0.00011473975746146245
+INFO logger 2024-02-01 14:43:40,968 | train_utils.py:153 | Best Loss: 8.473757285779962e-06
+INFO logger 2024-02-01 14:43:41,688 | train_utils.py:153 | Best Loss: 0.00034753963879243595
+INFO logger 2024-02-01 14:43:42,665 | train_utils.py:153 | Best Loss: 0.0003420502339915086
+INFO logger 2024-02-01 14:43:43,112 | train_utils.py:153 | Best Loss: 1.1127082611870578e-05
+INFO logger 2024-02-01 14:43:43,489 | train_utils.py:153 | Best Loss: 8.598721500388102e-05
+INFO logger 2024-02-01 14:43:43,751 | train_utils.py:153 | Best Loss: 7.660763398946628e-06
+INFO logger 2024-02-01 14:43:44,173 | train_utils.py:153 | Best Loss: 0.00010434570191264676
+INFO logger 2024-02-01 14:43:44,567 | train_utils.py:153 | Best Loss: 8.808693638185791e-05
+INFO logger 2024-02-01 14:43:45,081 | train_utils.py:153 | Best Loss: 9.195415704097185e-05
+INFO logger 2024-02-01 14:43:45,157 | server.py:212 | [Global round 19] Aggregating local models...
+INFO logger 2024-02-01 14:43:45,159 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-01 14:43:45,250 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034049841797155304, mse: 0.043385665863752365, rmse: 0.20829226069096365, mae: 0.07660995423793793, nrmse: 1.185160671871142
+INFO logger 2024-02-01 14:43:45,292 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015023775120968357, mse: 0.019116263836622238, rmse: 0.13826157758619073, mae: 0.09371155500411987, nrmse: 1.6706667046340034
+INFO logger 2024-02-01 14:43:45,319 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.903645035288868e-06, mse: 0.0008299429900944233, rmse: 0.02880873114342982, mae: 0.019445721060037613, nrmse: 0.4797646238524152
+INFO logger 2024-02-01 14:43:45,324 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_3', 'LesCorts_1', 'PobleSec_0', 'ElBorn_1', 'ElBorn_0', 'ElBorn_4', 'LesCorts_2', 'PobleSec_1', 'PobleSec_4', 'ElBorn_2', 'LesCorts_3', 'LesCorts_0', 'PobleSec_2', 'ElBorn_3', 'LesCorts_4']
+INFO logger 2024-02-01 14:43:46,084 | train_utils.py:153 | Best Loss: 0.0003469833474620942
+INFO logger 2024-02-01 14:43:46,634 | train_utils.py:153 | Best Loss: 8.700176823628271e-05
+INFO logger 2024-02-01 14:43:47,455 | train_utils.py:153 | Best Loss: 0.0003426032187233818
+INFO logger 2024-02-01 14:43:48,044 | train_utils.py:153 | Best Loss: 8.28705424502501e-06
+INFO logger 2024-02-01 14:43:48,422 | train_utils.py:153 | Best Loss: 6.3023177888874275e-06
+INFO logger 2024-02-01 14:43:48,661 | train_utils.py:153 | Best Loss: 1.0482515931097961e-05
+INFO logger 2024-02-01 14:43:49,056 | train_utils.py:153 | Best Loss: 9.09193769867984e-05
+INFO logger 2024-02-01 14:43:50,104 | train_utils.py:153 | Best Loss: 0.00034117588223376145
+INFO logger 2024-02-01 14:43:51,617 | train_utils.py:153 | Best Loss: 0.0003499151750533717
+INFO logger 2024-02-01 14:43:52,107 | train_utils.py:153 | Best Loss: 7.727998730632057e-06
+INFO logger 2024-02-01 14:43:52,510 | train_utils.py:153 | Best Loss: 0.00011334001537336157
+INFO logger 2024-02-01 14:43:53,049 | train_utils.py:153 | Best Loss: 0.00010391376498672698
+INFO logger 2024-02-01 14:43:54,328 | train_utils.py:153 | Best Loss: 0.0003491059056387877
+INFO logger 2024-02-01 14:43:55,078 | train_utils.py:153 | Best Loss: 1.0498245461823661e-05
+INFO logger 2024-02-01 14:43:55,475 | train_utils.py:153 | Best Loss: 8.783504000608945e-05
+INFO logger 2024-02-01 14:43:55,540 | server.py:212 | [Global round 20] Aggregating local models...
+INFO logger 2024-02-01 14:43:55,541 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+INFO logger 2024-02-01 14:43:55,709 | server.py:294 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003412966929398125, mse: 0.0434873104095459, rmse: 0.20853611296258953, mae: 0.07695470750331879, nrmse: 1.1863548051042256
+INFO logger 2024-02-01 14:43:55,765 | server.py:294 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014885288015775906, mse: 0.01893911324441433, rmse: 0.13761945082151117, mae: 0.09332595765590668, nrmse: 1.7339557941751207
+INFO logger 2024-02-01 14:43:55,810 | server.py:294 | [Dataset ElBorn Evaluation on 828 samples] loss: 6.734209388532734e-06, mse: 0.0008099165861494839, rmse: 0.028459033471807928, mae: 0.01923430897295475, nrmse: 0.47342486306532683
+INFO logger 2024-02-01 14:43:55,814 | server.py:133 | Time passed: 195.3740749359131 seconds.
+INFO logger 2024-02-01 14:43:55,814 | server.py:134 | Best global model found on fl_round=0 with loss=0.0017594693884394996
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 122, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 56, in main
+    validation_dict = inference(
+                      ^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 167, in inference
+    assert client in list(y_scalers.keys())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

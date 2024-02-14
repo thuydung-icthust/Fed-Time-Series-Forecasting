@@ -1,0 +1,27 @@
+INFO logger 2024-02-01 11:20:36,731 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 11:20:36,731 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 11:20:36,731 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 11:20:36,732 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 11:20:36,734 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 11:20:36,735 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 11:20:36,735 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 11:20:36,735 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 11:20:36,739 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 11:20:36,739 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 11:20:36,739 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 11:20:36,740 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 11:20:36,741 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 11:20:36,741 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 11:20:36,742 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 11:20:36,742 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 11:20:36,742 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 122, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 29, in main
+    X_train, X_val, y_train, y_val, client_X_train, client_X_val, client_y_train, client_y_val, exogenous_data_train, exogenous_data_val = make_postprocessing(X_train, X_val, y_train, y_val, exogenous_data_train, exogenous_data_val, x_scalers, y_scalers, args)
+                                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/helpers.py", line 188, in make_postprocessing
+    area_X_train[area], area_y_train[area], area_X_val[area], area_y_val[area])
+    ~~~~~~~~~~~~^^^^^^
+KeyError: 'LesCorts'

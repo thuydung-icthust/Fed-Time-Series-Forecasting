@@ -1,0 +1,581 @@
+INFO logger 2024-02-03 11:19:41,600 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-03 11:19:41,600 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-03 11:19:41,600 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-03 11:19:41,600 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-03 11:19:41,602 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-03 11:19:41,602 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-03 11:19:41,602 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-03 11:19:41,602 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-03 11:19:41,604 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-03 11:19:41,604 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-03 11:19:41,604 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-03 11:19:41,604 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-03 11:19:41,605 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-03 11:19:41,605 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-03 11:19:41,605 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-03 11:19:41,605 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-03 11:19:41,605 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+INFO logger 2024-02-03 11:19:42,171 | server.py:74 | Initializing client manager...
+INFO logger 2024-02-03 11:19:42,171 | server.py:81 | Registering clients...
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-03 11:19:42,171 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-03 11:19:42,172 | server.py:85 | Client manager initialized!
+INFO logger 2024-02-03 11:19:42,172 | server.py:67 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-03 11:19:42,172 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+X_val_sub.shape is 535 	 y_val_sub is 535
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-03 11:19:43,845 | server.py:99 | Starting FL rounds
+INFO logger 2024-02-03 11:19:43,845 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-03 11:19:44,754 | train_utils.py:153 | Best Loss: 0.0002896100798708915
+INFO logger 2024-02-03 11:19:45,316 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-03 11:19:46,024 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-03 11:19:46,523 | train_utils.py:153 | Best Loss: 0.0002248865115829712
+INFO logger 2024-02-03 11:19:47,015 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-03 11:19:47,490 | train_utils.py:153 | Best Loss: 0.0005417556082557516
+INFO logger 2024-02-03 11:19:48,005 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-03 11:19:48,609 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-03 11:19:49,066 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-03 11:19:49,262 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-03 11:19:49,485 | train_utils.py:153 | Best Loss: 0.0001446908842637271
+INFO logger 2024-02-03 11:19:49,820 | train_utils.py:153 | Best Loss: 0.0007182669863976234
+INFO logger 2024-02-03 11:19:50,511 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-03 11:19:51,562 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-03 11:19:52,190 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+preds shape is: (15, 535, 5)
+preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.17.2 -- An enhanced Interactive Python. Type '?' for help.
+(535,)
+array([0.09190046, 0.12443791, 0.09887483, 0.13853575, 0.08460823,
+       0.16602828, 0.12781262, 0.10203271, 0.09799921, 0.12601995,
+       0.12108927, 0.08165455, 0.08512352, 0.1319866 , 0.09981035,
+       0.10887048, 0.1465477 , 0.12405029, 0.0770582 , 0.12474998,
+       0.11826418, 0.16395791, 0.1314178 , 0.14532113, 0.11895666,
+       0.07989358, 0.08513858, 0.06597155, 0.12054957, 0.13906053,
+       0.13570794, 0.09669363, 0.14478527, 0.16101263, 0.14508177,
+       0.14668438, 0.1557848 , 0.14959045, 0.11646535, 0.1467609 ,
+       0.13539627, 0.10980379, 0.1359732 , 0.13815814, 0.13563651,
+       0.11271509, 0.13279389, 0.14004214, 0.11062778, 0.15178567,
+       0.06860514, 0.14360362, 0.13981883, 0.17683223, 0.1515599 ,
+       0.12270216, 0.07905737, 0.13616444, 0.07554892, 0.10077719,
+       0.1635424 , 0.09953291, 0.14022811, 0.11424099, 0.14105803,
+       0.14549157, 0.12945081, 0.10290485, 0.07226211, 0.15015356,
+       0.07508101, 0.12952343, 0.10266033, 0.1230991 , 0.10667063,
+       0.12365421, 0.14144082, 0.15215407, 0.15002199, 0.14059308,
+       0.12016136, 0.14188655, 0.06473935, 0.27473786, 0.05329269,
+       0.06182288, 0.17235325, 0.08564804, 0.28070208, 0.10497358,
+       0.26229832, 0.30582967, 0.18820058, 0.27830908, 0.15873088,
+       0.2141334 , 0.42404267, 0.252232  , 0.29605538, 0.12601386,
+       0.10123809, 0.08290107, 0.33398893, 0.29303095, 0.00364649,
+       0.21398385, 0.182026  , 0.19076294, 0.39906666, 0.20977587,
+       0.22367948, 0.32025433, 0.3369884 , 0.28004533, 0.21463089,
+       0.27908808, 0.2655042 , 0.11190807, 0.26156065, 0.36529917,
+       0.0649334 , 0.13255946, 0.28710106, 0.18467467, 0.23630102,
+       0.27242243, 0.3240949 , 0.14424652, 0.18933462, 0.15122901,
+       0.06808158, 0.28062516, 0.11421881, 0.27471176, 0.28281537,
+       0.27260506, 0.22607073, 0.30190662, 0.2284347 , 0.24431373,
+       0.17881757, 0.32088238, 0.33466682, 0.24409357, 0.25833276,
+       0.31752533, 0.3815076 , 0.20813645, 0.07598548, 0.40084884,
+       0.10335303, 0.24950355, 0.28270975, 0.05152317, 0.11701637,
+       0.13191937, 0.23866303, 0.22133754, 0.2313358 , 0.23707427,
+       0.3346128 , 0.06058829, 0.24647574, 0.27348107, 0.23686475,
+       0.27236453, 0.21611916, 0.20650437, 0.27367553, 0.18355772,
+       0.19983363, 0.2568411 , 0.2877219 , 0.21572685, 0.21104069,
+       0.2925789 , 0.22739999, 0.23569497, 0.09230375, 0.3900762 ,
+       0.24951576, 0.10811498, 0.14656709, 0.16921325, 0.13936105,
+       0.15142207, 0.31315178, 0.19708739, 0.29034695, 0.07817217,
+       0.17145158, 0.1062981 , 0.3540769 , 0.15663499, 0.20800795,
+       0.19286163, 0.15005049, 0.28991526, 0.32398036, 0.12802719,
+       0.1015038 , 0.2240345 , 0.19838136, 0.2864735 , 0.17356168,
+       0.3569115 , 0.2568451 , 0.04258371, 0.27594385, 0.08492754,
+       0.42687353, 0.27114388, 0.3323775 , 0.21543592, 0.23703824,
+       0.03866368, 0.1554278 , 0.20120582, 0.11149158, 0.15792985,
+       0.16350473, 0.15534851, 0.2662622 , 0.06983528, 0.41343457,
+       0.14769882, 0.1208851 , 0.43068603, 0.10097811, 0.22503151,
+       0.12006379, 0.10249618, 0.37219927, 0.14584535, 0.12133829,
+       0.09017809, 0.19452848, 0.14107464, 0.26009974, 0.13217366,
+       0.26640087, 0.10252339, 0.13317049, 0.47722852, 0.24365145,
+       0.15607837, 0.130383  , 0.3193019 , 0.23206353, 0.05286745,
+       0.11929309, 0.07978354, 0.19319636, 0.3214968 , 0.09732961,
+       0.21796627, 0.08439238, 0.24333273, 0.442477  , 0.11397038,
+       0.36567828, 0.12900847, 0.09247503, 0.1181021 , 0.10261861,
+       0.12913549, 0.11861537, 0.19067614, 0.09033515, 0.17689854,
+       0.14862497, 0.06055961, 0.11226165, 0.15814744, 0.14193375,
+       0.12873189, 0.13027209, 0.37061012, 0.13845101, 0.35362515,
+       0.12101825, 0.16313379, 0.21116371, 0.127663  , 0.12768623,
+       0.10608656, 0.09382683, 0.14038672, 0.15311986, 0.14856245,
+       0.14700255, 0.1606163 , 0.07649458, 0.53672916, 0.06099335,
+       0.13209197, 0.11679899, 0.16681407, 0.37814507, 0.0820802 ,
+       0.14112484, 0.16936098, 0.09463048, 0.14969172, 0.09972768,
+       0.5696183 , 0.13552843, 0.10755295, 0.1895187 , 0.10877873,
+       0.07873676, 0.1782641 , 0.14861126, 0.16501965, 0.14681768,
+       0.13279681, 0.15692233, 0.24968384, 0.09572612, 0.20843647,
+       0.25406435, 0.11545407, 0.16571681, 0.08264159, 0.2948121 ,
+       0.10378412, 0.15270613, 0.07915741, 0.1456529 , 0.16142292,
+       0.09609321, 0.10536384, 0.08924835, 0.27428326, 0.24407136,
+       0.16022713, 0.05797525, 0.10603175, 0.09254443, 0.19529171,
+       0.09288167, 0.11741257, 0.08329937, 0.32681462, 0.07297074,
+       0.04526947, 0.27371314, 0.14471073, 0.1431988 , 0.13591298,
+       0.17649738, 0.08477784, 0.33847764, 0.11448319, 0.23823895,
+       0.13918516, 0.14775239, 0.31546983, 0.55001754, 0.21649824,
+       0.08432838, 0.16514401, 0.5068546 , 0.09834578, 0.13540089,
+       0.15995885, 0.27420536, 0.30363134, 0.16577448, 0.28131777,
+       0.14663221, 0.08059011, 0.12628035, 0.11300021, 0.17583084,
+       0.18456028, 0.11816172, 0.10431027, 0.18353711, 0.09720431,
+       0.11686573, 0.38081506, 0.09576531, 0.14292188, 0.20522305,
+       0.15137506, 0.11612161, 0.12370395, 0.11010918, 0.5489163 ,
+       0.13875927, 0.14916342, 0.26108834, 0.107407  , 0.08442334,
+       0.16322075, 0.09101693, 0.16947459, 0.22623487, 0.35043412,
+       0.16969141, 0.05289152, 0.15826552, 0.17211355, 0.15441531,
+       0.14594878, 0.02316752, 0.16623278, 0.16308047, 0.14682472,
+       0.13006404, 0.27877033, 0.16500072, 0.18239726, 0.2548096 ,
+       0.19138114, 0.09451964, 0.08095929, 0.10021601, 0.07685386,
+       0.09270009, 0.10976227, 0.15583204, 0.09220655, 0.09863182,
+       0.11270104, 0.16921724, 0.09087789, 0.25847214, 0.16350316,
+       0.15779407, 0.16356319, 0.11539603, 0.24787942, 0.04576976,
+       0.10045172, 0.08724774, 0.1940736 , 0.09560868, 0.18391283,
+       0.19529575, 0.10772035, 0.14689751, 0.29045308, 0.11012246,
+       0.14820123, 0.13767578, 0.11715952, 0.13640535, 0.46089163,
+       0.3060424 , 0.09451906, 0.15490864, 0.1049001 , 0.15228269,
+       0.13556105, 0.01929745, 0.08753292, 0.18510427, 0.11696651,
+       0.3525364 , 0.12216497, 0.09221421, 0.37724683, 0.13743488,
+       0.15656199, 0.14711149, 0.14945586, 0.10622746, 0.27342477,
+       0.13999866, 0.0877746 , 0.1479247 , 0.59501165, 0.20938264,
+       0.38042656, 0.10806645, 0.13055944, 0.11566976, 0.09940404,
+       0.14931314, 0.16603713, 0.29394463, 0.09297122, 0.21810007,
+       0.15597928, 0.24384402, 0.14086264, 0.13071926, 0.14768964,
+       0.15870918, 0.14154837, 0.10005355, 0.10324882, 0.13978224,
+       0.1214769 , 0.12338027, 0.12888066, 0.4258969 , 0.24744295,
+       0.16985044, 0.16350102, 0.15012754, 0.0712075 , 0.36807913,
+       0.09688136, 0.25890216, 0.08559835, 0.14015308, 0.10751078,
+       0.1790747 , 0.33791003, 0.16361263, 0.41446465, 0.16277729,
+       0.0980247 , 0.2897872 , 0.3296396 , 0.14228325, 0.17971171,
+       0.1253464 , 0.22845013, 0.38022128, 0.19550376, 0.15250847,
+       0.13476838, 0.7251778 , 0.18941171, 0.16682655, 0.15101191,
+       0.14940354, 0.13183816, 0.21601088, 0.16531517, 0.14661293],
+      dtype=float32)
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]
+Type 'copyright', 'credits' or 'license' for more information

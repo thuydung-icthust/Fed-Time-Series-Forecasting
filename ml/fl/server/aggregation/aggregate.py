@@ -36,21 +36,34 @@ def median_aggregate(results: List[Tuple[List[np.ndarray], int]]) -> np.ndarray:
     return weights_prime
 
 
-def fedavg_aggregate(results: List[Tuple[List[np.ndarray], int]]) -> np.ndarray:
+def fedavg_aggregate(results: List[Tuple[List[np.ndarray], int]],
+                     coffs = []) -> np.ndarray:
     """Compute weighted average."""
     # Calculate the total number of examples used during training
     num_examples_total = sum([num_examples for _, num_examples in results])
 
-    # Create a list of weights, each multiplied by the related number of examples
-    weighted_weights = [
-        [layer * num_examples for layer in weights] for weights, num_examples in results
-    ]
+    if not len(coffs):
+        # Create a list of weights, each multiplied by the related number of examples
+        weighted_weights = [
+            [layer * num_examples for layer in weights] for weights, num_examples in results
+        ]
 
-    # Compute average weights of each layer
-    weights_prime: np.ndarray = [
-        reduce(np.add, layer_updates) / num_examples_total
-        for layer_updates in zip(*weighted_weights)
-    ]
+        # Compute average weights of each layer
+        weights_prime: np.ndarray = [
+            reduce(np.add, layer_updates) / num_examples_total
+            for layer_updates in zip(*weighted_weights)
+        ]
+    else:
+        # Create a list of weights, each multiplied by the related number of examples
+        weighted_weights = []
+        for idx, (weights, num_examples) in enumerate(results):
+            weighted_weights.append([layer * coffs[idx] for layer in weights])
+
+        # Compute average weights of each layer
+        weights_prime: np.ndarray = [
+            reduce(np.add, layer_updates) / sum(coffs)
+            for layer_updates in zip(*weighted_weights)
+        ]
     return weights_prime
 
 

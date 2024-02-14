@@ -1,0 +1,18 @@
+wandb/*
+local/*
+stats/*
+# Byte-compiled / optimized / DLL files
+*/__pycache__/*
+*.py[cod]
+*$py.class
+*.cpython*
+*/tracks/*
+*.zip
+*.pth
+.DS_Store
+*temp/*
+src/tracks/*
+*/tracks/*.png
+src/__pycache__/*
+*/style_stats/*
+*.pkl

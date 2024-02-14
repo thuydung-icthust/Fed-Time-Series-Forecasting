@@ -1,0 +1,28 @@
+INFO logger 2024-02-01 12:24:31,710 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 12:24:31,710 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 12:24:31,710 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 12:24:31,711 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 12:24:31,712 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 12:24:31,712 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 12:24:31,712 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 12:24:31,713 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 12:24:31,715 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 12:24:31,715 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 12:24:31,715 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 12:24:31,715 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 12:24:31,716 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 12:24:31,716 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 12:24:31,716 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 12:24:31,717 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 12:24:31,717 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 122, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 46, in main
+    global_model, history = fit(
+                            ^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 68, in fit
+    X_val[domain_name], y_val[domain_name],
+    ~~~~~^^^^^^^^^^^^^
+KeyError: 'E'
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])

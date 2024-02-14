@@ -1,0 +1,669 @@
+2024-02-04 11:45:37,833 INFO    StreamThr :693430 [internal.py:wandb_internal():86] W&B internal server running at pid: 693430, started at: 2024-02-04 11:45:37.833022
+2024-02-04 11:45:37,834 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status
+2024-02-04 11:45:37,838 INFO    WriterThread:693430 [datastore.py:open_for_write():85] open: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/run-jqlrouxi.wandb
+2024-02-04 11:45:37,838 DEBUG   SenderThread:693430 [sender.py:send():380] send: header
+2024-02-04 11:45:37,841 DEBUG   SenderThread:693430 [sender.py:send():380] send: run
+2024-02-04 11:45:38,080 INFO    SenderThread:693430 [dir_watcher.py:__init__():211] watching files in: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files
+2024-02-04 11:45:38,080 INFO    SenderThread:693430 [sender.py:_start_run_threads():1122] run started: jqlrouxi with start time 1707075937.833023
+2024-02-04 11:45:38,086 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: check_version
+2024-02-04 11:45:38,086 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: check_version
+2024-02-04 11:45:38,238 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: run_start
+2024-02-04 11:45:38,246 DEBUG   HandlerThread:693430 [system_info.py:__init__():32] System info init
+2024-02-04 11:45:38,246 DEBUG   HandlerThread:693430 [system_info.py:__init__():47] System info init done
+2024-02-04 11:45:38,246 INFO    HandlerThread:693430 [system_monitor.py:start():194] Starting system monitor
+2024-02-04 11:45:38,246 INFO    SystemMonitor:693430 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-02-04 11:45:38,247 INFO    HandlerThread:693430 [system_monitor.py:probe():214] Collecting system info
+2024-02-04 11:45:38,247 INFO    SystemMonitor:693430 [interfaces.py:start():190] Started cpu monitoring
+2024-02-04 11:45:38,247 INFO    SystemMonitor:693430 [interfaces.py:start():190] Started disk monitoring
+2024-02-04 11:45:38,248 INFO    SystemMonitor:693430 [interfaces.py:start():190] Started gpu monitoring
+2024-02-04 11:45:38,249 INFO    SystemMonitor:693430 [interfaces.py:start():190] Started memory monitoring
+2024-02-04 11:45:38,250 INFO    SystemMonitor:693430 [interfaces.py:start():190] Started network monitoring
+2024-02-04 11:45:38,264 DEBUG   HandlerThread:693430 [system_info.py:probe():196] Probing system
+2024-02-04 11:45:38,265 DEBUG   HandlerThread:693430 [system_info.py:_probe_git():181] Probing git
+2024-02-04 11:45:38,269 DEBUG   HandlerThread:693430 [system_info.py:_probe_git():189] Probing git done
+2024-02-04 11:45:38,269 DEBUG   HandlerThread:693430 [system_info.py:probe():244] Probing system done
+2024-02-04 11:45:38,269 DEBUG   HandlerThread:693430 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-15-generic-x86_64-with-glibc2.35', 'python': '3.11.5', 'heartbeatAt': '2024-02-04T19:45:38.264181', 'startedAt': '2024-02-04T19:45:37.828049', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/judy/code/Fed-Time-Series-Forecasting/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/thuydung-icthust/Fed-Time-Series-Forecasting.git', 'commit': 'ba3c3b00901ac61a44e594efa41aec75a50e875f'}, 'email': 'thuydungnguyen.ictk63@gmail.com', 'root': '/home/judy/code/Fed-Time-Series-Forecasting', 'host': 'wakka', 'username': 'judy', 'executable': '/home/judy/miniconda3/envs/judy/bin/python', 'cpu_count': 28, 'cpu_count_logical': 56, 'cpu_freq': {'current': 2.599446428571428, 'min': 800.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 2.596, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.605, 'min': 800.0, 'max': 3400.0}, {'current': 2.609, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.597, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.603, 'min': 800.0, 'max': 3400.0}, {'current': 2.595, 'min': 800.0, 'max': 3400.0}, {'current': 2.596, 'min': 800.0, 'max': 3400.0}, {'current': 2.597, 'min': 800.0, 'max': 3400.0}, {'current': 2.606, 'min': 800.0, 'max': 3400.0}, {'current': 2.603, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.532, 'min': 800.0, 'max': 3400.0}, {'current': 2.593, 'min': 800.0, 'max': 3400.0}, {'current': 2.597, 'min': 800.0, 'max': 3400.0}, {'current': 2.596, 'min': 800.0, 'max': 3400.0}, {'current': 2.596, 'min': 800.0, 'max': 3400.0}, {'current': 2.597, 'min': 800.0, 'max': 3400.0}, {'current': 2.599, 'min': 800.0, 'max': 3400.0}, {'current': 2.597, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.603, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.599, 'min': 800.0, 'max': 3400.0}, {'current': 2.605, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.604, 'min': 800.0, 'max': 3400.0}, {'current': 2.485, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.599, 'min': 800.0, 'max': 3400.0}, {'current': 2.604, 'min': 800.0, 'max': 3400.0}, {'current': 2.604, 'min': 800.0, 'max': 3400.0}, {'current': 2.604, 'min': 800.0, 'max': 3400.0}, {'current': 2.6, 'min': 800.0, 'max': 3400.0}, {'current': 2.599, 'min': 800.0, 'max': 3400.0}], 'disk': {'/': {'total': 7391.692821502686, 'used': 1223.4429168701172}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.30216598510742}}
+2024-02-04 11:45:38,269 INFO    HandlerThread:693430 [system_monitor.py:probe():224] Finished collecting system info
+2024-02-04 11:45:38,269 INFO    HandlerThread:693430 [system_monitor.py:probe():227] Publishing system info
+2024-02-04 11:45:38,269 DEBUG   HandlerThread:693430 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-02-04 11:45:38,270 DEBUG   HandlerThread:693430 [system_info.py:_save_pip():68] Saving pip packages done
+2024-02-04 11:45:38,270 DEBUG   HandlerThread:693430 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-02-04 11:45:39,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_created():271] file/dir created: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/requirements.txt
+2024-02-04 11:45:39,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_created():271] file/dir created: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/conda-environment.yaml
+2024-02-04 11:45:41,458 DEBUG   HandlerThread:693430 [system_info.py:_save_conda():87] Saving conda packages done
+2024-02-04 11:45:41,459 INFO    HandlerThread:693430 [system_monitor.py:probe():229] Finished publishing system info
+2024-02-04 11:45:41,461 DEBUG   SenderThread:693430 [sender.py:send():380] send: files
+2024-02-04 11:45:41,461 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-02-04 11:45:41,468 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:45:41,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:45:41,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:45:41,667 DEBUG   SenderThread:693430 [sender.py:send():380] send: telemetry
+2024-02-04 11:45:41,805 INFO    wandb-upload_0:693430 [upload_job.py:push():131] Uploaded file /tmp/tmpn92lytl1wandb/mwndw11j-wandb-metadata.json
+2024-02-04 11:45:42,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/conda-environment.yaml
+2024-02-04 11:45:42,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_created():271] file/dir created: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-metadata.json
+2024-02-04 11:45:42,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_created():271] file/dir created: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:43,392 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:45:43,830 DEBUG   SenderThread:693430 [sender.py:send():380] send: telemetry
+2024-02-04 11:45:43,902 DEBUG   SenderThread:693430 [sender.py:send():380] send: telemetry
+2024-02-04 11:45:44,081 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:45,082 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:46,082 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:48,082 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:48,557 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:45:49,083 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:50,083 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:51,083 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:51,517 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:51,519 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:51,519 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:51,736 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:51,736 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:51,736 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:51,736 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:51,736 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:51,736 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:51,737 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:51,737 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:51,737 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:52,083 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:52,084 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_created():271] file/dir created: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:45:53,084 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:54,077 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:45:54,084 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:55,084 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:56,085 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:56,468 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:45:56,468 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:45:56,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:45:57,085 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:58,085 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:45:58,750 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:58,750 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:58,751 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:45:58,751 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:58,752 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:58,752 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:58,752 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:58,752 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:58,752 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:58,753 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:45:58,753 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:45:58,753 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:45:59,080 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:45:59,085 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:00,086 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:01,086 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:02,086 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:03,086 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:04,087 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:04,365 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:05,087 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:06,087 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:06,097 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:06,099 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:06,101 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:06,187 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:06,187 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:06,188 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:06,188 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:06,188 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:06,188 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:06,189 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:06,189 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:06,189 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:07,087 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:07,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:08,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:09,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:09,371 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:10,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/config.yaml
+2024-02-04 11:46:10,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:11,088 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:11,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:46:11,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:46:11,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:46:12,089 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:13,001 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:13,002 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:13,003 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:13,096 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:13,096 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:13,096 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:13,097 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:13,097 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:13,097 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:13,097 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:13,097 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:13,097 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:13,098 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:14,097 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:14,097 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:14,805 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:15,097 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:16,097 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:18,098 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:19,098 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:19,863 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:20,105 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:20,269 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:20,270 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:20,270 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:21,195 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:21,308 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:21,309 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:21,329 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:21,329 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:21,329 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:21,336 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:21,337 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:21,337 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:21,337 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:22,196 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:22,196 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:23,196 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:24,196 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:25,006 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:25,196 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:26,197 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:26,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:46:26,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:46:26,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:46:27,220 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:27,518 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:27,520 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:27,520 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:27,554 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:27,554 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:27,554 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:27,555 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:27,555 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:27,555 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:27,555 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:27,555 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:27,555 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:28,219 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:28,219 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:29,219 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:30,163 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:30,219 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:31,219 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:32,220 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:33,220 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:34,220 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:35,220 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:35,367 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:35,689 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:35,690 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:35,690 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:35,782 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:35,782 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:35,782 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:35,783 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:35,783 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:35,783 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:35,783 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:35,783 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:35,783 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:36,221 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:36,221 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:37,221 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:38,221 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:38,250 DEBUG   SystemMonitor:693430 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-02-04 11:46:38,284 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:46:39,222 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:40,222 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:40,590 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:41,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:46:41,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:46:41,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:46:42,222 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:43,215 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:43,215 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:43,216 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:43,216 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:43,216 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:43,217 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:43,217 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:43,217 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:43,217 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:43,218 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:43,218 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:43,218 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:43,222 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:43,223 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:44,223 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:45,223 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:45,716 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:46,223 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:47,223 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:48,224 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:49,224 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:49,907 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:49,907 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:49,908 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:50,027 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:50,027 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:50,027 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:50,028 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:50,028 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:50,028 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:50,028 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:50,028 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:50,029 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:50,224 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:50,224 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:50,850 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:51,225 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:52,225 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:53,225 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:54,226 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:55,226 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:55,975 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:46:56,226 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:56,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:46:56,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:46:56,477 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:46:57,234 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:57,269 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:57,271 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:57,272 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:46:57,341 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:57,341 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:57,341 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:57,341 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:57,341 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:57,341 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:57,342 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:46:57,342 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:46:57,342 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:46:58,234 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:46:58,234 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:46:59,234 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:00,234 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:01,055 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:01,235 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:02,235 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:03,235 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:04,152 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:04,152 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:04,152 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:04,242 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:04,242 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:04,242 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:04,243 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:04,244 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:04,244 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:04,255 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:04,255 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:04,255 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:04,255 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:05,242 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:47:05,242 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:06,242 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:06,242 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:07,243 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:08,243 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:08,252 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:47:10,243 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:11,244 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:11,262 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:11,447 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:11,448 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:11,448 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:11,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:47:11,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:47:11,538 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:11,538 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:11,538 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:11,538 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:11,538 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:11,538 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:11,538 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:11,539 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:11,539 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:11,539 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:47:12,244 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:47:12,244 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:13,244 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:14,245 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:15,245 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:16,245 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:16,273 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:17,245 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:18,246 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:19,246 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:20,246 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:21,518 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:26,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:47:26,470 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:47:26,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:47:26,520 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:31,520 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:36,521 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:38,253 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:47:41,210 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:41,210 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:41,211 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:41,242 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:41,242 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:41,243 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:41,244 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:41,244 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:41,244 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:41,244 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:41,244 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:41,244 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:41,276 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:47:41,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:47:41,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:47:41,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:47:41,623 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:42,276 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:43,276 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:44,277 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:45,277 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:46,277 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:47,277 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:47,282 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:48,278 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:48,698 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:48,702 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:48,702 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:48,929 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:48,929 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:48,930 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:48,930 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:48,930 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:48,930 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:48,931 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:48,931 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:48,931 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:49,278 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:47:49,278 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:50,278 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:51,278 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:52,279 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:52,679 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:54,279 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:55,580 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:55,580 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:55,580 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:47:55,751 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:55,751 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:55,752 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:55,752 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:55,752 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:55,752 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:55,752 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:47:55,752 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:47:55,753 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:47:56,280 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:47:56,280 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:56,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:47:56,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:47:56,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:47:57,280 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:57,955 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:47:58,280 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:47:59,281 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:00,281 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:01,281 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:02,281 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:02,772 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:02,772 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:02,772 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:02,919 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:02,919 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:02,919 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:02,919 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:02,919 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:02,920 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:02,920 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:02,920 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:02,920 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:03,282 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:48:03,282 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:03,537 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:04,283 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:06,283 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:07,283 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:08,254 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:48:08,283 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:08,737 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:09,284 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:10,284 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:11,284 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:11,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:48:11,469 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:48:11,476 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:48:14,546 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:19,547 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:24,548 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:26,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:48:26,470 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:48:26,517 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:48:29,576 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:34,577 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:38,255 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:48:40,256 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:41,123 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:41,126 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:41,128 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:41,279 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:41,279 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:41,280 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:41,293 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:48:41,293 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:41,294 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:41,294 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:41,294 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:41,294 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:41,295 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:41,469 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:48:41,470 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:48:41,477 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:48:42,293 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:48:42,293 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:43,293 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:44,293 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:45,294 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:45,618 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:46,294 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:47,294 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:48,009 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:48,010 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:48,011 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:48,175 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:48,175 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:48,176 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:48,176 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:48,176 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:48,176 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:48,176 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:48,176 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:48,177 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:48,294 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:48:48,295 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:49,295 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:50,295 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:50,782 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:52,295 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:53,296 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:54,296 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:55,202 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:55,202 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:55,203 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:48:55,299 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:55,373 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:55,373 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:55,373 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:55,374 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:55,374 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:55,374 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:55,374 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:48:55,374 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:48:55,375 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:48:55,814 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:48:56,300 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:48:56,300 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:56,470 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-04 11:48:56,470 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: stop_status
+2024-02-04 11:48:56,477 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:48:57,300 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:58,300 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:48:59,300 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:00,301 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:01,301 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:01,419 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:49:02,303 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:02,488 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:49:02,489 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:49:02,489 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-04 11:49:02,728 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:49:02,728 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:49:02,729 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:49:02,729 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:49:02,729 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:49:02,729 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:49:02,729 DEBUG   SenderThread:693430 [sender.py:send():380] send: history
+2024-02-04 11:49:02,729 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: summary_record
+2024-02-04 11:49:02,730 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:49:02,730 DEBUG   SenderThread:693430 [sender.py:send():380] send: exit
+2024-02-04 11:49:02,730 INFO    SenderThread:693430 [sender.py:send_exit():585] handling exit code: 0
+2024-02-04 11:49:02,730 INFO    SenderThread:693430 [sender.py:send_exit():587] handling runtime: 204
+2024-02-04 11:49:02,730 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:49:02,730 INFO    SenderThread:693430 [sender.py:send_exit():593] send defer
+2024-02-04 11:49:02,730 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,730 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 0
+2024-02-04 11:49:02,731 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,731 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-02-04 11:49:02,731 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 1
+2024-02-04 11:49:02,731 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,731 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 1
+2024-02-04 11:49:02,731 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,731 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-02-04 11:49:02,731 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 2
+2024-02-04 11:49:02,731 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,731 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 2
+2024-02-04 11:49:02,731 INFO    HandlerThread:693430 [system_monitor.py:finish():203] Stopping system monitor
+2024-02-04 11:49:02,731 DEBUG   SystemMonitor:693430 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-02-04 11:49:02,731 DEBUG   SystemMonitor:693430 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-02-04 11:49:02,732 INFO    HandlerThread:693430 [interfaces.py:finish():202] Joined cpu monitor
+2024-02-04 11:49:02,733 INFO    HandlerThread:693430 [interfaces.py:finish():202] Joined disk monitor
+2024-02-04 11:49:02,972 INFO    HandlerThread:693430 [interfaces.py:finish():202] Joined gpu monitor
+2024-02-04 11:49:02,972 INFO    HandlerThread:693430 [interfaces.py:finish():202] Joined memory monitor
+2024-02-04 11:49:02,973 INFO    HandlerThread:693430 [interfaces.py:finish():202] Joined network monitor
+2024-02-04 11:49:02,973 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,973 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-02-04 11:49:02,973 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 3
+2024-02-04 11:49:02,973 DEBUG   SenderThread:693430 [sender.py:send():380] send: stats
+2024-02-04 11:49:02,974 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,974 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 3
+2024-02-04 11:49:02,974 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,974 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-02-04 11:49:02,974 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 4
+2024-02-04 11:49:02,974 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,974 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 4
+2024-02-04 11:49:02,974 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,974 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-02-04 11:49:02,974 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 5
+2024-02-04 11:49:02,974 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,974 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 5
+2024-02-04 11:49:02,974 DEBUG   SenderThread:693430 [sender.py:send():380] send: summary
+2024-02-04 11:49:02,975 INFO    SenderThread:693430 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-02-04 11:49:02,975 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,975 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-02-04 11:49:02,975 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 6
+2024-02-04 11:49:02,975 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,975 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 6
+2024-02-04 11:49:02,975 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,975 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-02-04 11:49:02,975 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 7
+2024-02-04 11:49:02,976 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: status_report
+2024-02-04 11:49:02,976 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:02,976 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 7
+2024-02-04 11:49:02,976 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:02,976 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-02-04 11:49:03,303 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:49:03,303 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:03,495 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-04 11:49:04,303 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:05,218 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 8
+2024-02-04 11:49:05,219 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: poll_exit
+2024-02-04 11:49:05,219 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:05,219 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 8
+2024-02-04 11:49:05,219 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:05,219 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-02-04 11:49:05,219 INFO    SenderThread:693430 [job_builder.py:build():281] Attempting to build job artifact
+2024-02-04 11:49:05,220 INFO    SenderThread:693430 [job_builder.py:_get_source_type():393] is repo sourced job
+2024-02-04 11:49:05,220 INFO    SenderThread:693430 [job_builder.py:build():369] adding wandb-job metadata file
+2024-02-04 11:49:05,262 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 9
+2024-02-04 11:49:05,262 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:05,262 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 9
+2024-02-04 11:49:05,262 DEBUG   SenderThread:693430 [sender.py:send():380] send: artifact
+2024-02-04 11:49:05,304 INFO    Thread-12 :693430 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:05,575 INFO    SenderThread:693430 [sender.py:send_artifact():1456] sent artifact job-https___github.com_thuydung-icthust_Fed-Time-Series-Forecasting.git_main.py - {'id': 'QXJ0aWZhY3Q6NzExMTcxNDUz', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEzNjA3NDY3OQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzEzMDk3OTAw', 'versionIndex': 9}}}
+2024-02-04 11:49:05,575 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:05,575 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-02-04 11:49:05,575 INFO    SenderThread:693430 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-02-04 11:49:06,304 INFO    SenderThread:693430 [dir_watcher.py:finish():388] scan: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files
+2024-02-04 11:49:06,304 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json wandb-summary.json
+2024-02-04 11:49:06,304 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/config.yaml config.yaml
+2024-02-04 11:49:06,304 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log output.log
+2024-02-04 11:49:06,304 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-metadata.json wandb-metadata.json
+2024-02-04 11:49:06,305 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/requirements.txt requirements.txt
+2024-02-04 11:49:06,305 INFO    SenderThread:693430 [dir_watcher.py:finish():402] scan save: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/conda-environment.yaml conda-environment.yaml
+2024-02-04 11:49:06,306 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 10
+2024-02-04 11:49:06,308 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:06,309 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 10
+2024-02-04 11:49:06,311 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:06,312 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-02-04 11:49:06,312 INFO    SenderThread:693430 [file_pusher.py:finish():175] shutting down file pusher
+2024-02-04 11:49:06,500 INFO    wandb-upload_0:693430 [upload_job.py:push():131] Uploaded file /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/config.yaml
+2024-02-04 11:49:06,601 INFO    wandb-upload_1:693430 [upload_job.py:push():131] Uploaded file /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/wandb-summary.json
+2024-02-04 11:49:06,715 INFO    wandb-upload_4:693430 [upload_job.py:push():131] Uploaded file /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/conda-environment.yaml
+2024-02-04 11:49:06,746 INFO    wandb-upload_3:693430 [upload_job.py:push():131] Uploaded file /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/requirements.txt
+2024-02-04 11:49:06,821 INFO    wandb-upload_2:693430 [upload_job.py:push():131] Uploaded file /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/files/output.log
+2024-02-04 11:49:07,022 INFO    Thread-11 (_thread_body):693430 [sender.py:transition_state():613] send defer: 11
+2024-02-04 11:49:07,022 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:07,022 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 11
+2024-02-04 11:49:07,022 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:07,022 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-02-04 11:49:07,023 INFO    SenderThread:693430 [file_pusher.py:join():181] waiting for file pusher
+2024-02-04 11:49:07,023 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 12
+2024-02-04 11:49:07,023 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:07,023 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 12
+2024-02-04 11:49:07,023 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:07,023 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-02-04 11:49:07,023 INFO    SenderThread:693430 [file_stream.py:finish():595] file stream finish called
+2024-02-04 11:49:07,220 INFO    SenderThread:693430 [file_stream.py:finish():599] file stream finish is done
+2024-02-04 11:49:07,220 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 13
+2024-02-04 11:49:07,220 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:07,220 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 13
+2024-02-04 11:49:07,220 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:07,220 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-02-04 11:49:07,220 INFO    SenderThread:693430 [sender.py:transition_state():613] send defer: 14
+2024-02-04 11:49:07,220 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: defer
+2024-02-04 11:49:07,220 INFO    HandlerThread:693430 [handler.py:handle_request_defer():172] handle defer: 14
+2024-02-04 11:49:07,220 DEBUG   SenderThread:693430 [sender.py:send():380] send: final
+2024-02-04 11:49:07,220 DEBUG   SenderThread:693430 [sender.py:send():380] send: footer
+2024-02-04 11:49:07,220 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: defer
+2024-02-04 11:49:07,220 INFO    SenderThread:693430 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-02-04 11:49:07,221 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-04 11:49:07,221 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: poll_exit
+2024-02-04 11:49:07,221 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: server_info
+2024-02-04 11:49:07,221 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: server_info
+2024-02-04 11:49:07,223 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: get_summary
+2024-02-04 11:49:07,223 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: sampled_history
+2024-02-04 11:49:07,224 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-04 11:49:07,224 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: job_info
+2024-02-04 11:49:07,277 DEBUG   SenderThread:693430 [sender.py:send_request():407] send_request: job_info
+2024-02-04 11:49:07,277 INFO    MainThread:693430 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2024-02-04 11:49:07,277 INFO    MainThread:693430 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2024-02-04 11:49:07,278 INFO    MainThread:693430 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2024-02-04 11:49:07,278 DEBUG   HandlerThread:693430 [handler.py:handle_request():146] handle_request: shutdown
+2024-02-04 11:49:07,278 INFO    HandlerThread:693430 [handler.py:finish():866] shutting down handler
+2024-02-04 11:49:08,224 INFO    WriterThread:693430 [datastore.py:close():294] close: /home/judy/code/Fed-Time-Series-Forecasting/wandb/run-20240204_114537-jqlrouxi/run-jqlrouxi.wandb
+2024-02-04 11:49:08,277 INFO    SenderThread:693430 [sender.py:finish():1534] shutting down sender
+2024-02-04 11:49:08,277 INFO    SenderThread:693430 [file_pusher.py:finish():175] shutting down file pusher
+2024-02-04 11:49:08,277 INFO    SenderThread:693430 [file_pusher.py:join():181] waiting for file pusher

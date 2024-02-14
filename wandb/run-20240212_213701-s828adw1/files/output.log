@@ -1,0 +1,365 @@
+INFO logger 2024-02-12 21:37:09,542 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-12 21:37:09,543 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-12 21:37:09,543 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-12 21:37:09,543 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-12 21:37:09,553 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-12 21:37:09,554 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-12 21:37:09,554 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-12 21:37:09,554 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-12 21:37:09,564 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-12 21:37:09,564 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-12 21:37:09,564 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-12 21:37:09,564 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-12 21:37:09,566 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-12 21:37:09,566 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-12 21:37:09,566 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-12 21:37:09,566 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-12 21:37:09,566 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+X_val_sub.shape is 535 	 y_val_sub is 535
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-12 21:37:11,825 | server.py:74 | Initializing client manager...
+INFO logger 2024-02-12 21:37:11,826 | server.py:81 | Registering clients...
+INFO logger 2024-02-12 21:37:11,826 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-12 21:37:11,827 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-12 21:37:11,827 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-12 21:37:11,827 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-12 21:37:11,828 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-12 21:37:11,828 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-12 21:37:11,828 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-12 21:37:11,829 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-12 21:37:11,829 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-12 21:37:11,829 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-12 21:37:11,830 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-12 21:37:11,830 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-12 21:37:11,831 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-12 21:37:11,831 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-12 21:37:11,831 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-12 21:37:11,832 | server.py:85 | Client manager initialized!
+INFO logger 2024-02-12 21:37:11,832 | server.py:67 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-12 21:37:11,833 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:37:14,165 | server.py:99 | Starting FL rounds
+INFO logger 2024-02-12 21:37:14,166 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-12 21:37:15,660 | train_utils.py:153 | Best Loss: 0.0003356432912555354
+INFO logger 2024-02-12 21:37:16,719 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:37:17,946 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-12 21:37:18,639 | train_utils.py:153 | Best Loss: 0.00021519607769838277
+INFO logger 2024-02-12 21:37:19,129 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:37:19,718 | train_utils.py:153 | Best Loss: 0.0005554203733758272
+INFO logger 2024-02-12 21:37:20,101 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-12 21:37:21,320 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:37:22,223 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+INFO logger 2024-02-12 21:37:22,647 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-12 21:37:23,111 | train_utils.py:153 | Best Loss: 0.0001559492036394307
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:37:23,805 | train_utils.py:153 | Best Loss: 0.000720918799440066
+INFO logger 2024-02-12 21:37:24,820 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-12 21:37:26,487 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-12 21:37:26,917 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.17.2 -- An enhanced Interactive Python. Type '?' for help.
+array([0.00189032, 0.00189032, 0.00189032, 0.00189032, 0.00189032,
+       0.00189032, 0.00189032, 0.00189032, 0.00189032, 0.00189032,
+       0.00189032, 0.00189032, 0.00189032, 0.00189032, 0.00189032,
+       0.00189032, 0.00189032, 0.00189032, 0.00189032, 0.00189032,
+       0.00318126, 0.00318126, 0.00318126, 0.00318126, 0.00318126,
+       0.00318126, 0.00318126, 0.00318126, 0.00318126, 0.00318126,
+       0.00318126, 0.00318126, 0.00318126, 0.00318126, 0.00318126,
+       0.00318126, 0.00318126, 0.00318126, 0.00318126, 0.00318126,
+       0.00308905, 0.00308905, 0.00308905, 0.00308905, 0.00308905,
+       0.00308905, 0.00308905, 0.00308905, 0.00308905, 0.00308905,
+       0.00308905, 0.00308905, 0.00308905, 0.00308905, 0.00308905,
+       0.00308905, 0.00308905, 0.00308905, 0.00308905, 0.00308905,
+       0.00179811, 0.00179811, 0.00179811, 0.00179811, 0.00179811,
+       0.00179811, 0.00179811, 0.00179811, 0.00179811, 0.00179811,
+       0.00179811, 0.00179811, 0.00179811, 0.00179811, 0.00179811,
+       0.00179811, 0.00179811, 0.00179811, 0.00179811, 0.00179811,
+       0.02088699, 0.02088699, 0.02088699, 0.02088699, 0.02088699,
+       0.02088699, 0.02088699, 0.02088699, 0.02088699, 0.02088699,
+       0.02088699, 0.02088699, 0.02088699, 0.02088699, 0.02088699,
+       0.02088699, 0.02088699, 0.02088699, 0.02088699, 0.02088699,
+       0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 ,
+       0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 ,
+       0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 ,
+       0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 , 0.0219173 ,
+       0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 ,
+       0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 ,
+       0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 ,
+       0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 , 0.0529668 ,
+       0.05081253, 0.05081253, 0.05081253, 0.05081253, 0.05081253,
+       0.05081253, 0.05081253, 0.05081253, 0.05081253, 0.05081253,
+       0.05081253, 0.05081253, 0.05081253, 0.05081253, 0.05081253,
+       0.05081253, 0.05081253, 0.05081253, 0.05081253, 0.05081253,
+       0.02777127, 0.02777127, 0.02777127, 0.02777127, 0.02777127,
+       0.02777127, 0.02777127, 0.02777127, 0.02777127, 0.02777127,
+       0.02777127, 0.02777127, 0.02777127, 0.02777127, 0.02777127,
+       0.02777127, 0.02777127, 0.02777127, 0.02777127, 0.02777127,
+       0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 ,
+       0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 ,
+       0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 ,
+       0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 , 0.0447244 ,
+       0.01840491, 0.01840491, 0.01840491, 0.01840491, 0.01840491,
+       0.01840491, 0.01840491, 0.01840491, 0.01840491, 0.01840491,
+       0.01840491, 0.01840491, 0.01840491, 0.01840491, 0.01840491,
+       0.01840491, 0.01840491, 0.01840491, 0.01840491, 0.01840491,
+       0.05997567, 0.05997567, 0.05997567, 0.05997567, 0.05997567,
+       0.05997567, 0.05997567, 0.05997567, 0.05997567, 0.05997567,
+       0.05997567, 0.05997567, 0.05997567, 0.05997567, 0.05997567,
+       0.05997567, 0.05997567, 0.05997567, 0.05997567, 0.05997567,
+       0.07693784, 0.07693784, 0.07693784, 0.07693784, 0.07693784,
+       0.07693784, 0.07693784, 0.07693784, 0.07693784, 0.07693784,
+       0.07693784, 0.07693784, 0.07693784, 0.07693784, 0.07693784,
+       0.07693784, 0.07693784, 0.07693784, 0.07693784, 0.07693784,
+       0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 ,
+       0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 ,
+       0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 ,
+       0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 , 0.0906996 ,
+       0.07885809, 0.07885809, 0.07885809, 0.07885809, 0.07885809,
+       0.07885809, 0.07885809, 0.07885809, 0.07885809, 0.07885809,
+       0.07885809, 0.07885809, 0.07885809, 0.07885809, 0.07885809,
+       0.07885809, 0.07885809, 0.07885809, 0.07885809, 0.07885809,
+       0.04294949, 0.04294949, 0.04294949, 0.04294949, 0.04294949,
+       0.04294949, 0.04294949, 0.04294949, 0.04294949, 0.04294949,
+       0.04294949, 0.04294949, 0.04294949, 0.04294949, 0.04294949,
+       0.04294949, 0.04294949, 0.04294949, 0.04294949, 0.04294949,
+       0.06573641, 0.06573641, 0.06573641, 0.06573641, 0.06573641,
+       0.06573641, 0.06573641, 0.06573641, 0.06573641, 0.06573641,
+       0.06573641, 0.06573641, 0.06573641, 0.06573641, 0.06573641,
+       0.06573641, 0.06573641, 0.06573641, 0.06573641, 0.06573641,
+       0.07463355, 0.07463355, 0.07463355, 0.07463355, 0.07463355,
+       0.07463355, 0.07463355, 0.07463355, 0.07463355, 0.07463355,
+       0.07463355, 0.07463355, 0.07463355, 0.07463355, 0.07463355,
+       0.07463355, 0.07463355, 0.07463355, 0.07463355, 0.07463355,
+       0.06804071, 0.06804071, 0.06804071, 0.06804071, 0.06804071,
+       0.06804071, 0.06804071, 0.06804071, 0.06804071, 0.06804071,
+       0.06804071, 0.06804071, 0.06804071, 0.06804071, 0.06804071,
+       0.06804071, 0.06804071, 0.06804071, 0.06804071, 0.06804071,
+       0.07239327, 0.07239327, 0.07239327, 0.07239327, 0.07239327,
+       0.07239327, 0.07239327, 0.07239327, 0.07239327, 0.07239327,
+       0.07239327, 0.07239327, 0.07239327, 0.07239327, 0.07239327,
+       0.07239327, 0.07239327, 0.07239327, 0.07239327, 0.07239327,
+       0.02649939, 0.02649939, 0.02649939, 0.02649939, 0.02649939,
+       0.02649939, 0.02649939, 0.02649939, 0.02649939, 0.02649939,
+       0.02649939, 0.02649939, 0.02649939, 0.02649939, 0.02649939,
+       0.02649939, 0.02649939, 0.02649939, 0.02649939, 0.02649939,
+       0.05210267, 0.05210267, 0.05210267, 0.05210267, 0.05210267,
+       0.05210267, 0.05210267, 0.05210267, 0.05210267, 0.05210267,
+       0.05210267, 0.05210267, 0.05210267, 0.05210267, 0.05210267,
+       0.05210267, 0.05210267, 0.05210267, 0.05210267, 0.05210267,
+       0.11950329, 0.11950329, 0.11950329, 0.11950329, 0.11950329,
+       0.11950329, 0.11950329, 0.11950329, 0.11950329, 0.11950329,
+       0.11950329, 0.11950329, 0.11950329, 0.11950329, 0.11950329,
+       0.11950329, 0.11950329, 0.11950329, 0.11950329, 0.11950329,
+       0.05664725, 0.05664725, 0.05664725, 0.05664725, 0.05664725,
+       0.05664725, 0.05664725, 0.05664725, 0.05664725, 0.05664725,
+       0.05664725, 0.05664725, 0.05664725, 0.05664725, 0.05664725,
+       0.05664725, 0.05664725, 0.05664725, 0.05664725, 0.05664725,
+       0.11380656, 0.11380656, 0.11380656, 0.11380656, 0.11380656,
+       0.11380656, 0.11380656, 0.11380656, 0.11380656, 0.11380656,
+       0.11380656, 0.11380656, 0.11380656, 0.11380656, 0.11380656,
+       0.11380656, 0.11380656, 0.11380656, 0.11380656, 0.11380656,
+       0.06119183, 0.06119183, 0.06119183, 0.06119183, 0.06119183,
+       0.06119183, 0.06119183, 0.06119183, 0.06119183, 0.06119183,
+       0.06119183, 0.06119183, 0.06119183, 0.06119183, 0.06119183,
+       0.06119183, 0.06119183, 0.06119183, 0.06119183, 0.06119183,
+       0.12289572, 0.12289572, 0.12289572, 0.12289572, 0.12289572,
+       0.12289572, 0.12289572, 0.12289572, 0.12289572, 0.12289572,
+       0.12289572, 0.12289572, 0.12289572, 0.12289572, 0.12289572])
+(535,)
+(535,)
+array([[[ 2.89878786e-01,  3.59144032e-01,  4.25950512e-02,
+          3.06313485e-01,  1.08832479e-01],
+        [ 3.18337440e-01,  3.74207318e-01,  5.48181459e-02,
+          4.11885768e-01,  7.95491934e-02],
+        [ 2.98964679e-01,  3.33983362e-01, -1.77230069e-03,
+          3.56253058e-01,  7.41606727e-02],
+        ...,
+        [ 3.99884820e-01,  5.63802838e-01,  5.46820223e-01,
+          4.16015953e-01,  5.24868727e-01],
+        [ 3.52340430e-01,  4.17244226e-01,  8.15613344e-02,
+          5.43407917e-01,  5.93377128e-02],
+        [ 3.32811117e-01,  3.98571879e-01,  4.54742238e-02,
+          5.01663864e-01,  5.17549515e-02]],
+       [[ 2.03264967e-01,  6.07115775e-02,  7.15456065e-03,
+          5.09596504e-02,  2.02434212e-02],
+        [ 2.91850746e-01,  7.97783285e-02,  1.19610270e-02,
+          1.73186406e-01,  1.60057992e-02],
+        [ 2.37248689e-01,  2.33159605e-02, -4.51667011e-02,
+          9.03859660e-02, -2.00234801e-02],
+        ...,
+        [ 3.14519554e-01,  3.66643459e-01,  3.81280690e-01,
+          4.53310311e-01,  3.76687706e-01],
+        [ 4.15372014e-01,  1.27441108e-01,  4.23668921e-02,
+          3.23633850e-01,  4.58706319e-02],
+        [ 3.70288074e-01,  1.21963739e-01,  2.19646171e-02,
+          2.77212501e-01,  4.91364300e-02]],
+       [[ 1.59074873e-01,  3.28813717e-02, -2.01872690e-03,
+          1.20040756e-02,  1.44954445e-03],
+        [ 2.47271895e-01,  6.52436689e-02,  1.51133239e-02,
+          1.26572132e-01,  4.46871342e-03],
+        [ 1.93431973e-01,  1.07905809e-02, -3.84019911e-02,
+          5.58593757e-02, -2.95791216e-02],
+        ...,
+        [ 2.65723526e-01,  3.62628430e-01,  3.76381963e-01,
+          3.99767190e-01,  3.69322360e-01],
+        [ 3.70850056e-01,  1.04733266e-01,  3.44627053e-02,
+          2.46646240e-01,  3.09932269e-02],
+        [ 3.23460728e-01,  9.04655680e-02,  1.21153370e-02,
+          2.00277865e-01,  2.79694684e-02]],
+       ...,
+       [[ 1.79890916e-01,  4.84325550e-02,  1.25811072e-02,
+          4.00257520e-02,  4.45561018e-05],
+        [ 2.63450086e-01,  8.90031606e-02,  5.28350212e-02,
+          1.68497369e-01,  1.50029454e-02],
+        [ 2.08312556e-01,  2.97107138e-02, -1.81854758e-02,
+          8.36712644e-02, -3.11764311e-02],
+        ...,
+        [ 3.04268569e-01,  3.20646375e-01,  4.30506587e-01,
+          4.25290048e-01,  4.11137283e-01],
+        [ 3.86534214e-01,  1.53902471e-01,  1.14661507e-01,
+          3.26453149e-01,  6.21725172e-02],
+        [ 3.35840732e-01,  1.33886561e-01,  7.67199993e-02,
+          2.69123971e-01,  4.82501537e-02]],
+       [[ 1.60656318e-01,  3.23770158e-02,  5.26927225e-03,
+         -7.89352786e-03,  3.94828916e-02],
+        [ 2.50095278e-01,  7.51647130e-02,  3.62010375e-02,
+          1.27303854e-01,  5.18582240e-02],
+        [ 1.92897260e-01,  1.38763357e-02, -2.43015159e-02,
+          4.19331975e-02,  8.56852438e-03],
+        ...,
+        [ 2.62813866e-01,  3.25838983e-01,  4.00999874e-01,
+          3.80251795e-01,  3.94944310e-01],
+        [ 3.76159817e-01,  1.35036930e-01,  7.66163766e-02,
+          2.84743905e-01,  9.30755809e-02],
+        [ 3.30851018e-01,  1.22408427e-01,  5.00710309e-02,
+          2.35261485e-01,  8.97897929e-02]],
+       [[ 1.14264324e-01,  8.89537409e-02,  6.70350948e-03,
+          7.09038228e-02,  3.80714685e-02],
+        [ 1.68593809e-01,  1.01982780e-01,  4.53660861e-02,
+          1.73589885e-01,  3.56302112e-02],
+        [ 1.20773979e-01,  4.62357923e-02, -4.63129804e-02,
+          8.92439485e-02, -9.74404998e-03],
+        ...,
+        [ 4.29055601e-01,  4.29701000e-01,  5.35030782e-01,
+          6.22162104e-01,  4.88075882e-01],
+        [ 2.30126932e-01,  1.39514387e-01,  1.28757924e-01,
+          2.99599081e-01,  7.04667270e-02],
+        [ 2.04641238e-01,  1.34789124e-01,  9.99592096e-02,
+          2.57135153e-01,  6.27199113e-02]]], dtype=float32)
+(15, 535, 5)
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+File ~/code/Fed-Time-Series-Forecasting/main.py:131
+    128     args.outlier_columns = outlier_columns
+    129     args.outlier_kwargs = outlier_kwargs
+--> 131 main(args)
+File ~/code/Fed-Time-Series-Forecasting/main.py:54, in main(args)
+     49 # federated local params
+     50 local_train_params = {"epochs": args.epochs, "optimizer": args.optimizer, "lr": args.lr,
+     51                     "criterion": args.criterion, "early_stopping": args.local_early_stopping,
+     52                     "patience": args.local_patience, "device": args.device
+     53                     }
+---> 54 global_model, history = fit(
+     55                             model,
+     56                             client_X_train,
+     57                             client_y_train,
+     58                             client_X_val,
+     59                             client_y_val,
+     60                             local_train_params=local_train_params,
+     61                             args = args,
+     62                             wandb_ins=wandb_instance,
+     63                             subval_dataloader=subval_dataloader)
+File ~/code/Fed-Time-Series-Forecasting/fl_trainer.py:137, in fit(model, X_train, y_train, X_val, y_val, exogenous_data_train, exogenous_data_val, idxs, log_per, client_creation_fn, local_train_params, aggregation_params, use_carbontracker, args, wandb_ins, subval_dataloader)
+    125 server = Server(
+    126     client_proxies=client_proxies, # the client representations
+    127     aggregation=args.aggregation, # the aggregation algorithm
+   (...)
+    132     subval_dataloader=subval_dataloader
+    133 )
+    134 # Note that the client manager instance will be initialized automatically. You can define your own client manager.
+    135
+    136 # train with FL
+--> 137 model_params, history = server.fit(args.fl_rounds, args.fraction, use_carbontracker=use_carbontracker,
+    138                                    wandb_ins=wandb_ins)
+    140 params_dict = zip(model.state_dict().keys(), model_params)
+    141 state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
+File ~/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py:114, in Server.fit(self, num_rounds, fraction, fraction_args, use_carbontracker, wandb_ins)
+    112     cb_tracker.epoch_start()
+    113 # train and replace the previous global model
+--> 114 self.fit_round(fl_round=fl_round,
+    115                fraction=fraction,
+    116                fraction_args=fraction_args,
+    117                history=history)
+    118 if use_carbontracker and cb_tracker is not None:
+    119     cb_tracker.epoch_end()
+File ~/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py:186, in Server.fit_round(self, fl_round, fraction, fraction_args, history)
+    183 history.add_local_test_metrics(all_test_metrics, fl_round)
+    185 # Conduct defense before aggregation
+--> 186 verifier_w = self.conduct_defense(model_vec_list)
+    188 # STEP 4: Aggregate local models
+    189 self.global_model = self.aggregate_models(fl_round, results, verifier_w)
+File ~/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py:223, in Server.conduct_defense(self, local_weights)
+    221     y_true = y_true.cpu().numpy()
+    222     preds.append(y_pred)
+--> 223 verifier_w = sat_verifier(preds, y_true, 0)
+    224 return verifier_w
+File ~/code/Fed-Time-Series-Forecasting/verifier.py:155, in sat_verifier(pred_list, y_true, atk_feature)
+    153 print(f"Preds shape by feat is: {preds_by_feat.shape}")
+    154 # r_a = verify(preds_by_feat)
+--> 155 r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
+    156 r_a = np.asarray(r_a)
+    157 r_a = np.sum(r_a, axis=1).reshape(-1, 1)
+File ~/code/Fed-Time-Series-Forecasting/verifier.py:89, in verify_by_allowable(preds, y_true)
+     86 aggregated_lb, aggregated_ub = get_allowable_by_interval(y_true)
+     87 # import IPython
+     88 # IPython.embed()
+---> 89 verifier_results = get_satisfied_elements(preds, np.asarray(aggregated_lb), np.asarray(aggregated_ub))
+     90 return verifier_results
+File ~/code/Fed-Time-Series-Forecasting/verifier.py:103, in get_satisfied_elements(predictions, lb, ub)
+    100     pred = predictions[j]
+    101     # import IPython
+    102     # IPython.embed()
+--> 103     satisfied_elements = [1.0 if lb[i] <= pred[i] <= ub[i] else 0.0 for i in range(len(pred))]
+    104     verifier_results.append(satisfied_elements)
+    105 return verifier_results
+File ~/code/Fed-Time-Series-Forecasting/verifier.py:103, in <listcomp>(.0)
+    100     pred = predictions[j]
+    101     # import IPython
+    102     # IPython.embed()
+--> 103     satisfied_elements = [1.0 if lb[i] <= pred[i] <= ub[i] else 0.0 for i in range(len(pred))]
+    104     verifier_results.append(satisfied_elements)
+    105 return verifier_results
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

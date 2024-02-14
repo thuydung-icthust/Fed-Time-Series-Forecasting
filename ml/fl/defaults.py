@@ -23,11 +23,11 @@ from ml.fl.client.client import Client
 
 
 def create_regression_client(cid: str, model: torch.nn.Module, train_loader: DataLoader, test_loader: DataLoader,
-                             local_params: Dict[str, Union[bool, str, int, float]]) -> Client:
+                             local_params: Dict[str, Union[bool, str, int, float]], is_malicious: bool) -> Client:
     net = copy.deepcopy(model)
 
     return TorchRegressionClient(cid=cid, net=net, train_loader=train_loader, val_loader=test_loader,
-                                 local_train_params=local_params)
+                                 local_train_params=local_params, is_malicious=is_malicious)
 
 
 def weighted_loss_avg(n_per_client: List[int], losses: List[float]) -> float:

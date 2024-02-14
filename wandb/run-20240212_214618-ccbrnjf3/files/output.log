@@ -1,0 +1,1442 @@
+INFO logger 2024-02-12 21:46:27,822 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-12 21:46:27,822 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-12 21:46:27,822 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-12 21:46:27,822 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-12 21:46:27,827 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-12 21:46:27,827 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-12 21:46:27,827 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-12 21:46:27,827 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-12 21:46:27,831 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-12 21:46:27,831 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-12 21:46:27,831 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-12 21:46:27,831 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-12 21:46:27,842 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-12 21:46:27,842 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-12 21:46:27,842 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-12 21:46:27,842 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-12 21:46:27,842 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+X_val_sub.shape is 535 	 y_val_sub is 535
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-12 21:46:30,707 | server.py:74 | Initializing client manager...
+INFO logger 2024-02-12 21:46:30,720 | server.py:81 | Registering clients...
+INFO logger 2024-02-12 21:46:30,721 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-12 21:46:30,721 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-12 21:46:30,721 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-12 21:46:30,721 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-12 21:46:30,722 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-12 21:46:30,722 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-12 21:46:30,722 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-12 21:46:30,722 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-12 21:46:30,723 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-12 21:46:30,723 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-12 21:46:30,723 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-12 21:46:30,723 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-12 21:46:30,724 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-12 21:46:30,724 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-12 21:46:30,724 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-12 21:46:30,724 | server.py:85 | Client manager initialized!
+INFO logger 2024-02-12 21:46:30,724 | server.py:67 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-12 21:46:30,725 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+INFO logger 2024-02-12 21:46:33,603 | server.py:99 | Starting FL rounds
+INFO logger 2024-02-12 21:46:33,603 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:35,526 | train_utils.py:153 | Best Loss: 0.0003356432912555354
+INFO logger 2024-02-12 21:46:36,763 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-12 21:46:38,867 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-12 21:46:39,558 | train_utils.py:153 | Best Loss: 0.00021519607769838277
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:39,964 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+INFO logger 2024-02-12 21:46:40,657 | train_utils.py:153 | Best Loss: 0.0005554203733758272
+INFO logger 2024-02-12 21:46:41,104 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-12 21:46:42,317 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-12 21:46:43,552 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:44,153 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-12 21:46:44,863 | train_utils.py:153 | Best Loss: 0.0001559492036394307
+INFO logger 2024-02-12 21:46:45,779 | train_utils.py:153 | Best Loss: 0.000720918799440066
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:46,838 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-12 21:46:48,275 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-12 21:46:48,912 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+INFO logger 2024-02-12 21:46:49,386 | server.py:244 | [Global round 1] Aggregating local models...
+INFO logger 2024-02-12 21:46:49,388 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_4']
+INFO logger 2024-02-12 21:46:49,429 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 5.875352898315675e-05, mse: 0.007155922707170248, rmse: 0.08459268707855454, mae: 0.06780628859996796, nrmse: 1.01085439733709
+INFO logger 2024-02-12 21:46:49,481 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0004573813823394869, mse: 0.05811307579278946, rmse: 0.2410665381026356, mae: 0.19053861498832703, nrmse: 4.0484473710734505
+INFO logger 2024-02-12 21:46:49,586 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0005102602521500249, mse: 0.06507033109664917, rmse: 0.2550888690175429, mae: 0.1251916140317917, nrmse: 1.415810802713015
+INFO logger 2024-02-12 21:46:49,589 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_2', 'PobleSec_2', 'ElBorn_1', 'LesCorts_4', 'ElBorn_4', 'LesCorts_3', 'PobleSec_4', 'PobleSec_0', 'ElBorn_0', 'LesCorts_0', 'LesCorts_1', 'PobleSec_1', 'PobleSec_3', 'LesCorts_2', 'ElBorn_3']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[456.]
+ [465.]
+ [510.]
+ [408.]
+ [492.]
+ [476.]
+ [383.]
+ [495.]
+ [511.]
+ [469.]
+ [372.]
+ [430.]
+ [479.]
+ [494.]
+ [491.]]
+INFO logger 2024-02-12 21:46:49,909 | train_utils.py:153 | Best Loss: 2.160692640359779e-05
+INFO logger 2024-02-12 21:46:51,575 | train_utils.py:153 | Best Loss: 0.0004166688583057931
+INFO logger 2024-02-12 21:46:52,314 | train_utils.py:153 | Best Loss: 2.5888262114123158e-05
+INFO logger 2024-02-12 21:46:53,008 | train_utils.py:153 | Best Loss: 0.00010125009664361589
+INFO logger 2024-02-12 21:46:53,462 | train_utils.py:153 | Best Loss: 2.2668564542543126e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:54,112 | train_utils.py:153 | Best Loss: 0.0003971025846048928
+INFO logger 2024-02-12 21:46:55,511 | train_utils.py:153 | Best Loss: 0.0003935196199711031
+INFO logger 2024-02-12 21:46:57,189 | train_utils.py:153 | Best Loss: 0.0003959285543762206
+INFO logger 2024-02-12 21:46:57,865 | train_utils.py:153 | Best Loss: 0.00016138959419576153
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:46:58,462 | train_utils.py:153 | Best Loss: 0.0004645276907286797
+INFO logger 2024-02-12 21:46:59,354 | train_utils.py:153 | Best Loss: 0.00018651237199355288
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:00,690 | train_utils.py:153 | Best Loss: 0.00038399509381590864
+INFO logger 2024-02-12 21:47:02,004 | train_utils.py:153 | Best Loss: 0.00039978599755137456
+INFO logger 2024-02-12 21:47:02,822 | train_utils.py:153 | Best Loss: 9.82568803521102e-05
+INFO logger 2024-02-12 21:47:03,373 | train_utils.py:153 | Best Loss: 0.00019442450237158992
+[31mStarting poisoning...!
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[505.]
+ [484.]
+ [534.]
+ [458.]
+ [516.]
+ [348.]
+ [462.]
+ [463.]
+ [372.]
+ [372.]
+ [425.]
+ [475.]
+ [475.]
+ [460.]
+ [365.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:04,031 | server.py:244 | [Global round 2] Aggregating local models...
+INFO logger 2024-02-12 21:47:04,034 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_1']
+INFO logger 2024-02-12 21:47:04,133 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.989983695091293e-05, mse: 0.003640704555436969, rmse: 0.06033825117980276, mae: 0.04466787725687027, nrmse: 0.7081383337729695
+INFO logger 2024-02-12 21:47:04,236 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00028655313129662076, mse: 0.03640159219503403, rmse: 0.1907920129225383, mae: 0.14587177336215973, nrmse: 2.8106147896825835
+INFO logger 2024-02-12 21:47:04,325 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00043632325107657063, mse: 0.05563676357269287, rmse: 0.23587446570727588, mae: 0.10270502418279648, nrmse: 1.3140574765383486
+INFO logger 2024-02-12 21:47:04,326 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_0', 'LesCorts_4', 'PobleSec_0', 'ElBorn_3', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'ElBorn_4', 'ElBorn_0', 'PobleSec_2', 'LesCorts_1', 'PobleSec_4', 'ElBorn_2', 'ElBorn_1', 'PobleSec_1']
+INFO logger 2024-02-12 21:47:05,426 | train_utils.py:153 | Best Loss: 0.00030894402131351114
+INFO logger 2024-02-12 21:47:06,126 | train_utils.py:153 | Best Loss: 0.00010211579110173846
+INFO logger 2024-02-12 21:47:07,619 | train_utils.py:153 | Best Loss: 0.000374200011302871
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:08,353 | train_utils.py:153 | Best Loss: 0.00012101288794895301
+INFO logger 2024-02-12 21:47:09,225 | train_utils.py:153 | Best Loss: 0.000330368522554636
+INFO logger 2024-02-12 21:47:10,092 | train_utils.py:153 | Best Loss: 0.00010548283673457975
+INFO logger 2024-02-12 21:47:11,257 | train_utils.py:153 | Best Loss: 0.00037957904504714755
+INFO logger 2024-02-12 21:47:11,700 | train_utils.py:153 | Best Loss: 1.594483552068688e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:12,044 | train_utils.py:153 | Best Loss: 0.0001422682966011158
+INFO logger 2024-02-12 21:47:13,721 | train_utils.py:153 | Best Loss: 0.0003889605037017366
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:14,804 | train_utils.py:153 | Best Loss: 0.00018083457412927995
+INFO logger 2024-02-12 21:47:16,280 | train_utils.py:153 | Best Loss: 0.00037425647788556424
+INFO logger 2024-02-12 21:47:16,962 | train_utils.py:153 | Best Loss: 1.730765584419855e-05
+INFO logger 2024-02-12 21:47:17,458 | train_utils.py:153 | Best Loss: 1.8580436508580683e-05
+INFO logger 2024-02-12 21:47:18,584 | train_utils.py:153 | Best Loss: 0.0003652215449828801
+INFO logger 2024-02-12 21:47:19,576 | server.py:244 | [Global round 3] Aggregating local models...
+INFO logger 2024-02-12 21:47:19,578 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_4']
+INFO logger 2024-02-12 21:47:19,622 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.4251681881853277e-05, mse: 0.0029377613682299852, rmse: 0.05420111962155381, mae: 0.03910648077726364, nrmse: 0.6687704128545117
+INFO logger 2024-02-12 21:47:19,664 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00022177836328080437, mse: 0.02816644310951233, rmse: 0.1678286123088442, mae: 0.12807200849056244, nrmse: 2.2885897482084308
+INFO logger 2024-02-12 21:47:19,796 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00039867869460969926, mse: 0.050826478749513626, rmse: 0.22544728596617353, mae: 0.095661960542202, nrmse: 1.2582460523949117
+INFO logger 2024-02-12 21:47:19,801 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_2', 'PobleSec_3', 'LesCorts_0', 'ElBorn_3', 'PobleSec_2', 'ElBorn_1', 'PobleSec_1', 'LesCorts_3', 'LesCorts_4', 'LesCorts_1', 'ElBorn_4', 'PobleSec_4', 'ElBorn_0', 'ElBorn_2', 'PobleSec_0']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[430.]
+ [507.]
+ [471.]
+ [388.]
+ [382.]
+ [510.]
+ [477.]
+ [474.]
+ [374.]
+ [455.]
+ [401.]
+ [464.]
+ [474.]
+ [513.]
+ [475.]]
+INFO logger 2024-02-12 21:47:20,437 | train_utils.py:153 | Best Loss: 0.0001004925133845611
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:22,144 | train_utils.py:153 | Best Loss: 0.0003686388074163729
+INFO logger 2024-02-12 21:47:23,102 | train_utils.py:153 | Best Loss: 0.00024616385385263387
+INFO logger 2024-02-12 21:47:23,739 | train_utils.py:153 | Best Loss: 0.00011890541294202712
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:25,082 | train_utils.py:153 | Best Loss: 0.0003739692473336761
+INFO logger 2024-02-12 21:47:25,729 | train_utils.py:153 | Best Loss: 1.4561298190827531e-05
+INFO logger 2024-02-12 21:47:27,152 | train_utils.py:153 | Best Loss: 0.00035547059703999615
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:28,097 | train_utils.py:153 | Best Loss: 0.0002838526838813086
+INFO logger 2024-02-12 21:47:28,683 | train_utils.py:153 | Best Loss: 0.00010485403622331762
+INFO logger 2024-02-12 21:47:29,199 | train_utils.py:153 | Best Loss: 0.00016585114134246842
+INFO logger 2024-02-12 21:47:29,460 | train_utils.py:153 | Best Loss: 1.4789902030350865e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:30,504 | train_utils.py:153 | Best Loss: 0.00036097137763450935
+INFO logger 2024-02-12 21:47:31,386 | train_utils.py:153 | Best Loss: 0.000137470038337768
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:31,923 | train_utils.py:153 | Best Loss: 1.3096821491588536e-05
+INFO logger 2024-02-12 21:47:33,350 | train_utils.py:153 | Best Loss: 0.00036619410941773277
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[532.]
+ [475.]
+ [407.]
+ [395.]
+ [468.]
+ [504.]
+ [478.]
+ [391.]
+ [457.]
+ [461.]
+ [456.]
+ [481.]
+ [346.]
+ [516.]
+ [494.]]
+INFO logger 2024-02-12 21:47:34,148 | server.py:244 | [Global round 4] Aggregating local models...
+INFO logger 2024-02-12 21:47:34,150 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-12 21:47:34,339 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.3799545861609677e-05, mse: 0.002875102683901787, rmse: 0.053619983997589805, mae: 0.038621943444013596, nrmse: 0.6228043917321232
+INFO logger 2024-02-12 21:47:34,416 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00019853517354591287, mse: 0.025201376527547836, rmse: 0.1587494142589126, mae: 0.11868248134851456, nrmse: 1.9206515021021526
+INFO logger 2024-02-12 21:47:34,579 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00038065008841102986, mse: 0.04852120205760002, rmse: 0.22027528698789617, mae: 0.0934530720114708, nrmse: 1.2335596929473924
+INFO logger 2024-02-12 21:47:34,580 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_3', 'LesCorts_2', 'ElBorn_1', 'ElBorn_4', 'PobleSec_4', 'PobleSec_1', 'PobleSec_2', 'LesCorts_0', 'LesCorts_1', 'LesCorts_4', 'PobleSec_0', 'ElBorn_2', 'PobleSec_3', 'ElBorn_0', 'ElBorn_3']
+INFO logger 2024-02-12 21:47:35,493 | train_utils.py:153 | Best Loss: 0.00025189894507502954
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:36,169 | train_utils.py:153 | Best Loss: 0.00010090806059898776
+INFO logger 2024-02-12 21:47:36,601 | train_utils.py:153 | Best Loss: 1.3820828975668708e-05
+INFO logger 2024-02-12 21:47:37,039 | train_utils.py:153 | Best Loss: 1.4258100671450729e-05
+INFO logger 2024-02-12 21:47:38,209 | train_utils.py:153 | Best Loss: 0.00035429902035581667
+INFO logger 2024-02-12 21:47:39,867 | train_utils.py:153 | Best Loss: 0.0003492450008286149
+INFO logger 2024-02-12 21:47:41,217 | train_utils.py:153 | Best Loss: 0.0003647665124144552
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:42,020 | train_utils.py:153 | Best Loss: 0.00021429296599276233
+INFO logger 2024-02-12 21:47:42,809 | train_utils.py:153 | Best Loss: 0.00014551627525939928
+INFO logger 2024-02-12 21:47:43,588 | train_utils.py:153 | Best Loss: 9.900826092112308e-05
+INFO logger 2024-02-12 21:47:44,875 | train_utils.py:153 | Best Loss: 0.0003586734452387538
+INFO logger 2024-02-12 21:47:45,437 | train_utils.py:153 | Best Loss: 1.3834979834489453e-05
+INFO logger 2024-02-12 21:47:46,875 | train_utils.py:153 | Best Loss: 0.00036222496678627383
+INFO logger 2024-02-12 21:47:47,583 | train_utils.py:153 | Best Loss: 0.00013027537461136275
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[412.]
+ [533.]
+ [510.]
+ [470.]
+ [491.]
+ [482.]
+ [474.]
+ [407.]
+ [468.]
+ [459.]
+ [498.]
+ [516.]
+ [480.]
+ [369.]
+ [366.]]
+INFO logger 2024-02-12 21:47:47,922 | train_utils.py:153 | Best Loss: 0.00013380290171050507
+INFO logger 2024-02-12 21:47:48,245 | server.py:244 | [Global round 5] Aggregating local models...
+INFO logger 2024-02-12 21:47:48,246 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-12 21:47:48,298 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.2682350056902797e-05, mse: 0.002739174524322152, rmse: 0.05233712376814523, mae: 0.037005357444286346, nrmse: 0.607899124569251
+INFO logger 2024-02-12 21:47:48,339 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00018649330030451393, mse: 0.0236702598631382, rmse: 0.15385142138809832, mae: 0.11285580694675446, nrmse: 1.7295758580635376
+INFO logger 2024-02-12 21:47:48,492 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003686333472627824, mse: 0.046984534710645676, rmse: 0.21675916292199893, mae: 0.09068726003170013, nrmse: 1.214885575050807
+INFO logger 2024-02-12 21:47:48,496 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_4', 'ElBorn_3', 'ElBorn_4', 'ElBorn_2', 'PobleSec_3', 'PobleSec_1', 'ElBorn_0', 'PobleSec_2', 'PobleSec_0', 'LesCorts_3', 'LesCorts_0', 'ElBorn_1', 'LesCorts_2', 'PobleSec_4', 'LesCorts_1']
+INFO logger 2024-02-12 21:47:48,953 | train_utils.py:153 | Best Loss: 9.674123251451212e-05
+INFO logger 2024-02-12 21:47:49,621 | train_utils.py:153 | Best Loss: 0.00012154903618285909
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:49,931 | train_utils.py:153 | Best Loss: 1.3113547898806487e-05
+INFO logger 2024-02-12 21:47:50,233 | train_utils.py:153 | Best Loss: 1.2861690801739297e-05
+INFO logger 2024-02-12 21:47:51,085 | train_utils.py:153 | Best Loss: 0.0003573474142055108
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:52,131 | train_utils.py:153 | Best Loss: 0.00034498150454922104
+INFO logger 2024-02-12 21:47:52,809 | train_utils.py:153 | Best Loss: 0.00013205768419024736
+INFO logger 2024-02-12 21:47:53,998 | train_utils.py:153 | Best Loss: 0.0003588307018971115
+INFO logger 2024-02-12 21:47:55,229 | train_utils.py:153 | Best Loss: 0.00035400845007750934
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:47:56,023 | train_utils.py:153 | Best Loss: 0.0002166670406705629
+INFO logger 2024-02-12 21:47:56,662 | train_utils.py:153 | Best Loss: 0.00018379332535840265
+INFO logger 2024-02-12 21:47:57,212 | train_utils.py:153 | Best Loss: 1.2946186743559685e-05
+INFO logger 2024-02-12 21:47:57,931 | train_utils.py:153 | Best Loss: 9.894270445792037e-05
+INFO logger 2024-02-12 21:47:59,042 | train_utils.py:153 | Best Loss: 0.0003503408738389963
+[31mStarting poisoning...!
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[453.]
+ [370.]
+ [466.]
+ [514.]
+ [483.]
+ [483.]
+ [370.]
+ [483.]
+ [510.]
+ [434.]
+ [426.]
+ [511.]
+ [452.]
+ [499.]
+ [452.]]
+INFO logger 2024-02-12 21:47:59,753 | train_utils.py:153 | Best Loss: 0.00014693394292429176
+INFO logger 2024-02-12 21:48:00,313 | server.py:244 | [Global round 6] Aggregating local models...
+INFO logger 2024-02-12 21:48:00,314 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-12 21:48:00,429 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.133383250858293e-05, mse: 0.002571058925241232, rmse: 0.05070561039215712, mae: 0.03560703247785568, nrmse: 0.5854692213425372
+INFO logger 2024-02-12 21:48:00,545 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00018235900383497104, mse: 0.02314695343375206, rmse: 0.1521412285797379, mae: 0.11156544834375381, nrmse: 1.819445579133815
+INFO logger 2024-02-12 21:48:00,758 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00036001601850423287, mse: 0.0458822026848793, rmse: 0.21420131345274077, mae: 0.088178351521492, nrmse: 1.20001035089439
+INFO logger 2024-02-12 21:48:00,761 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_1', 'PobleSec_3', 'LesCorts_3', 'PobleSec_0', 'LesCorts_1', 'PobleSec_2', 'ElBorn_4', 'ElBorn_3', 'PobleSec_4', 'ElBorn_1', 'LesCorts_4', 'LesCorts_2', 'ElBorn_2', 'LesCorts_0', 'ElBorn_0']
+INFO logger 2024-02-12 21:48:01,729 | train_utils.py:153 | Best Loss: 0.00034234409273682735
+INFO logger 2024-02-12 21:48:03,104 | train_utils.py:153 | Best Loss: 0.00035398892079311327
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:04,648 | train_utils.py:153 | Best Loss: 0.00020817036288436392
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:05,655 | train_utils.py:153 | Best Loss: 0.0003504172897545665
+INFO logger 2024-02-12 21:48:06,462 | train_utils.py:153 | Best Loss: 0.0001329585531323451
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:07,714 | train_utils.py:153 | Best Loss: 0.0003550427388143176
+INFO logger 2024-02-12 21:48:08,435 | train_utils.py:153 | Best Loss: 1.2433701751591718e-05
+INFO logger 2024-02-12 21:48:08,968 | train_utils.py:153 | Best Loss: 0.00011997178516346187
+INFO logger 2024-02-12 21:48:10,064 | train_utils.py:153 | Best Loss: 0.0003476863964020795
+INFO logger 2024-02-12 21:48:10,745 | train_utils.py:153 | Best Loss: 1.224527075877728e-05
+INFO logger 2024-02-12 21:48:11,542 | train_utils.py:153 | Best Loss: 9.36770597227702e-05
+INFO logger 2024-02-12 21:48:12,317 | train_utils.py:153 | Best Loss: 9.89996182748623e-05
+INFO logger 2024-02-12 21:48:12,840 | train_utils.py:153 | Best Loss: 1.1746923479696978e-05
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:13,756 | train_utils.py:153 | Best Loss: 0.00018265049452539423
+INFO logger 2024-02-12 21:48:14,350 | train_utils.py:153 | Best Loss: 0.00015964415171836022
+INFO logger 2024-02-12 21:48:14,736 | server.py:244 | [Global round 7] Aggregating local models...
+INFO logger 2024-02-12 21:48:14,739 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-12 21:48:14,831 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.9669541352370006e-05, mse: 0.002371819457039237, rmse: 0.04870132910957602, mae: 0.03340233489871025, nrmse: 0.523627810456138
+INFO logger 2024-02-12 21:48:14,929 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001799000538776667, mse: 0.0228397399187088, rmse: 0.15112822343529617, mae: 0.11056153476238251, nrmse: 1.9126867156906184
+INFO logger 2024-02-12 21:48:15,059 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00035381917900398493, mse: 0.04509016126394272, rmse: 0.2123444401531218, mae: 0.08554353564977646, nrmse: 1.1902753075819525
+INFO logger 2024-02-12 21:48:15,060 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_0', 'PobleSec_4', 'PobleSec_1', 'LesCorts_0', 'ElBorn_1', 'PobleSec_2', 'PobleSec_3', 'LesCorts_2', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_3', 'ElBorn_0', 'LesCorts_1', 'ElBorn_3']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[486.]
+ [490.]
+ [424.]
+ [505.]
+ [472.]
+ [494.]
+ [504.]
+ [372.]
+ [498.]
+ [512.]
+ [454.]
+ [460.]
+ [515.]
+ [425.]
+ [366.]]
+INFO logger 2024-02-12 21:48:16,195 | train_utils.py:153 | Best Loss: 0.0003476412678650749
+INFO logger 2024-02-12 21:48:17,504 | train_utils.py:153 | Best Loss: 0.0003462557025862432
+INFO logger 2024-02-12 21:48:18,748 | train_utils.py:153 | Best Loss: 0.00034029856480027393
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:19,868 | train_utils.py:153 | Best Loss: 0.0001662920218244282
+INFO logger 2024-02-12 21:48:20,348 | train_utils.py:153 | Best Loss: 1.1314964322609477e-05
+INFO logger 2024-02-12 21:48:21,160 | train_utils.py:153 | Best Loss: 0.00035237280824258337
+INFO logger 2024-02-12 21:48:22,262 | train_utils.py:153 | Best Loss: 0.000351779397492715
+INFO logger 2024-02-12 21:48:22,858 | train_utils.py:153 | Best Loss: 9.881514458160042e-05
+INFO logger 2024-02-12 21:48:23,335 | train_utils.py:153 | Best Loss: 1.1552423775839453e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:23,741 | train_utils.py:153 | Best Loss: 9.341238965879451e-05
+INFO logger 2024-02-12 21:48:24,095 | train_utils.py:153 | Best Loss: 1.191620162130302e-05
+INFO logger 2024-02-12 21:48:24,689 | train_utils.py:153 | Best Loss: 0.00022682148625540456
+INFO logger 2024-02-12 21:48:25,387 | train_utils.py:153 | Best Loss: 0.00010820408126762236
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:26,059 | train_utils.py:153 | Best Loss: 0.00013713367768067715
+INFO logger 2024-02-12 21:48:26,676 | train_utils.py:153 | Best Loss: 0.00011347988980331858
+INFO logger 2024-02-12 21:48:27,039 | server.py:244 | [Global round 8] Aggregating local models...
+INFO logger 2024-02-12 21:48:27,041 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_1']
+INFO logger 2024-02-12 21:48:27,073 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.031706825825543e-05, mse: 0.0024530417285859585, rmse: 0.04952819125090233, mae: 0.03463596850633621, nrmse: 0.5589110742757091
+INFO logger 2024-02-12 21:48:27,109 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00016549890942610146, mse: 0.02099679224193096, rmse: 0.14490269922237806, mae: 0.10593599081039429, nrmse: 1.7087105434794823
+INFO logger 2024-02-12 21:48:27,217 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003528887040795773, mse: 0.04496891424059868, rmse: 0.2120587518604188, mae: 0.08651752024888992, nrmse: 1.1892965540429015
+INFO logger 2024-02-12 21:48:27,223 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_1', 'ElBorn_3', 'LesCorts_0', 'ElBorn_2', 'PobleSec_2', 'LesCorts_1', 'ElBorn_0', 'ElBorn_1', 'LesCorts_4', 'LesCorts_2', 'PobleSec_0', 'LesCorts_3', 'PobleSec_4', 'PobleSec_3', 'ElBorn_4']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[504.]
+ [500.]
+ [490.]
+ [450.]
+ [521.]
+ [492.]
+ [499.]
+ [532.]
+ [499.]
+ [452.]
+ [525.]
+ [368.]
+ [393.]
+ [454.]
+ [407.]]
+INFO logger 2024-02-12 21:48:28,442 | train_utils.py:153 | Best Loss: 0.0003391427997184375
+INFO logger 2024-02-12 21:48:29,088 | train_utils.py:153 | Best Loss: 0.00012521893978298862
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:29,668 | train_utils.py:153 | Best Loss: 0.00016373813381059127
+INFO logger 2024-02-12 21:48:30,087 | train_utils.py:153 | Best Loss: 9.543634585559297e-06
+INFO logger 2024-02-12 21:48:31,047 | train_utils.py:153 | Best Loss: 0.00035008469578172045
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:31,932 | train_utils.py:153 | Best Loss: 0.00014293150723045854
+INFO logger 2024-02-12 21:48:32,321 | train_utils.py:153 | Best Loss: 0.00014358699650184257
+INFO logger 2024-02-12 21:48:32,584 | train_utils.py:153 | Best Loss: 1.0593242719454537e-05
+INFO logger 2024-02-12 21:48:33,249 | train_utils.py:153 | Best Loss: 9.252653339447464e-05
+INFO logger 2024-02-12 21:48:33,971 | train_utils.py:153 | Best Loss: 9.618092591095476e-05
+INFO logger 2024-02-12 21:48:35,148 | train_utils.py:153 | Best Loss: 0.00034540460688817334
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:36,276 | train_utils.py:153 | Best Loss: 0.000216148676601244
+INFO logger 2024-02-12 21:48:37,308 | train_utils.py:153 | Best Loss: 0.0003449731938152273
+INFO logger 2024-02-12 21:48:38,512 | train_utils.py:153 | Best Loss: 0.00034883248861732443
+INFO logger 2024-02-12 21:48:39,149 | train_utils.py:153 | Best Loss: 1.12071819772161e-05
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[490.]
+ [367.]
+ [449.]
+ [520.]
+ [493.]
+ [441.]
+ [323.]
+ [495.]
+ [527.]
+ [529.]
+ [509.]
+ [384.]
+ [514.]
+ [493.]
+ [454.]]
+INFO logger 2024-02-12 21:48:39,634 | server.py:244 | [Global round 9] Aggregating local models...
+INFO logger 2024-02-12 21:48:39,636 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_1']
+INFO logger 2024-02-12 21:48:39,718 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 2.0336512147768395e-05, mse: 0.002450769068673253, rmse: 0.04950524284026141, mae: 0.033964045345783234, nrmse: 0.5351205771931181
+INFO logger 2024-02-12 21:48:39,847 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001555621451752707, mse: 0.019730890169739723, rmse: 0.14046668704621648, mae: 0.10256588459014893, nrmse: 1.5357554023299342
+INFO logger 2024-02-12 21:48:39,983 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003497191429812843, mse: 0.04456343129277229, rmse: 0.21110052414139643, mae: 0.08530666679143906, nrmse: 1.1884063132794012
+INFO logger 2024-02-12 21:48:39,984 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_0', 'ElBorn_3', 'LesCorts_4', 'PobleSec_2', 'ElBorn_1', 'LesCorts_1', 'PobleSec_4', 'LesCorts_0', 'PobleSec_1', 'ElBorn_0', 'LesCorts_2', 'ElBorn_4', 'PobleSec_3', 'ElBorn_2', 'LesCorts_3']
+INFO logger 2024-02-12 21:48:41,255 | train_utils.py:153 | Best Loss: 0.0003442600602834067
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:42,012 | train_utils.py:153 | Best Loss: 0.00012856222473192906
+INFO logger 2024-02-12 21:48:42,737 | train_utils.py:153 | Best Loss: 9.241340238034551e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:43,900 | train_utils.py:153 | Best Loss: 0.00034829146703558526
+INFO logger 2024-02-12 21:48:44,364 | train_utils.py:153 | Best Loss: 1.1034412711638292e-05
+INFO logger 2024-02-12 21:48:44,983 | train_utils.py:153 | Best Loss: 0.0001195906443597629
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:46,113 | train_utils.py:153 | Best Loss: 0.00034412431336323343
+INFO logger 2024-02-12 21:48:47,145 | train_utils.py:153 | Best Loss: 0.00018160026493258991
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:48,156 | train_utils.py:153 | Best Loss: 0.0003385761625492784
+INFO logger 2024-02-12 21:48:48,684 | train_utils.py:153 | Best Loss: 0.0001488477835242731
+INFO logger 2024-02-12 21:48:49,492 | train_utils.py:153 | Best Loss: 9.665405547943467e-05
+INFO logger 2024-02-12 21:48:50,007 | train_utils.py:153 | Best Loss: 1.1686541678289464e-05
+INFO logger 2024-02-12 21:48:50,952 | train_utils.py:153 | Best Loss: 0.0003468842679766689
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:51,618 | train_utils.py:153 | Best Loss: 9.865674796482719e-06
+INFO logger 2024-02-12 21:48:52,474 | train_utils.py:153 | Best Loss: 0.00019788203967942132
+INFO logger 2024-02-12 21:48:53,002 | server.py:244 | [Global round 10] Aggregating local models...
+INFO logger 2024-02-12 21:48:53,005 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-12 21:48:53,057 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.836025534571117e-05, mse: 0.0022129726130515337, rmse: 0.0470422428573674, mae: 0.032212935388088226, nrmse: 0.5280592854625867
+INFO logger 2024-02-12 21:48:53,093 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001578923435309869, mse: 0.020036766305565834, rmse: 0.1415512850721103, mae: 0.10192563384771347, nrmse: 1.604411211503248
+INFO logger 2024-02-12 21:48:53,170 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034624650854412026, mse: 0.044121067970991135, rmse: 0.21005015584614817, mae: 0.08312632143497467, nrmse: 1.1818447715292457
+INFO logger 2024-02-12 21:48:53,179 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_3', 'PobleSec_1', 'PobleSec_2', 'ElBorn_0', 'PobleSec_0', 'PobleSec_3', 'LesCorts_3', 'LesCorts_1', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_0', 'PobleSec_4', 'LesCorts_2', 'ElBorn_1']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[511.]
+ [349.]
+ [524.]
+ [492.]
+ [503.]
+ [494.]
+ [515.]
+ [402.]
+ [490.]
+ [364.]
+ [528.]
+ [487.]
+ [498.]
+ [511.]
+ [414.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:53,955 | train_utils.py:153 | Best Loss: 0.00011244040670926157
+INFO logger 2024-02-12 21:48:54,759 | train_utils.py:153 | Best Loss: 0.00033810464401296745
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:55,717 | train_utils.py:153 | Best Loss: 0.0003473357742424966
+INFO logger 2024-02-12 21:48:56,292 | train_utils.py:153 | Best Loss: 0.00015299759382283055
+INFO logger 2024-02-12 21:48:57,211 | train_utils.py:153 | Best Loss: 0.00034290424973417924
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:48:58,202 | train_utils.py:153 | Best Loss: 0.0003459770993813579
+INFO logger 2024-02-12 21:48:59,017 | train_utils.py:153 | Best Loss: 0.00018817316114423218
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:00,176 | train_utils.py:153 | Best Loss: 0.00013474090711066596
+INFO logger 2024-02-12 21:49:00,776 | train_utils.py:153 | Best Loss: 1.046507542554721e-05
+INFO logger 2024-02-12 21:49:01,365 | train_utils.py:153 | Best Loss: 9.2326857289844e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:01,751 | train_utils.py:153 | Best Loss: 1.0269491639154725e-05
+INFO logger 2024-02-12 21:49:02,306 | train_utils.py:153 | Best Loss: 0.00016549702635721157
+INFO logger 2024-02-12 21:49:03,292 | train_utils.py:153 | Best Loss: 0.00034385363298182297
+INFO logger 2024-02-12 21:49:03,958 | train_utils.py:153 | Best Loss: 9.464167639863683e-05
+INFO logger 2024-02-12 21:49:04,357 | train_utils.py:153 | Best Loss: 1.0701530339682233e-05
+INFO logger 2024-02-12 21:49:04,678 | server.py:244 | [Global round 11] Aggregating local models...
+INFO logger 2024-02-12 21:49:04,680 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-12 21:49:04,746 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.866014669806773e-05, mse: 0.0022475961595773697, rmse: 0.04740881942821788, mae: 0.03241794928908348, nrmse: 0.5169271590496018
+INFO logger 2024-02-12 21:49:04,783 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001591742031918893, mse: 0.020198296755552292, rmse: 0.14212071191614645, mae: 0.10227353870868683, nrmse: 1.69359056206681
+INFO logger 2024-02-12 21:49:04,864 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034485466704945865, mse: 0.04394281655550003, rmse: 0.20962541963106485, mae: 0.08244913816452026, nrmse: 1.1789939037507442
+INFO logger 2024-02-12 21:49:04,866 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'ElBorn_2', 'ElBorn_0', 'LesCorts_3', 'LesCorts_2', 'PobleSec_2', 'ElBorn_1', 'PobleSec_4', 'PobleSec_1', 'PobleSec_3', 'LesCorts_0', 'ElBorn_3', 'ElBorn_4', 'LesCorts_4', 'PobleSec_0']
+INFO logger 2024-02-12 21:49:05,492 | train_utils.py:153 | Best Loss: 0.00012969073011643358
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[380.]
+ [495.]
+ [491.]
+ [345.]
+ [494.]
+ [497.]
+ [418.]
+ [454.]
+ [495.]
+ [447.]
+ [513.]
+ [428.]
+ [514.]
+ [507.]
+ [501.]]
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:05,950 | train_utils.py:153 | Best Loss: 1.040127336166817e-05
+INFO logger 2024-02-12 21:49:06,520 | train_utils.py:153 | Best Loss: 0.00014427373442204967
+INFO logger 2024-02-12 21:49:07,131 | train_utils.py:153 | Best Loss: 0.00018793399097147392
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:07,656 | train_utils.py:153 | Best Loss: 9.299131407816376e-05
+INFO logger 2024-02-12 21:49:09,265 | train_utils.py:153 | Best Loss: 0.0003468456177964924
+INFO logger 2024-02-12 21:49:10,004 | train_utils.py:153 | Best Loss: 1.0544112852576597e-05
+INFO logger 2024-02-12 21:49:11,424 | train_utils.py:153 | Best Loss: 0.0003441430245504135
+INFO logger 2024-02-12 21:49:12,855 | train_utils.py:153 | Best Loss: 0.0003377772146087932
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:13,964 | train_utils.py:153 | Best Loss: 0.00034672684432190704
+INFO logger 2024-02-12 21:49:14,765 | train_utils.py:153 | Best Loss: 0.00016472917404134719
+INFO logger 2024-02-12 21:49:15,532 | train_utils.py:153 | Best Loss: 0.00010927938766201625
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:15,943 | train_utils.py:153 | Best Loss: 1.041207488981674e-05
+INFO logger 2024-02-12 21:49:16,552 | train_utils.py:153 | Best Loss: 9.216580298941648e-05
+INFO logger 2024-02-12 21:49:17,395 | train_utils.py:153 | Best Loss: 0.0003421155777283189
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[459.]
+ [513.]
+ [334.]
+ [414.]
+ [510.]
+ [491.]
+ [504.]
+ [516.]
+ [497.]
+ [501.]
+ [429.]
+ [368.]
+ [507.]
+ [447.]
+ [501.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:18,077 | server.py:244 | [Global round 12] Aggregating local models...
+INFO logger 2024-02-12 21:49:18,079 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_2']
+INFO logger 2024-02-12 21:49:18,209 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.8315941740979175e-05, mse: 0.0022063227370381355, rmse: 0.04697150984413994, mae: 0.032257162034511566, nrmse: 0.5194764513568445
+INFO logger 2024-02-12 21:49:18,282 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001558466230339387, mse: 0.01977524533867836, rmse: 0.14062448342546316, mae: 0.10167296230792999, nrmse: 1.6885297625229734
+INFO logger 2024-02-12 21:49:18,384 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003438524423739103, mse: 0.04381411522626877, rmse: 0.20931821522807986, mae: 0.08225496113300323, nrmse: 1.1788780798537852
+INFO logger 2024-02-12 21:49:18,388 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'PobleSec_2', 'PobleSec_0', 'ElBorn_2', 'PobleSec_1', 'LesCorts_0', 'LesCorts_3', 'ElBorn_4', 'PobleSec_4', 'LesCorts_2', 'ElBorn_3', 'ElBorn_1', 'LesCorts_1', 'LesCorts_4', 'PobleSec_3']
+INFO logger 2024-02-12 21:49:18,811 | train_utils.py:153 | Best Loss: 0.00016444137180449017
+INFO logger 2024-02-12 21:49:20,029 | train_utils.py:153 | Best Loss: 0.0003463577542006676
+INFO logger 2024-02-12 21:49:21,327 | train_utils.py:153 | Best Loss: 0.00034210325358068847
+INFO logger 2024-02-12 21:49:21,689 | train_utils.py:153 | Best Loss: 1.0189973085034405e-05
+INFO logger 2024-02-12 21:49:22,643 | train_utils.py:153 | Best Loss: 0.0003378720464566209
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:23,638 | train_utils.py:153 | Best Loss: 0.00015888570491987014
+INFO logger 2024-02-12 21:49:24,460 | train_utils.py:153 | Best Loss: 0.00018493728766664426
+INFO logger 2024-02-12 21:49:24,828 | train_utils.py:153 | Best Loss: 9.749554238813043e-06
+INFO logger 2024-02-12 21:49:26,222 | train_utils.py:153 | Best Loss: 0.000344091150268003
+INFO logger 2024-02-12 21:49:26,944 | train_utils.py:153 | Best Loss: 9.378261216752754e-05
+INFO logger 2024-02-12 21:49:27,465 | train_utils.py:153 | Best Loss: 9.318221032007593e-05
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:27,926 | train_utils.py:153 | Best Loss: 1.0169698963063242e-05
+INFO logger 2024-02-12 21:49:28,762 | train_utils.py:153 | Best Loss: 0.00013318674350211844
+INFO logger 2024-02-12 21:49:29,530 | train_utils.py:153 | Best Loss: 9.231825310829483e-05
+INFO logger 2024-02-12 21:49:30,710 | train_utils.py:153 | Best Loss: 0.0003462477885626667
+INFO logger 2024-02-12 21:49:31,520 | server.py:244 | [Global round 13] Aggregating local models...
+INFO logger 2024-02-12 21:49:31,522 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[311.]
+ [491.]
+ [502.]
+ [513.]
+ [498.]
+ [434.]
+ [411.]
+ [502.]
+ [518.]
+ [511.]
+ [391.]
+ [503.]
+ [450.]
+ [442.]
+ [502.]]
+INFO logger 2024-02-12 21:49:31,605 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.8652520088505916e-05, mse: 0.0022470864932984114, rmse: 0.04740344389702515, mae: 0.03216460347175598, nrmse: 0.5084447939606908
+INFO logger 2024-02-12 21:49:31,696 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015486682845519212, mse: 0.019649211317300797, rmse: 0.14017564452250897, mae: 0.10120485723018646, nrmse: 1.6664307129151552
+INFO logger 2024-02-12 21:49:31,872 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003432658388770706, mse: 0.0437389500439167, rmse: 0.2091385905181459, mae: 0.08178553730249405, nrmse: 1.1781900546314363
+INFO logger 2024-02-12 21:49:31,876 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_4', 'PobleSec_3', 'LesCorts_3', 'ElBorn_4', 'PobleSec_0', 'LesCorts_0', 'LesCorts_1', 'PobleSec_1', 'ElBorn_1', 'LesCorts_2', 'ElBorn_0', 'ElBorn_3', 'ElBorn_2', 'PobleSec_4', 'PobleSec_2']
+INFO logger 2024-02-12 21:49:32,480 | train_utils.py:153 | Best Loss: 9.215505788925142e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:33,958 | train_utils.py:153 | Best Loss: 0.00034580098835414083
+INFO logger 2024-02-12 21:49:34,586 | train_utils.py:153 | Best Loss: 0.00019556456463335202
+INFO logger 2024-02-12 21:49:34,984 | train_utils.py:153 | Best Loss: 9.51012707841785e-06
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:35,787 | train_utils.py:153 | Best Loss: 0.00034200805501543045
+INFO logger 2024-02-12 21:49:36,647 | train_utils.py:153 | Best Loss: 0.00017220113693317126
+INFO logger 2024-02-12 21:49:37,441 | train_utils.py:153 | Best Loss: 0.0001362170384140217
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:38,792 | train_utils.py:153 | Best Loss: 0.00033768988258432687
+INFO logger 2024-02-12 21:49:39,399 | train_utils.py:153 | Best Loss: 1.0338072495755474e-05
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:39,942 | train_utils.py:153 | Best Loss: 9.305293726930885e-05
+INFO logger 2024-02-12 21:49:40,458 | train_utils.py:153 | Best Loss: 0.00016008474378158218
+INFO logger 2024-02-12 21:49:40,754 | train_utils.py:153 | Best Loss: 9.544469598356797e-05
+INFO logger 2024-02-12 21:49:41,024 | train_utils.py:153 | Best Loss: 1.0281195315748345e-05
+INFO logger 2024-02-12 21:49:41,846 | train_utils.py:153 | Best Loss: 0.00034423497932647745
+INFO logger 2024-02-12 21:49:43,148 | train_utils.py:153 | Best Loss: 0.00034642310759903293
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[445.]
+ [471.]
+ [390.]
+ [499.]
+ [512.]
+ [403.]
+ [452.]
+ [502.]
+ [508.]
+ [515.]
+ [314.]
+ [410.]
+ [513.]
+ [520.]
+ [487.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:44,032 | server.py:244 | [Global round 14] Aggregating local models...
+INFO logger 2024-02-12 21:49:44,035 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_1']
+INFO logger 2024-02-12 21:49:44,213 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.803602995733384e-05, mse: 0.0021725469268858433, rmse: 0.04661058814138525, mae: 0.031648170202970505, nrmse: 0.5079141285409323
+INFO logger 2024-02-12 21:49:44,310 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015622782738803075, mse: 0.019826773554086685, rmse: 0.1408075763376626, mae: 0.1030341163277626, nrmse: 1.7858507608524294
+INFO logger 2024-02-12 21:49:44,572 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003419643722650573, mse: 0.04357234761118889, rmse: 0.20873990421380598, mae: 0.08137492090463638, nrmse: 1.178407964706181
+INFO logger 2024-02-12 21:49:44,574 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'LesCorts_3', 'ElBorn_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_2', 'LesCorts_0', 'PobleSec_2', 'PobleSec_3', 'PobleSec_1', 'LesCorts_4', 'ElBorn_1', 'LesCorts_1', 'PobleSec_0', 'PobleSec_4']
+INFO logger 2024-02-12 21:49:44,880 | train_utils.py:153 | Best Loss: 0.00014868377626914045
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:45,598 | train_utils.py:153 | Best Loss: 0.00018478947560907457
+INFO logger 2024-02-12 21:49:46,015 | train_utils.py:153 | Best Loss: 8.97774118243982e-06
+INFO logger 2024-02-12 21:49:46,384 | train_utils.py:153 | Best Loss: 1.126810367576832e-05
+INFO logger 2024-02-12 21:49:46,738 | train_utils.py:153 | Best Loss: 0.00012729736382438654
+INFO logger 2024-02-12 21:49:47,232 | train_utils.py:153 | Best Loss: 9.397127613158385e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:47,834 | train_utils.py:153 | Best Loss: 0.00016189954374312308
+INFO logger 2024-02-12 21:49:49,040 | train_utils.py:153 | Best Loss: 0.00034605007292336134
+INFO logger 2024-02-12 21:49:50,838 | train_utils.py:153 | Best Loss: 0.00034589059639898105
+INFO logger 2024-02-12 21:49:52,007 | train_utils.py:153 | Best Loss: 0.0003380263045312851
+INFO logger 2024-02-12 21:49:52,786 | train_utils.py:153 | Best Loss: 9.179560507427116e-05
+INFO logger 2024-02-12 21:49:53,566 | train_utils.py:153 | Best Loss: 9.695527617311204e-06
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:54,299 | train_utils.py:153 | Best Loss: 0.0001460794721626573
+INFO logger 2024-02-12 21:49:55,411 | train_utils.py:153 | Best Loss: 0.00034092108048058633
+INFO logger 2024-02-12 21:49:56,905 | train_utils.py:153 | Best Loss: 0.0003445809217001216
+INFO logger 2024-02-12 21:49:57,566 | server.py:244 | [Global round 15] Aggregating local models...
+INFO logger 2024-02-12 21:49:57,568 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_1']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[339.]
+ [401.]
+ [507.]
+ [522.]
+ [348.]
+ [515.]
+ [432.]
+ [490.]
+ [474.]
+ [499.]
+ [527.]
+ [509.]
+ [424.]
+ [501.]
+ [519.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:49:57,593 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.923354460119949e-05, mse: 0.0023146483581513166, rmse: 0.048110792532978675, mae: 0.03288041800260544, nrmse: 0.5234725497488373
+INFO logger 2024-02-12 21:49:57,629 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00015183860417019728, mse: 0.019260065630078316, rmse: 0.13878063852741965, mae: 0.10086381435394287, nrmse: 1.653695232130055
+INFO logger 2024-02-12 21:49:57,728 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003423129683580455, mse: 0.04361612722277641, rmse: 0.20884474430249952, mae: 0.0819028839468956, nrmse: 1.1781165555351412
+INFO logger 2024-02-12 21:49:57,729 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_3', 'PobleSec_0', 'ElBorn_1', 'ElBorn_0', 'LesCorts_4', 'ElBorn_3', 'LesCorts_0', 'PobleSec_1', 'PobleSec_4', 'LesCorts_2', 'LesCorts_3', 'ElBorn_4', 'ElBorn_2', 'PobleSec_2']
+INFO logger 2024-02-12 21:49:58,400 | train_utils.py:153 | Best Loss: 0.00013030114194258438
+INFO logger 2024-02-12 21:49:59,466 | train_utils.py:153 | Best Loss: 0.00034472432467851815
+INFO logger 2024-02-12 21:50:00,637 | train_utils.py:153 | Best Loss: 0.0003410178505060241
+INFO logger 2024-02-12 21:50:01,272 | train_utils.py:153 | Best Loss: 9.998362252695693e-06
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:01,599 | train_utils.py:153 | Best Loss: 0.0001583926330190062
+INFO logger 2024-02-12 21:50:02,218 | train_utils.py:153 | Best Loss: 9.109397826931434e-05
+INFO logger 2024-02-12 21:50:02,924 | train_utils.py:153 | Best Loss: 0.00011592060732452765
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:03,775 | train_utils.py:153 | Best Loss: 0.000152101120720917
+INFO logger 2024-02-12 21:50:05,117 | train_utils.py:153 | Best Loss: 0.000338089059649666
+INFO logger 2024-02-12 21:50:06,386 | train_utils.py:153 | Best Loss: 0.00034463849157006956
+INFO logger 2024-02-12 21:50:07,003 | train_utils.py:153 | Best Loss: 9.29912167249999e-05
+INFO logger 2024-02-12 21:50:07,605 | train_utils.py:153 | Best Loss: 0.00017990366207185196
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:08,101 | train_utils.py:153 | Best Loss: 8.809413906560247e-06
+INFO logger 2024-02-12 21:50:08,372 | train_utils.py:153 | Best Loss: 1.028947282474542e-05
+INFO logger 2024-02-12 21:50:09,361 | train_utils.py:153 | Best Loss: 0.0003464550871446025
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[451.]
+ [475.]
+ [501.]
+ [512.]
+ [359.]
+ [527.]
+ [356.]
+ [452.]
+ [500.]
+ [519.]
+ [517.]
+ [423.]
+ [502.]
+ [513.]
+ [490.]]
+INFO logger 2024-02-12 21:50:10,101 | server.py:244 | [Global round 16] Aggregating local models...
+INFO logger 2024-02-12 21:50:10,103 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_1']
+INFO logger 2024-02-12 21:50:10,167 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.9097699590279286e-05, mse: 0.0022984775714576244, rmse: 0.04794244019089584, mae: 0.03294076770544052, nrmse: 0.5508101070193806
+INFO logger 2024-02-12 21:50:10,238 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014965654294992313, mse: 0.018981795758008957, rmse: 0.1377744379702162, mae: 0.09913510829210281, nrmse: 1.5764002198860638
+INFO logger 2024-02-12 21:50:10,362 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003417659428439976, mse: 0.043546803295612335, rmse: 0.20867870829486254, mae: 0.08125949651002884, nrmse: 1.1781440658576812
+INFO logger 2024-02-12 21:50:10,366 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_3', 'PobleSec_1', 'LesCorts_4', 'LesCorts_1', 'PobleSec_0', 'ElBorn_0', 'ElBorn_2', 'LesCorts_2', 'PobleSec_2', 'LesCorts_3', 'ElBorn_1', 'ElBorn_3', 'LesCorts_0', 'ElBorn_4', 'PobleSec_4']
+INFO logger 2024-02-12 21:50:11,573 | train_utils.py:153 | Best Loss: 0.000345090752848842
+INFO logger 2024-02-12 21:50:12,855 | train_utils.py:153 | Best Loss: 0.00033818749875915566
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:13,800 | train_utils.py:153 | Best Loss: 8.930912110627743e-05
+INFO logger 2024-02-12 21:50:14,446 | train_utils.py:153 | Best Loss: 0.00014176572760164042
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:15,796 | train_utils.py:153 | Best Loss: 0.00034037898983953034
+INFO logger 2024-02-12 21:50:16,537 | train_utils.py:153 | Best Loss: 0.0001624437658665117
+INFO logger 2024-02-12 21:50:16,958 | train_utils.py:153 | Best Loss: 1.0217422918092621e-05
+INFO logger 2024-02-12 21:50:17,626 | train_utils.py:153 | Best Loss: 9.270130257715869e-05
+INFO logger 2024-02-12 21:50:19,317 | train_utils.py:153 | Best Loss: 0.00034629388873678025
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:19,921 | train_utils.py:153 | Best Loss: 0.0001777526541280816
+INFO logger 2024-02-12 21:50:20,183 | train_utils.py:153 | Best Loss: 9.998688370254844e-06
+INFO logger 2024-02-12 21:50:20,481 | train_utils.py:153 | Best Loss: 0.00010662391030450086
+INFO logger 2024-02-12 21:50:20,951 | train_utils.py:153 | Best Loss: 0.00016607539537662303
+INFO logger 2024-02-12 21:50:21,428 | train_utils.py:153 | Best Loss: 8.49622885239927e-06
+INFO logger 2024-02-12 21:50:22,743 | train_utils.py:153 | Best Loss: 0.00034481578204032827
+INFO logger 2024-02-12 21:50:23,333 | server.py:244 | [Global round 17] Aggregating local models...
+INFO logger 2024-02-12 21:50:23,334 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_4']
+INFO logger 2024-02-12 21:50:23,376 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.9744401747036886e-05, mse: 0.0023752576671540737, rmse: 0.0487366152615677, mae: 0.03337160870432854, nrmse: 0.5466572788731294
+INFO logger 2024-02-12 21:50:23,428 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.0001477542566816317, mse: 0.018735190853476524, rmse: 0.13687655333721888, mae: 0.09840686619281769, nrmse: 1.564259329354034
+INFO logger 2024-02-12 21:50:23,568 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034146583353088597, mse: 0.04350809007883072, rmse: 0.2085859297240126, mae: 0.08137192577123642, nrmse: 1.1786343003421114
+INFO logger 2024-02-12 21:50:23,569 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'LesCorts_2', 'LesCorts_0', 'ElBorn_4', 'PobleSec_3', 'PobleSec_4', 'LesCorts_1', 'ElBorn_3', 'PobleSec_1', 'PobleSec_2', 'LesCorts_4', 'ElBorn_1', 'LesCorts_3', 'PobleSec_0', 'ElBorn_2']
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[473.]
+ [501.]
+ [527.]
+ [437.]
+ [501.]
+ [344.]
+ [463.]
+ [517.]
+ [492.]
+ [413.]
+ [512.]
+ [405.]
+ [431.]
+ [507.]
+ [518.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:24,181 | train_utils.py:153 | Best Loss: 0.00018735060351338364
+INFO logger 2024-02-12 21:50:24,635 | train_utils.py:153 | Best Loss: 9.273948527093737e-05
+INFO logger 2024-02-12 21:50:25,433 | train_utils.py:153 | Best Loss: 0.00015939276376793608
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:25,785 | train_utils.py:153 | Best Loss: 8.200991160353276e-06
+INFO logger 2024-02-12 21:50:27,225 | train_utils.py:153 | Best Loss: 0.00034482871710256796
+INFO logger 2024-02-12 21:50:28,415 | train_utils.py:153 | Best Loss: 0.0003449714209473743
+INFO logger 2024-02-12 21:50:29,189 | train_utils.py:153 | Best Loss: 0.00013809767483641006
+INFO logger 2024-02-12 21:50:29,550 | train_utils.py:153 | Best Loss: 0.00010768048789190209
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:30,548 | train_utils.py:153 | Best Loss: 0.00033845508452798204
+INFO logger 2024-02-12 21:50:32,153 | train_utils.py:153 | Best Loss: 0.0003465768542162722
+INFO logger 2024-02-12 21:50:33,286 | train_utils.py:153 | Best Loss: 8.803856785801288e-05
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:33,683 | train_utils.py:153 | Best Loss: 1.0537198865066332e-05
+INFO logger 2024-02-12 21:50:34,276 | train_utils.py:153 | Best Loss: 0.00017270432752475404
+INFO logger 2024-02-12 21:50:35,291 | train_utils.py:153 | Best Loss: 0.0003407480213497802
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[316.]
+ [530.]
+ [434.]
+ [509.]
+ [473.]
+ [519.]
+ [439.]
+ [377.]
+ [501.]
+ [491.]
+ [527.]
+ [514.]
+ [427.]
+ [501.]
+ [464.]]
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:35,789 | train_utils.py:153 | Best Loss: 9.803964763740302e-06
+INFO logger 2024-02-12 21:50:36,314 | server.py:244 | [Global round 18] Aggregating local models...
+INFO logger 2024-02-12 21:50:36,316 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_0']
+INFO logger 2024-02-12 21:50:36,344 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.88373905721296e-05, mse: 0.0022682901471853256, rmse: 0.04762656976085225, mae: 0.03270211070775986, nrmse: 0.532050064893355
+INFO logger 2024-02-12 21:50:36,381 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014263719295788753, mse: 0.01808745786547661, rmse: 0.13448961991721373, mae: 0.0958106517791748, nrmse: 1.4637347511957994
+INFO logger 2024-02-12 21:50:36,506 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034211791707129457, mse: 0.04359157755970955, rmse: 0.20878596111738343, mae: 0.08193768560886383, nrmse: 1.180314024897328
+INFO logger 2024-02-12 21:50:36,510 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['ElBorn_0', 'ElBorn_3', 'PobleSec_4', 'PobleSec_1', 'PobleSec_2', 'LesCorts_3', 'ElBorn_1', 'PobleSec_3', 'PobleSec_0', 'ElBorn_4', 'LesCorts_4', 'ElBorn_2', 'LesCorts_0', 'LesCorts_1', 'LesCorts_2']
+INFO logger 2024-02-12 21:50:36,765 | train_utils.py:153 | Best Loss: 0.00014907124132853774
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:37,725 | train_utils.py:153 | Best Loss: 0.00012430363415699938
+INFO logger 2024-02-12 21:50:38,892 | train_utils.py:153 | Best Loss: 0.0003450927730121716
+INFO logger 2024-02-12 21:50:40,044 | train_utils.py:153 | Best Loss: 0.00033816107743104374
+INFO logger 2024-02-12 21:50:41,262 | train_utils.py:153 | Best Loss: 0.0003465204334297166
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:42,209 | train_utils.py:153 | Best Loss: 0.0001773124843922972
+INFO logger 2024-02-12 21:50:42,649 | train_utils.py:153 | Best Loss: 1.0205374143180856e-05
+INFO logger 2024-02-12 21:50:43,654 | train_utils.py:153 | Best Loss: 0.0003451467442186916
+INFO logger 2024-02-12 21:50:45,026 | train_utils.py:153 | Best Loss: 0.00034100334270028616
+INFO logger 2024-02-12 21:50:45,459 | train_utils.py:153 | Best Loss: 8.346671227293746e-06
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:45,812 | train_utils.py:153 | Best Loss: 8.818036708123002e-05
+INFO logger 2024-02-12 21:50:46,098 | train_utils.py:153 | Best Loss: 9.818687857295149e-06
+INFO logger 2024-02-12 21:50:46,785 | train_utils.py:153 | Best Loss: 0.00016492004206741762
+INFO logger 2024-02-12 21:50:47,278 | train_utils.py:153 | Best Loss: 0.000131159440794012
+[31mStarting poisoning...!
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[346.]
+ [338.]
+ [518.]
+ [512.]
+ [493.]
+ [419.]
+ [516.]
+ [475.]
+ [514.]
+ [496.]
+ [527.]
+ [484.]
+ [419.]
+ [452.]
+ [519.]]
+INFO logger 2024-02-12 21:50:47,935 | train_utils.py:153 | Best Loss: 9.220860808630262e-05
+INFO logger 2024-02-12 21:50:48,597 | server.py:244 | [Global round 19] Aggregating local models...
+INFO logger 2024-02-12 21:50:48,599 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts_2']
+INFO logger 2024-02-12 21:50:48,656 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.778840753789721e-05, mse: 0.00214122305624187, rmse: 0.046273351469737635, mae: 0.0318860225379467, nrmse: 0.538672147848432
+INFO logger 2024-02-12 21:50:48,712 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014486499144341687, mse: 0.018376003950834274, rmse: 0.1355581201951188, mae: 0.09683549404144287, nrmse: 1.5414318263655236
+INFO logger 2024-02-12 21:50:48,875 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.00034116629474451694, mse: 0.04347134754061699, rmse: 0.20849783581758585, mae: 0.08042855560779572, nrmse: 1.180892661158333
+INFO logger 2024-02-12 21:50:48,886 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['PobleSec_3', 'LesCorts_1', 'PobleSec_0', 'ElBorn_1', 'ElBorn_0', 'ElBorn_4', 'LesCorts_2', 'PobleSec_1', 'PobleSec_4', 'ElBorn_2', 'LesCorts_3', 'LesCorts_0', 'PobleSec_2', 'ElBorn_3', 'LesCorts_4']
+INFO logger 2024-02-12 21:50:50,356 | train_utils.py:153 | Best Loss: 0.00034516558095108805
+INFO logger 2024-02-12 21:50:51,318 | train_utils.py:153 | Best Loss: 0.0001377255590469168
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:52,282 | train_utils.py:153 | Best Loss: 0.00034126266580456355
+INFO logger 2024-02-12 21:50:52,841 | train_utils.py:153 | Best Loss: 1.0002948425863172e-05
+INFO logger 2024-02-12 21:50:53,193 | train_utils.py:153 | Best Loss: 0.00016076756182356158
+INFO logger 2024-02-12 21:50:53,616 | train_utils.py:153 | Best Loss: 7.89132306508603e-06
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:54,127 | train_utils.py:153 | Best Loss: 9.181339627986894e-05
+INFO logger 2024-02-12 21:50:55,622 | train_utils.py:153 | Best Loss: 0.00033849073933276135
+INFO logger 2024-02-12 21:50:56,874 | train_utils.py:153 | Best Loss: 0.0003453989884280783
+INFO logger 2024-02-12 21:50:57,336 | train_utils.py:153 | Best Loss: 9.778890407819679e-06
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:50:57,972 | train_utils.py:153 | Best Loss: 0.000173914372888312
+INFO logger 2024-02-12 21:50:58,415 | train_utils.py:153 | Best Loss: 0.00016641534173218478
+INFO logger 2024-02-12 21:50:59,446 | train_utils.py:153 | Best Loss: 0.0003465789236590325
+[31mStarting poisoning...!
+INFO logger 2024-02-12 21:51:00,218 | train_utils.py:153 | Best Loss: 9.074083479922175e-05
+INFO logger 2024-02-12 21:51:00,839 | train_utils.py:153 | Best Loss: 8.855356252071453e-05
+INFO logger 2024-02-12 21:51:01,267 | server.py:244 | [Global round 20] Aggregating local models...
+INFO logger 2024-02-12 21:51:01,269 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+INFO logger 2024-02-12 21:51:01,441 | server.py:324 | [Dataset ElBorn Evaluation on 828 samples] loss: 1.887388579133484e-05, mse: 0.0022721211425960064, rmse: 0.04766677189191656, mae: 0.03174924477934837, nrmse: 0.49214133805286897
+INFO logger 2024-02-12 21:51:01,499 | server.py:324 | [Dataset LesCorts Evaluation on 1368 samples] loss: 0.00014503856124193, mse: 0.018394455313682556, rmse: 0.13562616013764658, mae: 0.09589883685112, nrmse: 1.467602000073931
+Preds shape is: (15, 535, 5)
+Preds shape by feat is: (15, 535)
+end_idx: 20
+end_idx: 40
+end_idx: 60
+end_idx: 80
+end_idx: 100
+end_idx: 120
+end_idx: 140
+end_idx: 160
+end_idx: 180
+end_idx: 200
+end_idx: 220
+end_idx: 240
+end_idx: 260
+end_idx: 280
+end_idx: 300
+end_idx: 320
+end_idx: 340
+end_idx: 360
+end_idx: 380
+end_idx: 400
+end_idx: 420
+end_idx: 440
+end_idx: 460
+end_idx: 480
+end_idx: 500
+end_idx: 520
+end_idx: 535
+[[507.]
+ [444.]
+ [499.]
+ [518.]
+ [330.]
+ [510.]
+ [518.]
+ [512.]
+ [518.]
+ [488.]
+ [417.]
+ [407.]
+ [492.]
+ [407.]
+ [527.]]
+INFO logger 2024-02-12 21:51:01,685 | server.py:324 | [Dataset PobleSec Evaluation on 3175 samples] loss: 0.0003418426785442069, mse: 0.04355718940496445, rmse: 0.20870359221864018, mae: 0.08094101399183273, nrmse: 1.18059317434332
+INFO logger 2024-02-12 21:51:01,696 | server.py:136 | Time passed: 268.0927131175995 seconds.
+INFO logger 2024-02-12 21:51:01,697 | server.py:137 | Best global model found on fl_round=0 with loss=0.0017594693884394996

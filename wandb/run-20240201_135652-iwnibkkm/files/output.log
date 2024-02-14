@@ -1,0 +1,72 @@
+INFO logger 2024-02-01 13:56:58,655 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 13:56:58,655 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 13:56:58,656 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 13:56:58,656 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 13:56:58,659 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 13:56:58,659 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 13:56:58,659 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 13:56:58,659 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 13:56:58,663 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 13:56:58,663 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 13:56:58,663 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 13:56:58,664 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 13:56:58,697 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 13:56:58,697 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 13:56:58,697 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 13:56:58,697 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 13:56:58,698 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-01 13:57:00,561 | server.py:68 | Initializing client manager...
+INFO logger 2024-02-01 13:57:00,561 | server.py:75 | Registering clients...
+INFO logger 2024-02-01 13:57:00,561 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-01 13:57:00,561 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-01 13:57:00,561 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-01 13:57:00,561 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-01 13:57:00,561 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-01 13:57:00,562 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-01 13:57:00,562 | server.py:79 | Client manager initialized!
+INFO logger 2024-02-01 13:57:00,562 | server.py:61 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-01 13:57:00,563 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+INFO logger 2024-02-01 13:57:02,483 | server.py:93 | Starting FL rounds
+INFO logger 2024-02-01 13:57:02,484 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-01 13:57:03,565 | train_utils.py:153 | Best Loss: 0.0002896100798708915
+INFO logger 2024-02-01 13:57:04,249 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-01 13:57:05,186 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-01 13:57:05,516 | train_utils.py:153 | Best Loss: 0.00016069088518115633
+INFO logger 2024-02-01 13:57:05,768 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+INFO logger 2024-02-01 13:57:06,222 | train_utils.py:153 | Best Loss: 0.0004772753332202372
+INFO logger 2024-02-01 13:57:06,593 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-01 13:57:07,348 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-01 13:57:07,920 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+INFO logger 2024-02-01 13:57:08,205 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-01 13:57:08,579 | train_utils.py:153 | Best Loss: 6.096589588222728e-05
+INFO logger 2024-02-01 13:57:09,026 | train_utils.py:153 | Best Loss: 0.0005857830156425113
+INFO logger 2024-02-01 13:57:09,926 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-01 13:57:10,860 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-01 13:57:11,239 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+INFO logger 2024-02-01 13:57:11,288 | server.py:208 | [Global round 1] Aggregating local models...
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 122, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 46, in main
+    global_model, history = fit(
+                            ^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 133, in fit
+    model_params, history = server.fit(args.fl_rounds, args.fraction, use_carbontracker=use_carbontracker,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 117, in fit
+    test_metrics = self.random_evaluate(self.global_val_loaders, self.global_model)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 282, in random_evaluate
+    loss, mse, rmse, mae, r2, nrmse = test(model, val_loader, params["criterion"], device=self.device)
+                                                                                          ^^^^^^^^^^^
+AttributeError: 'Server' object has no attribute 'device'

@@ -26,7 +26,8 @@ from ml.utils.train_utils import train, test
 
 class TorchRegressionClient(Client):
     def __init__(self, cid: Union[str, int], net: torch.nn.Module, train_loader: DataLoader, val_loader: DataLoader,
-                 local_train_params: Optional[Dict[str, Union[str, int, float, bool]]]):
+                 local_train_params: Optional[Dict[str, Union[str, int, float, bool]]],
+                 is_malicious: bool):
         self.cid = cid
         self.net = net
         self.train_loader = train_loader
@@ -44,6 +45,7 @@ class TorchRegressionClient(Client):
         self.max_grad_norm = None
         self.fed_prox_mu = None
         self._init_local_train_params()
+        self.is_malicious = is_malicious
 
     def _init_local_train_params(self):
 
@@ -74,7 +76,8 @@ class TorchRegressionClient(Client):
 
     def get_parameters(self) -> List[np.ndarray]:
         return [val.cpu().numpy() for _, val in self.net.state_dict().items()]
-
+    def vectorize_net(self):
+        return torch.cat([p.view(-1) for p in self.net.parameters()])
     def set_train_parameters(self,
                              params: Dict[str, Union[bool, str, int, float]],
                              verbose: bool = False):  # default parameters
@@ -106,7 +109,7 @@ class TorchRegressionClient(Client):
             self.net.load_state_dict(parameters.state_dict(), strict=True)
 
     def fit(self, model: Optional[Union[torch.nn.Module, List[np.ndarray]]] = None) -> Tuple[
-        List[np.ndarray], int, float, Dict[str, float], int, float, Dict[str, float]]:
+        List[np.ndarray], any, int, float, Dict[str, float], int, float, Dict[str, float]]:
 
         if model is not None:
             self.set_parameters(model)
@@ -117,11 +120,12 @@ class TorchRegressionClient(Client):
                                           early_stopping=self.early_stopping, patience=self.patience,
                                           reg1=self.reg1, reg2=self.reg2, max_grad_norm=self.max_grad_norm,
                                           fedprox_mu=self.fed_prox_mu,
-                                          log_per=10)
+                                          log_per=10,
+                                          is_malicious = self.is_malicious)
         _, train_loss, train_metrics = self.evaluate(self.train_loader)
         num_test, test_loss, test_metrics = self.evaluate(self.val_loader)
 
-        return self.get_parameters(), len(
+        return self.get_parameters(), self.vectorize_net(), len(
             self.train_loader.dataset), train_loss, train_metrics, num_test, test_loss, test_metrics
 
     def evaluate(self, data: Optional[DataLoader] = None,
@@ -150,3 +154,4 @@ class TorchRegressionClient(Client):
                       f"loss: {loss}, mse: {mse}, rmse: {rmse}, mae: {mae}, nrmse: {nrmse}")
 
         return len(data.dataset), loss, metrics
+    

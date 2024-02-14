@@ -63,10 +63,11 @@ class Aggregator:
         return rep
 
     def aggregate(self, local_weights: List[Tuple[List[np.ndarray], int]],
-                  current_model: List[np.ndarray]) -> List[np.ndarray]:
+                  current_model: List[np.ndarray],
+                  coffs=None) -> List[np.ndarray]:
         aggregated = []
         if self.alg == "fedavg" or self.alg == "fedprox":
-            aggregated = fedavg_aggregate(local_weights)
+            aggregated = fedavg_aggregate(local_weights, coffs)
         elif self.alg == "avg":
             aggregated = simple_aggregate(local_weights)
         elif self.alg == "medianavg":

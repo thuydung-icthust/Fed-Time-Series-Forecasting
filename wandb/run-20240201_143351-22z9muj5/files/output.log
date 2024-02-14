@@ -1,0 +1,76 @@
+INFO logger 2024-02-01 14:33:57,557 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 14:33:57,558 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 14:33:57,558 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 14:33:57,558 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 14:33:57,561 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 14:33:57,561 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 14:33:57,561 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 14:33:57,561 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 14:33:57,571 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 14:33:57,571 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 14:33:57,571 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 14:33:57,571 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 14:33:57,573 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 14:33:57,573 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 14:33:57,580 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 14:33:57,580 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 14:33:57,581 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+INFO logger 2024-02-01 14:33:59,026 | server.py:71 | Initializing client manager...
+INFO logger 2024-02-01 14:33:59,027 | server.py:78 | Registering clients...
+INFO logger 2024-02-01 14:33:59,027 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-01 14:33:59,027 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-01 14:33:59,028 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-01 14:33:59,029 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-01 14:33:59,030 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-01 14:33:59,030 | server.py:82 | Client manager initialized!
+INFO logger 2024-02-01 14:33:59,030 | server.py:64 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-01 14:33:59,030 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-01 14:34:00,824 | server.py:96 | Starting FL rounds
+INFO logger 2024-02-01 14:34:00,825 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-01 14:34:02,006 | train_utils.py:153 | Best Loss: 0.0002896100798708915
+INFO logger 2024-02-01 14:34:02,788 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-01 14:34:03,945 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-01 14:34:04,530 | train_utils.py:153 | Best Loss: 0.00016069088518115633
+INFO logger 2024-02-01 14:34:04,906 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+INFO logger 2024-02-01 14:34:05,274 | train_utils.py:153 | Best Loss: 0.0004772753332202372
+INFO logger 2024-02-01 14:34:05,683 | train_utils.py:153 | Best Loss: 0.00021486838037769
+INFO logger 2024-02-01 14:34:06,525 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-01 14:34:07,166 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+INFO logger 2024-02-01 14:34:07,673 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-01 14:34:08,136 | train_utils.py:153 | Best Loss: 6.096589588222728e-05
+INFO logger 2024-02-01 14:34:08,576 | train_utils.py:153 | Best Loss: 0.0005857830156425113
+INFO logger 2024-02-01 14:34:09,322 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-01 14:34:10,473 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-01 14:34:10,996 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+INFO logger 2024-02-01 14:34:11,078 | server.py:212 | [Global round 1] Aggregating local models...
+INFO logger 2024-02-01 14:34:11,079 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['ElBorn_4']
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 122, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 46, in main
+    global_model, history = fit(
+                            ^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 134, in fit
+    model_params, history = server.fit(args.fl_rounds, args.fraction, use_carbontracker=use_carbontracker,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 121, in fit
+    test_metrics = self.random_evaluate(self.global_val_loaders, self.global_model, net=random_net)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 290, in random_evaluate
+    loss, mse, rmse, mae, r2, nrmse = test(self.model_in, val_loader, params["criterion"], device="cuda")
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/utils/train_utils.py", line 165, in test
+    for x, exogenous, y_hist, y in data:
+        ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 4)

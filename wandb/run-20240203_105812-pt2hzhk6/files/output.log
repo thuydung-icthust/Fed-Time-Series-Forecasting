@@ -1,0 +1,91 @@
+INFO logger 2024-02-03 10:58:16,493 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-03 10:58:16,493 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-03 10:58:16,493 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-03 10:58:16,493 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-03 10:58:16,495 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-03 10:58:16,495 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-03 10:58:16,495 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-03 10:58:16,495 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-03 10:58:16,497 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-03 10:58:16,497 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-03 10:58:16,497 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-03 10:58:16,497 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-03 10:58:16,498 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-03 10:58:16,498 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-03 10:58:16,498 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-03 10:58:16,498 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-03 10:58:16,498 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+INFO logger 2024-02-03 10:58:17,082 | server.py:74 | Initializing client manager...
+INFO logger 2024-02-03 10:58:17,082 | server.py:81 | Registering clients...
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: ElBorn_0
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: ElBorn_1
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: ElBorn_2
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: ElBorn_3
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: ElBorn_4
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: LesCorts_0
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: LesCorts_1
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: LesCorts_2
+INFO logger 2024-02-03 10:58:17,082 | client_manager.py:66 | Registered client with id: LesCorts_3
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: LesCorts_4
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: PobleSec_0
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: PobleSec_1
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: PobleSec_2
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: PobleSec_3
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:66 | Registered client with id: PobleSec_4
+INFO logger 2024-02-03 10:58:17,083 | server.py:85 | Client manager initialized!
+INFO logger 2024-02-03 10:58:17,083 | server.py:67 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-03 10:58:17,083 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['PobleSec_3']
+X_val_sub.shape is 535 	 y_val_sub is 535
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-03 10:58:18,579 | server.py:99 | Starting FL rounds
+INFO logger 2024-02-03 10:58:18,580 | client_manager.py:88 | Parameter c=1.0. Sampled 15 client(s): ['LesCorts_1', 'PobleSec_2', 'PobleSec_4', 'ElBorn_0', 'ElBorn_4', 'LesCorts_3', 'LesCorts_2', 'PobleSec_3', 'LesCorts_4', 'ElBorn_2', 'ElBorn_3', 'LesCorts_0', 'PobleSec_0', 'PobleSec_1', 'ElBorn_1']
+INFO logger 2024-02-03 10:58:19,347 | train_utils.py:153 | Best Loss: 0.0002896100798708915
+INFO logger 2024-02-03 10:58:19,924 | train_utils.py:153 | Best Loss: 0.00048219764949827213
+INFO logger 2024-02-03 10:58:20,661 | train_utils.py:153 | Best Loss: 0.0004605070486166111
+INFO logger 2024-02-03 10:58:20,987 | train_utils.py:153 | Best Loss: 0.0002248865115829712
+INFO logger 2024-02-03 10:58:21,182 | train_utils.py:153 | Best Loss: 2.704441241170887e-05
+INFO logger 2024-02-03 10:58:21,543 | train_utils.py:153 | Best Loss: 0.0005417556082557516
+INFO logger 2024-02-03 10:58:21,843 | train_utils.py:153 | Best Loss: 0.00021486838037769
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-03 10:58:22,415 | train_utils.py:153 | Best Loss: 0.00046282758760288006
+INFO logger 2024-02-03 10:58:22,886 | train_utils.py:153 | Best Loss: 0.00017418319152461158
+INFO logger 2024-02-03 10:58:23,096 | train_utils.py:153 | Best Loss: 2.86163878345925e-05
+INFO logger 2024-02-03 10:58:23,336 | train_utils.py:153 | Best Loss: 0.0001446908842637271
+INFO logger 2024-02-03 10:58:23,725 | train_utils.py:153 | Best Loss: 0.0007182669863976234
+[31mStarting poisoning...!
+[31mStarting poisoning...!
+INFO logger 2024-02-03 10:58:24,255 | train_utils.py:153 | Best Loss: 0.000442783231663657
+INFO logger 2024-02-03 10:58:25,303 | train_utils.py:153 | Best Loss: 0.0004338021676136753
+INFO logger 2024-02-03 10:58:25,893 | train_utils.py:153 | Best Loss: 2.6967046345957523e-05
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 131, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 54, in main
+    global_model, history = fit(
+                            ^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 137, in fit
+    model_params, history = server.fit(args.fl_rounds, args.fraction, use_carbontracker=use_carbontracker,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 114, in fit
+    self.fit_round(fl_round=fl_round,
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 186, in fit_round
+    self.conduct_defense(model_vec_list)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/ml/fl/server/server.py", line 224, in conduct_defense
+    verification_result = sat_verifier(preds, y_true, 0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/verifier.py", line 114, in sat_verifier
+    r_a = verify(preds)
+          ^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/verifier.py", line 49, in verify
+    verifier_results = get_satisfied_elements(preds, np.asarray(aggregated_lb), np.asarray(aggregated_ub))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/verifier.py", line 63, in get_satisfied_elements
+    satisfied_elements = [1.0 if lb[i] <= pred[i] <= ub[i] else 0.0 for i in range(len(pred))]
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/verifier.py", line 63, in <listcomp>
+    satisfied_elements = [1.0 if lb[i] <= pred[i] <= ub[i] else 0.0 for i in range(len(pred))]
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+preds shape is: (15, 535, 5)
+preds shape by feat is: (15, 5)

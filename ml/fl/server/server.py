@@ -2,10 +2,16 @@
 Implements the server and the federated process.
 """
 
+from collections import OrderedDict
 import copy
 import sys
 
 from pathlib import Path
+
+import torch
+
+from ml.utils.train_utils import get_preds, load_model_weight, test
+from verifier import sat_verifier
 
 parent = Path(__file__).resolve().parents[3]
 if parent not in sys.path:
@@ -37,8 +43,12 @@ class Server:
                  weighted_loss_fn: Optional[Callable] = None,
                  weighted_metrics_fn: Optional[Callable] = None,
                  val_loader: Optional[DataLoader] = None,
-                 local_params_fn: Optional[Callable] = None):
-
+                 local_params_fn: Optional[Callable] = None,
+                 global_val_loaders: Optional[DataLoader] = None,
+                 model=None,
+                 subval_dataloader=None):
+        
+        self.model_in = model
         self.global_model = None
         self.best_model = None
         self.best_loss, self.best_epoch = np.inf, -1
@@ -48,7 +58,9 @@ class Server:
 
         self.weighted_loss = weighted_loss_fn if weighted_loss_fn is not None else weighted_loss_avg
         self.weighted_metrics = weighted_metrics_fn if weighted_metrics_fn is not None else weighted_metrics_avg
-
+        self.global_val_loaders = global_val_loaders
+        self.val_subset = subval_dataloader
+        
         if aggregation is None:
             aggregation = "fedavg"
         self.aggregator = Aggregator(aggregation_alg=aggregation, params=aggregation_params)
@@ -76,7 +88,8 @@ class Server:
             num_rounds: int,
             fraction: float,
             fraction_args: Optional[Callable] = None,
-            use_carbontracker: bool = True) -> Tuple[List[np.ndarray], History]:
+            use_carbontracker: bool = True,
+            wandb_ins=None) -> Tuple[List[np.ndarray], History]:
         """Run federated rounds for num_rounds rounds."""
 
         history = History()
@@ -105,8 +118,19 @@ class Server:
             if use_carbontracker and cb_tracker is not None:
                 cb_tracker.epoch_end()
             # evaluate global model
-            self.evaluate_round(fl_round=fl_round,
-                                history=history)
+            # test_metrics = self.evaluate_round(fl_round=fl_round,
+            #                     history=history)
+            random_net = copy.deepcopy(self.client_manager.sample(0.)[0])
+            test_metrics = self.random_evaluate(self.global_val_loaders, self.global_model, net=random_net)
+            for key_ in test_metrics.keys():
+                wandb_ins.log({f"{key_}/val_mse": test_metrics[key_]['MSE'],
+                           f"{key_}/val_rmse": test_metrics[key_]['RMSE'],
+                           f"{key_}/val_mae": test_metrics[key_]['MAE'],
+                           f"{key_}/val_r2": test_metrics[key_]['R^2'],
+                           f"{key_}/val_nrmse": test_metrics[key_]['NRMSE'],
+                           f"{key_}/flr": fl_round
+                           })
+            
         end_time = time.time()
         # log(INFO, history)
         log(INFO, f"Time passed: {end_time - start_time} seconds.")
@@ -140,10 +164,10 @@ class Server:
         all_train_metrics: Dict[str, Dict[str, float]] = dict()
         all_test_metrics: Dict[str, Dict[str, float]] = dict()
         results: List[Tuple[List[np.ndarray], int]] = []
-
+        model_vec_list = []
         for client in selected_clients:
             res = self.fit_client(fl_round, client)
-            model_params, num_train, train_loss, train_metrics, num_test, test_loss, test_metrics = res
+            model_params, model_vec, num_train, train_loss, train_metrics, num_test, test_loss, test_metrics = res
             num_train_examples.append(num_train)
             num_test_examples.append(num_test)
             train_losses[client.cid] = train_loss
@@ -151,14 +175,19 @@ class Server:
             all_train_metrics[client.cid] = train_metrics
             all_test_metrics[client.cid] = test_metrics
             results.append((model_params, num_train))
+            model_vec_list.append(model_vec)
 
         history.add_local_train_loss(train_losses, fl_round)
         history.add_local_train_metrics(all_train_metrics, fl_round)
         history.add_local_test_loss(test_losses, fl_round)
         history.add_local_test_metrics(all_test_metrics, fl_round)
 
+        # Conduct defense before aggregation
+        verifier_w = self.conduct_defense(model_vec_list)
+        
         # STEP 4: Aggregate local models
-        self.global_model = self.aggregate_models(fl_round, results)
+        self.global_model = self.aggregate_models(fl_round, results, verifier_w)
+        
         if self.best_model is None:
             self.best_model = copy.deepcopy(self.global_model)
 
@@ -174,6 +203,26 @@ class Server:
 
         return selected_clients
 
+    def conduct_defense(self, local_weights):
+        # TODO: SAT defense function
+        # First, convert all weights to model for inference
+
+        # net_list = [self.set_parameters(self.model_in, weight) for weight in local_weights]
+        net_list = []
+        for weight in local_weights:
+            cp_mod = copy.deepcopy(self.model_in)
+            load_model_weight(cp_mod, weight)
+            net_list.append(cp_mod)
+        preds = []
+        y_true = []
+        for net in net_list:
+            y_pred, y_true = get_preds(net, self.val_subset, "cuda")
+            y_pred = y_pred.cpu().numpy()
+            y_true = y_true.cpu().numpy()
+            preds.append(y_pred)
+        verifier_w = sat_verifier(preds, y_true, 0)
+        return verifier_w      
+        
     def fit_client(self,
                    fl_round: int,
                    client: ClientProxy) -> Tuple[
@@ -187,9 +236,16 @@ class Server:
 
         return fit_res
 
-    def aggregate_models(self, fl_round: int, results: List[Tuple[List[np.ndarray], int]]) -> List[np.ndarray]:
+    def aggregate_models(self, 
+                         fl_round: int, 
+                         results: List[Tuple[List[np.ndarray], int]],
+                         w = [],
+                         ) -> List[np.ndarray]:
         log(INFO, f"[Global round {fl_round}] Aggregating local models...")
-        aggregated_params = self.aggregator.aggregate(results, self.global_model)
+        if not len(w):
+            aggregated_params = self.aggregator.aggregate(results, self.global_model)
+        else:
+            aggregated_params = self.aggregator.aggregate(results, self.global_model, coffs=w)
         return aggregated_params
 
     def evaluate_round(self, fl_round: int, history: History):
@@ -211,7 +267,6 @@ class Server:
             num_test_examples = [num_instances]
             test_metrics["Server"] = eval_metrics
             test_losses["Server"] = loss
-
         else:
             for cid, client_proxy in self.client_manager.all().items():
                 num_train_instances, train_loss, train_eval_metrics = client_proxy.evaluate(model=self.global_model,
@@ -226,7 +281,7 @@ class Server:
                 num_test_examples.append(num_test_instances)
                 test_losses[cid] = test_loss
                 test_metrics[cid] = test_eval_metrics
-
+        
         history.add_global_train_losses(self.weighted_loss(num_train_examples, list(train_losses.values())))
         history.add_global_train_metrics(self.weighted_metrics(num_train_examples, train_metrics))
 
@@ -238,6 +293,7 @@ class Server:
             self.best_model = copy.deepcopy(self.global_model)
 
         history.add_global_test_metrics(self.weighted_metrics(num_test_examples, test_metrics))
+        return test_metrics
 
     def _get_initial_model(self) -> List[np.ndarray]:
         """Get initial parameters from a random client"""
@@ -245,3 +301,35 @@ class Server:
         client_model = random_client.get_parameters()
         # log(INFO, "Received initial parameters from one random client!")
         return client_model
+
+    def random_evaluate(self, val_loader: Optional[DataLoader] = None,
+                 model: Optional[Union[torch.nn.Module, List[np.ndarray]]] = None,
+                 params: Dict[str, any] = None, method: Optional[str] = "test", 
+                 verbose: bool = True, net = None) -> Tuple[
+        int, float, Dict[str, float]]:
+                     
+        if not params or "criterion" not in params:
+            params = dict()
+            params["criterion"] = torch.nn.MSELoss()
+
+        self.set_parameters(self.model_in, self.global_model)
+        test_result = {}
+
+        for key_ in val_loader.keys():
+            data = val_loader[key_]
+            loss, mse, rmse, mae, r2, nrmse = test(self.model_in, data, params["criterion"], device="cuda")
+            metrics = {"MSE": mse, "RMSE": rmse, "MAE": mae, "R^2": r2, "NRMSE": nrmse, "loss": loss}
+            test_result[key_] = metrics 
+            if verbose:
+                log(INFO, f"[Dataset {key_} Evaluation on {len(data.dataset)} samples] "
+                        f"loss: {loss}, mse: {mse}, rmse: {rmse}, mae: {mae}, nrmse: {nrmse}")
+        return test_result
+    
+    def set_parameters(self, net, parameters: Union[List[np.ndarray], torch.nn.Module]):
+        if not isinstance(parameters, torch.nn.Module):
+            params_dict = zip(net.state_dict().keys(), parameters)
+            state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
+            net.load_state_dict(state_dict, strict=True)
+        else:
+            net.load_state_dict(parameters.state_dict(), strict=True)
+        return net

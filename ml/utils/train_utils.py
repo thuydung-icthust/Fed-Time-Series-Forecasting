@@ -6,6 +6,10 @@ import sys
 
 from pathlib import Path
 
+from termcolor import colored
+
+from ml.utils.adversarial_helpers import poison_batch
+
 parent = Path(__file__).resolve().parents[2]
 if parent not in sys.path:
     sys.path.insert(0, str(parent))
@@ -37,8 +41,12 @@ def train(model: torch.nn.Module,
           device="cuda",
           fedprox_mu: float = 0.,
           log_per: int = 1,
-          use_carbontracker: bool = False):
+          use_carbontracker: bool = False,
+          is_malicious: bool = False):
     """Trains a neural network defined as torch module."""
+    if is_malicious:
+        print(colored("Starting poisoning...!", "red"))
+        
     best_model, best_loss, best_epoch = None, -1, -1
     train_loss_history, train_rmse_history = [], []
     test_loss_history, test_rmse_history = [], []
@@ -61,7 +69,10 @@ def train(model: torch.nn.Module,
         model.to(device)
         model.train()
         epoch_loss = []
-        for x, exogenous, y_hist, y in train_loader:
+        for batch in train_loader:
+            if is_malicious:
+                batch = poison_batch(batch)
+            x, exogenous, y_hist, y = batch
             x, y = x.to(device), y.to(device)
             y_hist = y_hist.to(device)
             if exogenous is not None and len(exogenous) > 0:
@@ -150,6 +161,8 @@ def test(model, data, criterion, device="cuda") -> Union[
     model.eval()
     y_true, y_pred = [], []
     loss = 0.
+    # import IPython
+    # IPython.embed()
     with torch.no_grad():
         for x, exogenous, y_hist, y in data:
             x, y = x.to(device), y.to(device)
@@ -173,3 +186,36 @@ def test(model, data, criterion, device="cuda") -> Union[
         return mse, rmse, mae, r2, nrmse, y_pred
 
     return loss, mse, rmse, mae, r2, nrmse
+
+def get_preds(model, data, device):
+    model.to(device)
+    model.eval()
+    y_true, y_pred = [], []
+    with torch.no_grad():
+        for x, exogenous, y_hist, y in data:
+            x, y = x.to(device), y.to(device)
+            y_hist = y_hist.to(device)
+            if exogenous is not None and len(exogenous) > 0:
+                exogenous = exogenous.to(device)
+            else:
+                exogenous = None
+            out = model(x, exogenous, device, y_hist)
+            
+            y_true.extend(y)
+            y_pred.extend(out)
+
+    # loss /= len(data.dataset)
+
+    y_true = torch.stack(y_true)
+    y_pred = torch.stack(y_pred)
+    return y_pred, y_true
+
+def vectorize_net(net):
+    return torch.cat([p.view(-1) for p in net.parameters()])
+
+
+def load_model_weight(net, weight):
+    index_bias = 0
+    for p_index, p in enumerate(net.parameters()):
+        p.data =  weight[index_bias:index_bias+p.numel()].view(p.size())
+        index_bias += p.numel()

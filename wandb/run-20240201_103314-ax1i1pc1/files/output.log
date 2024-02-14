@@ -1,0 +1,89 @@
+INFO logger 2024-02-01 10:33:17,671 | data_utils.py:383 | Observations info in ElBorn
+INFO logger 2024-02-01 10:33:17,671 | data_utils.py:384 | 	Total number of samples:  4192
+INFO logger 2024-02-01 10:33:17,671 | data_utils.py:385 | 	Number of samples for training: 3354
+INFO logger 2024-02-01 10:33:17,672 | data_utils.py:386 | 	Number of samples for validation:  838
+INFO logger 2024-02-01 10:33:17,674 | data_utils.py:383 | Observations info in LesCorts
+INFO logger 2024-02-01 10:33:17,674 | data_utils.py:384 | 	Total number of samples:  6892
+INFO logger 2024-02-01 10:33:17,674 | data_utils.py:385 | 	Number of samples for training: 5514
+INFO logger 2024-02-01 10:33:17,674 | data_utils.py:386 | 	Number of samples for validation:  1378
+INFO logger 2024-02-01 10:33:17,676 | data_utils.py:383 | Observations info in PobleSec
+INFO logger 2024-02-01 10:33:17,677 | data_utils.py:384 | 	Total number of samples:  15927
+INFO logger 2024-02-01 10:33:17,677 | data_utils.py:385 | 	Number of samples for training: 12742
+INFO logger 2024-02-01 10:33:17,677 | data_utils.py:386 | 	Number of samples for validation:  3185
+INFO logger 2024-02-01 10:33:17,678 | data_utils.py:389 | Observations info using all data
+INFO logger 2024-02-01 10:33:17,679 | data_utils.py:390 | 	Total number of samples:  27011
+INFO logger 2024-02-01 10:33:17,679 | data_utils.py:391 | 	Number of samples for training: 21610
+INFO logger 2024-02-01 10:33:17,679 | data_utils.py:392 | 	Number of samples for validation:  5401
+INFO logger 2024-02-01 10:33:17,679 | data_utils.py:118 | Using Flooring and Capping and with params: {'ElBorn': (10, 90), 'LesCorts': (10, 90), 'PobleSec': (5, 95)}
+INFO logger 2024-02-01 10:33:18,475 | server.py:62 | Initializing client manager...
+INFO logger 2024-02-01 10:33:18,475 | server.py:69 | Registering clients...
+INFO logger 2024-02-01 10:33:18,475 | client_manager.py:66 | Registered client with id: ElBorn
+INFO logger 2024-02-01 10:33:18,476 | client_manager.py:66 | Registered client with id: LesCorts
+INFO logger 2024-02-01 10:33:18,476 | client_manager.py:66 | Registered client with id: PobleSec
+INFO logger 2024-02-01 10:33:18,476 | server.py:73 | Client manager initialized!
+INFO logger 2024-02-01 10:33:18,476 | server.py:55 | Aggregation algorithm: FedAvg()
+INFO logger 2024-02-01 10:33:18,476 | client_manager.py:88 | Parameter c=0.0. Sampled 1 client(s): ['LesCorts']
+Clients participating training are: dict_keys(['ElBorn', 'LesCorts', 'PobleSec'])
+INFO logger 2024-02-01 10:33:19,462 | server.py:87 | Starting FL rounds
+INFO logger 2024-02-01 10:33:19,463 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['LesCorts', 'ElBorn', 'PobleSec']
+INFO logger 2024-02-01 10:33:21,432 | train_utils.py:153 | Best Loss: 9.611116624192188e-05
+INFO logger 2024-02-01 10:33:22,268 | train_utils.py:153 | Best Loss: 1.827523342596934e-05
+INFO logger 2024-02-01 10:33:25,351 | train_utils.py:153 | Best Loss: 0.00035936859661830575
+INFO logger 2024-02-01 10:33:26,265 | server.py:201 | [Global round 1] Aggregating local models...
+INFO logger 2024-02-01 10:33:27,127 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['PobleSec', 'LesCorts', 'ElBorn']
+INFO logger 2024-02-01 10:33:30,735 | train_utils.py:153 | Best Loss: 0.00034176042789270676
+INFO logger 2024-02-01 10:33:32,146 | train_utils.py:153 | Best Loss: 0.0001017630603355056
+INFO logger 2024-02-01 10:33:32,978 | train_utils.py:153 | Best Loss: 1.0444965698038664e-05
+INFO logger 2024-02-01 10:33:33,067 | server.py:201 | [Global round 2] Aggregating local models...
+INFO logger 2024-02-01 10:33:34,332 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['LesCorts', 'PobleSec', 'ElBorn']
+INFO logger 2024-02-01 10:33:35,257 | train_utils.py:153 | Best Loss: 0.00010052675276460964
+INFO logger 2024-02-01 10:33:37,902 | train_utils.py:153 | Best Loss: 0.0003410475158616607
+INFO logger 2024-02-01 10:33:38,784 | train_utils.py:153 | Best Loss: 8.229621737219106e-06
+INFO logger 2024-02-01 10:33:38,876 | server.py:201 | [Global round 3] Aggregating local models...
+INFO logger 2024-02-01 10:33:39,850 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['PobleSec', 'ElBorn', 'LesCorts']
+INFO logger 2024-02-01 10:33:43,225 | train_utils.py:153 | Best Loss: 0.00034092506421289927
+INFO logger 2024-02-01 10:33:44,302 | train_utils.py:153 | Best Loss: 6.619046831948926e-06
+INFO logger 2024-02-01 10:33:45,851 | train_utils.py:153 | Best Loss: 9.171801655994434e-05
+INFO logger 2024-02-01 10:33:46,234 | server.py:201 | [Global round 4] Aggregating local models...
+INFO logger 2024-02-01 10:33:47,122 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['LesCorts', 'ElBorn', 'PobleSec']
+INFO logger 2024-02-01 10:33:48,192 | train_utils.py:153 | Best Loss: 8.863085497590054e-05
+INFO logger 2024-02-01 10:33:48,974 | train_utils.py:153 | Best Loss: 8.617796958199194e-06
+INFO logger 2024-02-01 10:33:51,118 | train_utils.py:153 | Best Loss: 0.0003424245112311594
+INFO logger 2024-02-01 10:33:51,534 | server.py:201 | [Global round 5] Aggregating local models...
+INFO logger 2024-02-01 10:33:52,618 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['PobleSec', 'LesCorts', 'ElBorn']
+INFO logger 2024-02-01 10:33:55,589 | train_utils.py:153 | Best Loss: 0.00034166935319814273
+INFO logger 2024-02-01 10:33:56,813 | train_utils.py:153 | Best Loss: 9.913632492344195e-05
+INFO logger 2024-02-01 10:33:57,580 | train_utils.py:153 | Best Loss: 8.823579668791757e-06
+INFO logger 2024-02-01 10:33:57,688 | server.py:201 | [Global round 6] Aggregating local models...
+INFO logger 2024-02-01 10:33:58,413 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['LesCorts', 'ElBorn', 'PobleSec']
+INFO logger 2024-02-01 10:33:59,275 | train_utils.py:153 | Best Loss: 9.292016116962142e-05
+INFO logger 2024-02-01 10:33:59,920 | train_utils.py:153 | Best Loss: 7.304368365740466e-06
+INFO logger 2024-02-01 10:34:03,347 | train_utils.py:153 | Best Loss: 0.00034291804553647563
+INFO logger 2024-02-01 10:34:03,638 | server.py:201 | [Global round 7] Aggregating local models...
+INFO logger 2024-02-01 10:34:04,553 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['PobleSec', 'LesCorts', 'ElBorn']
+INFO logger 2024-02-01 10:34:06,974 | train_utils.py:153 | Best Loss: 0.0003453163949655384
+INFO logger 2024-02-01 10:34:08,108 | train_utils.py:153 | Best Loss: 9.213777991523694e-05
+INFO logger 2024-02-01 10:34:08,771 | train_utils.py:153 | Best Loss: 7.2534179980281725e-06
+INFO logger 2024-02-01 10:34:08,852 | server.py:201 | [Global round 8] Aggregating local models...
+INFO logger 2024-02-01 10:34:09,491 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['PobleSec', 'ElBorn', 'LesCorts']
+INFO logger 2024-02-01 10:34:11,663 | train_utils.py:153 | Best Loss: 0.0003465630452324614
+INFO logger 2024-02-01 10:34:12,644 | train_utils.py:153 | Best Loss: 7.19392892498532e-06
+INFO logger 2024-02-01 10:34:13,540 | train_utils.py:153 | Best Loss: 9.416682034327883e-05
+INFO logger 2024-02-01 10:34:13,861 | server.py:201 | [Global round 9] Aggregating local models...
+INFO logger 2024-02-01 10:34:14,554 | client_manager.py:88 | Parameter c=1.0. Sampled 3 client(s): ['LesCorts', 'PobleSec', 'ElBorn']
+INFO logger 2024-02-01 10:34:15,509 | train_utils.py:153 | Best Loss: 9.38615710297545e-05
+INFO logger 2024-02-01 10:34:17,755 | train_utils.py:153 | Best Loss: 0.0003466338718192666
+INFO logger 2024-02-01 10:34:19,789 | train_utils.py:153 | Best Loss: 6.8002603208569695e-06
+INFO logger 2024-02-01 10:34:19,900 | server.py:201 | [Global round 10] Aggregating local models...
+INFO logger 2024-02-01 10:34:20,522 | server.py:122 | Time passed: 61.05936551094055 seconds.
+INFO logger 2024-02-01 10:34:20,522 | server.py:123 | Best global model found on fl_round=5 with loss=0.00024292953731154036
+Traceback (most recent call last):
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 117, in <module>
+    main(args)
+  File "/home/judy/code/Fed-Time-Series-Forecasting/main.py", line 55, in main
+    validation_dict = inference(
+                      ^^^^^^^^^^
+  File "/home/judy/code/Fed-Time-Series-Forecasting/fl_trainer.py", line 156, in inference
+    num_lags=args.num_lags,
+             ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'num_lags'
