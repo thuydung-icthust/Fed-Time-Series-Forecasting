@@ -8,6 +8,16 @@ June 2021
 '''
 
 import sys
+import os
+
+
+from pathlib import Path
+
+parent = Path(__file__).resolve().parents[1]
+print(f"parent: {parent}")
+if parent not in sys.path:
+    sys.path.insert(0, str(parent))
+
 
 import numpy as np
 
@@ -120,7 +130,7 @@ def main():
         settings_str = "auto"
 
     #
-    spec_list, input_dtype = make_spec(vnnlib_filename, onnx_filename)
+    # spec_list, input_dtype = make_spec(vnnlib_filename, onnx_filename)
 
     try:
         network = load_onnx_network_optimized(onnx_filename)

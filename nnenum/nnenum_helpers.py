@@ -69,4 +69,8 @@ def verify_onnx_with_lib(onnx_filename, vnnlib_filename,
 
     if result_str == 'error':
         sys.exit(Result.results.index('error'))
+        
+if __name__ == "__main__":
+    onnx_file = "Fed-Time-Series-Forecasting/super_resolution.onnx"
+    
     

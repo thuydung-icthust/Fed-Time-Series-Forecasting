@@ -8,7 +8,7 @@ from pathlib import Path
 
 from termcolor import colored
 
-from ml.utils.adversarial_helpers import poison_batch
+from ml.utils.adversarial_helpers import poison_batch, poison_flip
 
 parent = Path(__file__).resolve().parents[2]
 if parent not in sys.path:
@@ -71,8 +71,10 @@ def train(model: torch.nn.Module,
         epoch_loss = []
         for batch in train_loader:
             if is_malicious:
-                batch = poison_batch(batch)
+                # batch = poison_batch(batch)
+                batch = poison_flip(batch)
             x, exogenous, y_hist, y = batch
+            # print(x.shape)
             x, y = x.to(device), y.to(device)
             y_hist = y_hist.to(device)
             if exogenous is not None and len(exogenous) > 0:
@@ -114,6 +116,22 @@ def train(model: torch.nn.Module,
         test_loss_history.append(test_mse)
         test_rmse_history.append(test_rmse)
 
+        # Input to the model
+        rand_x = torch.randn(1, 10, 11, 1, requires_grad=True)
+        cp_model = copy.deepcopy(model)
+        cp_model = cp_model.to("cpu")
+        torch_out = cp_model(rand_x)
+        # Export the model
+        torch.onnx.export(cp_model,               # model being run
+                        rand_x,                         # model input (or a tuple for multiple inputs)
+                        "super_resolution.onnx",   # where to save the model (can be a file or file-like object)
+                        export_params=True,        # store the trained parameter weights inside the model file
+                        opset_version=10,          # the ONNX version to export the model to
+                        do_constant_folding=True,  # whether to execute constant folding for optimization
+                        input_names = ['input'],   # the model's input names
+                        output_names = ['output'], # the model's output names
+                        dynamic_axes={'input' : {0 : 'batch_size'},    # variable length axes
+                                        'output' : {0 : 'batch_size'}})
         if early_stopping:
             monitor(test_loss, model)
             best_loss = abs(monitor.best_score)

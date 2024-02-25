@@ -40,6 +40,7 @@ def fit(model, X_train, y_train, X_val, y_val,
     all_client_keys  = X_train.keys()
     all_client_keys = [key_.split('_')[0] for key_ in all_client_keys]
     all_client_keys = set(all_client_keys)
+    
     # import IPython
     # IPython.embed()
     # global_val_loaders = [to_torch_dataset(
@@ -49,6 +50,7 @@ def fit(model, X_train, y_train, X_val, y_val,
     #     indices=idxs,
     #     batch_size=args.batch_size,
     #     shuffle=False) for domain_name in all_client_keys]
+    
     for domain_name in all_client_keys:
         global_val_loaders[domain_name] = to_torch_dataset(
         X_val[domain_name], y_val[domain_name],
@@ -101,12 +103,17 @@ def fit(model, X_train, y_train, X_val, y_val,
     # create clients with their local data
     cids = [k for k in X_train.keys() if k != "all"]
     clients = []
-    malicious_ids = ['LesCorts_0', 'LesCorts_3', 'LesCorts_1', 'ElBorn_0', 'ElBorn_3']
     
+    malicious_ids = ['LesCorts_0', 'LesCorts_3', 'LesCorts_1', 'ElBorn_0', 'ElBorn_3']
+    malicious_enum = []
+    if not args.has_attack:
+        malicious_ids = []
+    cnt = 0
     for cid, train_loader, val_loader in zip(cids, train_loaders, val_loaders):
         is_mal = False
         if cid in malicious_ids:
             is_mal = True
+            malicious_enum.append(cnt)
         clients.append(client_creation_fn(
             cid=cid, # client id
             model=model, # the global model
@@ -115,6 +122,7 @@ def fit(model, X_train, y_train, X_val, y_val,
             local_params=local_train_params, # local parameters
             is_malicious = is_mal,
         ))
+        cnt += 1
     
     # represent clients to server
     client_proxies = [
@@ -129,13 +137,14 @@ def fit(model, X_train, y_train, X_val, y_val,
         local_params_fn=None, # we can change the local params on demand
         global_val_loaders=global_val_loaders,
         model=copy.deepcopy(model),
-        subval_dataloader=subval_dataloader
+        subval_dataloader=subval_dataloader,
+        defense_on=args.defense_on
     )
     # Note that the client manager instance will be initialized automatically. You can define your own client manager.
 
     # train with FL
     model_params, history = server.fit(args.fl_rounds, args.fraction, use_carbontracker=use_carbontracker, 
-                                       wandb_ins=wandb_ins)
+                                       wandb_ins=wandb_ins, malicious_idxs=malicious_enum)
     
     params_dict = zip(model.state_dict().keys(), model_params)
     state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})

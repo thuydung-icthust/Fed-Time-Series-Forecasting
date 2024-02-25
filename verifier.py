@@ -1,6 +1,15 @@
+import os
+import random
+from matplotlib import pyplot as plt
 import numpy as np
 import torch
 from tqdm import tqdm
+import statsmodels.api as sm
+import pandas as pd
+
+from pylab import rcParams
+decompositions = []
+
 
 def get_local_range(preds):
     np_preds = np.asarray(preds)
@@ -17,7 +26,6 @@ def get_range_by_interval(preds, interval_size=5):
     for i in range(total_intervals):
         start_idx = i * interval_size
         end_idx = min((i + 1) * interval_size, total_timesteps)
-        print(f"end_idx: {end_idx}")
         # Ensure the end index is within the total timesteps
         # end_idx = min(end_idx, total_timesteps)
 
@@ -35,8 +43,6 @@ def rule_aggregation(LBs, UBs):
     # IPython.embed()
     aggregated_lb = np.median(LBs, axis=0)
     aggregated_ub = np.median(UBs, axis=0)
-    # print(f"UBs: {UBs}")
-    # print(f"Aggregated_lb: {aggregated_lb.shape}, \nAggregated_ub: {aggregated_ub.shape}")
     
     return aggregated_lb, aggregated_ub
 
@@ -65,10 +71,6 @@ def get_allowable_by_interval(y_true, alpha, interval_size=20):
     for i in range(total_intervals):
         start_idx = i * interval_size
         end_idx = min((i + 1) * interval_size, total_timesteps)
-        print(f"end_idx: {end_idx}")
-        # Ensure the end index is within the total timesteps
-        # end_idx = min(end_idx, total_timesteps)
-
         interval_preds = y_true[start_idx:end_idx]
 
         # Calculate local range for the interval
@@ -97,6 +99,7 @@ def pseudo_verify(preds, glob_pred):
 
 def get_satisfied_elements(predictions, lb, ub):
     verifier_results = []
+    num_elements = len(predictions[0])
     for j in range(predictions.shape[0]):
         pred = predictions[j]
         # import IPython
@@ -152,13 +155,84 @@ def sat_verifier(pred_list, y_true, atk_feature=0):
     print(f"Preds shape is: {preds.shape}")
     preds_by_feat = preds[:, :, atk_feature]
     print(f"Preds shape by feat is: {preds_by_feat.shape}")
-    # r_a = verify(preds_by_feat)
-    r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
+    r_a = verify(preds_by_feat)
+    # r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
     r_a = np.asarray(r_a)   
     r_a = np.sum(r_a, axis=1).reshape(-1, 1)
     print(r_a)
     return r_a
+
+# def sat_verifier_all_feats(pred_list, y_true):
+#     preds = np.asarray(pred_list)
+#     print(f"Preds shape is: {preds.shape}")
+#     atk_features = y_true.shape[-1]
+#     rets = []
+#     for feat_idx in range(atk_features):
+#         preds_by_feat = preds[:, :, feat_idx]
+#         print(f"Preds shape by feat is: {preds_by_feat.shape}")
+#         r_a = verify(preds_by_feat)
+#         # r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
+#         r_a = np.asarray(r_a)   
+#         r_a = np.sum(r_a, axis=1).reshape(-1, 1)
+#         rets.append(r_a)
+#         # print(r_a)
+#     rets = np.asarray(rets)
+#     return rets
+
+def sat_verifier_all_feats(pred_list, y_true):
+    preds = np.asarray(pred_list)
+    print(f"Preds shape is: {preds.shape}")
+    atk_features = y_true.shape[-1]
+    rets = []
+    for feat_idx in range(atk_features):
+        preds_by_feat = preds[feat_idx, :, :]
+        print(f"Preds shape by feat is: {preds_by_feat.shape}")
+        r_a = verify(preds_by_feat)
+        # r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
+        r_a = np.asarray(r_a)   
+        r_a = np.sum(r_a, axis=1).reshape(-1, 1)
+        rets.append(r_a)
+        # print(r_a)
+    rets = np.asarray(rets)
+    return rets
     
+def decompose_ts(ts_list, malicious_idxs = [], flr=0, var_idx=0):
+    ret_trends = []
+    for idx, ts in enumerate(ts_list):
+        rcParams['figure.figsize'] = 12, 8
+        num_elements = len(ts)
+        df = pd.DataFrame(ts)
+        start_date = '2024-01-01'
+        end_date = pd.to_datetime(start_date) + pd.DateOffset(days=num_elements - 1)
+        datetime_index = pd.date_range(start=start_date, end=end_date, freq='D')
+        df['Date'] = datetime_index
+        df.set_index('Date', inplace=True)
+        y=df[0].resample('D').mean()
+        decomposition = sm.tsa.seasonal_decompose(y, model='additive')
+        fig = decomposition.plot()
+        os.makedirs(f"plots/{flr}", exist_ok=True)
+        fig.savefig(f"plots/{flr}/{idx}_{'MALICIOUS' if idx in malicious_idxs else ''}_decomposed.png")
+        # import IPython
+        # IPython.embed()
+        ret_trends.append(decomposition.trend.values)
+    return ret_trends
+
+def trend_verifier(preds, malicious_idxs = [], flr=0, y_true=None):
+    preds = np.asarray(preds)
+    total_variations = preds.shape[-1]
+    print(preds.shape)
+    allfeat_trends = []
+    for var_idx in range(total_variations):
+        ts_list = preds[:,:, var_idx]
+        print(f"ts_list.shape: {ts_list.shape}")
+        trend_list = decompose_ts(ts_list, malicious_idxs, flr, var_idx)
+        trend_list = np.asarray(trend_list)
+        trend_list = np.nan_to_num(trend_list)
+        print(f"trend_list.shape: {trend_list.shape}")
+        allfeat_trends.append(trend_list)
+    rets = sat_verifier_all_feats(allfeat_trends, y_true)
+    return rets    
+
 if __name__ == "__main__":
     a = np.random.rand(20,10)
     r_a = verify(a)

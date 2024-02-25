@@ -40,6 +40,7 @@ def fedavg_aggregate(results: List[Tuple[List[np.ndarray], int]],
                      coffs = []) -> np.ndarray:
     """Compute weighted average."""
     # Calculate the total number of examples used during training
+    coffs = [coff/sum(coffs) for coff in coffs]
     num_examples_total = sum([num_examples for _, num_examples in results])
 
     if not len(coffs):

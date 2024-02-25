@@ -1,0 +1,6 @@
+{
+    "num_subset": 5,
+    "has_attack": 1,
+    "defense_on": 1,
+    "instance": "FedAVG_w_attack_w_defense"
+}

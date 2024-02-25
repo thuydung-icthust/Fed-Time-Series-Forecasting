@@ -7,11 +7,17 @@ import copy
 import sys
 
 from pathlib import Path
+from termcolor import colored
+
+from sklearn import preprocessing
+
+from helpers import norm_clipping
+min_max_scaler = preprocessing.MinMaxScaler()
 
 import torch
 
-from ml.utils.train_utils import get_preds, load_model_weight, test
-from verifier import sat_verifier
+from ml.utils.train_utils import get_preds, load_model_weight, test, vectorize_net
+from verifier import decompose_ts, sat_verifier, sat_verifier_all_feats, trend_verifier
 
 parent = Path(__file__).resolve().parents[3]
 if parent not in sys.path:
@@ -46,12 +52,14 @@ class Server:
                  local_params_fn: Optional[Callable] = None,
                  global_val_loaders: Optional[DataLoader] = None,
                  model=None,
-                 subval_dataloader=None):
+                 subval_dataloader=None,
+                 defense_on=False):
         
         self.model_in = model
         self.global_model = None
         self.best_model = None
         self.best_loss, self.best_epoch = np.inf, -1
+        self.defense_on = defense_on
 
         self.client_proxies = client_proxies
         self._initialize_client_manager(client_manager)  # initialize the client manager
@@ -89,7 +97,8 @@ class Server:
             fraction: float,
             fraction_args: Optional[Callable] = None,
             use_carbontracker: bool = True,
-            wandb_ins=None) -> Tuple[List[np.ndarray], History]:
+            wandb_ins = None,
+            malicious_idxs = []) -> Tuple[List[np.ndarray], History]:
         """Run federated rounds for num_rounds rounds."""
 
         history = History()
@@ -114,7 +123,8 @@ class Server:
             self.fit_round(fl_round=fl_round,
                            fraction=fraction,
                            fraction_args=fraction_args,
-                           history=history)
+                           history=history, 
+                           malicious_idxs=malicious_idxs)
             if use_carbontracker and cb_tracker is not None:
                 cb_tracker.epoch_end()
             # evaluate global model
@@ -141,7 +151,8 @@ class Server:
     def fit_round(self, fl_round: int,
                   fraction: float,
                   fraction_args: Optional[Callable],
-                  history: History) -> None:
+                  history: History, 
+                  malicious_idxs = []) -> None:
         """Perform a federated round, i.e.,
             1) Select a fraction of available clients.
             2) Instruct selected clients to execute local training.
@@ -165,6 +176,7 @@ class Server:
         all_test_metrics: Dict[str, Dict[str, float]] = dict()
         results: List[Tuple[List[np.ndarray], int]] = []
         model_vec_list = []
+        
         for client in selected_clients:
             res = self.fit_client(fl_round, client)
             model_params, model_vec, num_train, train_loss, train_metrics, num_test, test_loss, test_metrics = res
@@ -183,16 +195,59 @@ class Server:
         history.add_local_test_metrics(all_test_metrics, fl_round)
 
         # Conduct defense before aggregation
-        verifier_w = self.conduct_defense(model_vec_list)
-        
+        verifier_w = []
+        if self.defense_on:
+            print(colored("----------*----------\n CONDUCTING DEFENSE:", "green"))
+            verifier_w = self.conduct_defense(model_vec_list, fl_round, malicious_idxs).squeeze()
+            # print(f"Full features verifiers: {verifier_w}")
+            # import IPython
+            # IPython.embed()
+            v_scaled = np.mean(verifier_w, axis=0)
+            v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
+            
+            
+            # v_scaled = min_max_scaler.fit_transform(verifier_w.T).T
+            # v_scaled = np.mean(v_scaled, axis=0)
+            
+            
+            # v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
+            # import IPython
+            # IPython.embed()
+            
+            print(colored(f"Malicious ids: {malicious_idxs}", "green"))
+            good_idxes = [id_v for id_v, v in enumerate(v_scaled) if v >= np.median(v_scaled)]
+            clipping_idxs = [id_v for id_v, v in enumerate(v_scaled) if v < np.median(v_scaled)]
+            print(colored(f"Coffs ids: {v_scaled}, \tMedian is: {np.median(v_scaled)}\nGood idxs: {good_idxes}", "green"))
+            print(colored("----------*----------", "green"))
+            v_scaled = [0.0 if i in good_idxes else val for i, val in enumerate(v_scaled)]
+            print(colored(f"Malicious ids: {clipping_idxs}", "red"))
+            
+            prev_global_model = self.set_parameters(self.model_in, self.global_model).to("cuda")
+            
+            vec_prev_model = vectorize_net(prev_global_model)
+            
+            results_ = norm_clipping(model_vec_list, vec_prev_model, clipping_idxs)
+            results_ = [model_vec.cpu().detach().numpy() for model_vec in results_]
+            reconstructed_freq = [num_dpt for (_, num_dpt) in results]
+            reconstructed_freq = [freq/sum(reconstructed_freq) for freq in reconstructed_freq]
+            aggregated_grad = np.average(np.array(results_), weights=reconstructed_freq, axis=0).astype(np.float32)
+            aggregated_model = self.model_in # slicing which doesn't really matter
+            load_model_weight(aggregated_model, torch.from_numpy(aggregated_grad).to("cuda"))
+            results = [([val.cpu().numpy() for _, val in aggregated_model.state_dict().items()], 1.0)]
+            #TODO: change this stupid snippet later
+        else:
+            v_scaled = []
         # STEP 4: Aggregate local models
-        self.global_model = self.aggregate_models(fl_round, results, verifier_w)
+        
+        v_scaled = []
+        
+        self.global_model = self.aggregate_models(fl_round, results, v_scaled)
         
         if self.best_model is None:
             self.best_model = copy.deepcopy(self.global_model)
 
     def sample_clients(self, fl_round: int, fraction: float,
-                       fraction_args: Optional[Callable] = None) -> List[ClientProxy]:
+                    fraction_args: Optional[Callable] = None) -> List[ClientProxy]:
         """Sample available clients."""
         if fraction_args is not None:
             fraction: float = fraction_args(fl_round)
@@ -203,11 +258,10 @@ class Server:
 
         return selected_clients
 
-    def conduct_defense(self, local_weights):
+    def conduct_defense(self, local_weights, fl_round=0, malicious_idxs=[]):
         # TODO: SAT defense function
         # First, convert all weights to model for inference
 
-        # net_list = [self.set_parameters(self.model_in, weight) for weight in local_weights]
         net_list = []
         for weight in local_weights:
             cp_mod = copy.deepcopy(self.model_in)
@@ -220,7 +274,8 @@ class Server:
             y_pred = y_pred.cpu().numpy()
             y_true = y_true.cpu().numpy()
             preds.append(y_pred)
-        verifier_w = sat_verifier(preds, y_true, 0)
+        # verifier_w = sat_verifier(preds, y_true, 0)
+        verifier_w = trend_verifier(preds, malicious_idxs, fl_round, y_true)
         return verifier_w      
         
     def fit_client(self,
@@ -243,7 +298,7 @@ class Server:
                          ) -> List[np.ndarray]:
         log(INFO, f"[Global round {fl_round}] Aggregating local models...")
         if not len(w):
-            aggregated_params = self.aggregator.aggregate(results, self.global_model)
+            aggregated_params = self.aggregator.aggregate(results, self.global_model, [])
         else:
             aggregated_params = self.aggregator.aggregate(results, self.global_model, coffs=w)
         return aggregated_params

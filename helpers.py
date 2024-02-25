@@ -170,6 +170,7 @@ def make_postprocessing(X_train, X_val, y_train, y_val, exogenous_data_train, ex
     if exogenous_data_train is not None:
         exogenous_data_train, exogenous_data_val = get_exogenous_data_by_area(exogenous_data_train,
                                                                               exogenous_data_val)
+    
     # transform to np
     area_X_train_cp = {}
     area_Y_train_cp = {}
@@ -192,11 +193,23 @@ def make_postprocessing(X_train, X_val, y_train, y_val, exogenous_data_train, ex
                 tmp_X_val, tmp_y_val = tmp_X_val.to_numpy(), tmp_y_val.to_numpy()
                 total_sample = tmp_X_train.shape[0]
                 subset_size = int(total_sample/args.num_subset)
+                
+                # Assuming tmp_X_train and tmp_y_train are numpy arrays
+                num_samples = len(tmp_X_train)
+                indexes = np.random.permutation(num_samples)
+
                 for i in range(args.num_subset):
                     start_idx = i * subset_size
-                    end_idx = (i + 1) * subset_size if i < args.num_subset - 1 else total_sample
-                    area_X_train_cp[f"{area}_{i}"] = tmp_X_train[start_idx:end_idx]
-                    area_Y_train_cp[f"{area}_{i}"] = tmp_y_train[start_idx:end_idx]
+                    end_idx = (i + 1) * subset_size if i < args.num_subset - 1 else num_samples
+                    subset_indexes = indexes[start_idx:end_idx]
+                    area_X_train_cp[f"{area}_{i}"] = tmp_X_train[subset_indexes]
+                    area_Y_train_cp[f"{area}_{i}"] = tmp_y_train[subset_indexes]
+                    
+                # for i in range(args.num_subset):
+                #     start_idx = i * subset_size
+                #     end_idx = (i + 1) * subset_size if i < args.num_subset - 1 else total_sample
+                #     area_X_train_cp[f"{area}_{i}"] = tmp_X_train[start_idx:end_idx]
+                #     area_Y_train_cp[f"{area}_{i}"] = tmp_y_train[start_idx:end_idx]
                 area_X_val[area] = tmp_X_val
                 area_y_val[area] = tmp_y_val
     if args.num_subset > 1:
@@ -247,7 +260,9 @@ def get_subset_val(X_val, y_val, ratio=0.05):
     for key_ in all_keys:
         total_sps = X_val[key_].shape[0]
         count_ = int(ratio*total_sps)
-        sample_idxs = np.random.choice(total_sps, count_, replace=False)
+        # sample_idxs = np.random.choice(total_sps, count_, replace=False)
+        start_idx = np.random.choice(total_sps-500, 1, replace=False)
+        sample_idxs = np.arange(start_idx, start_idx+500, 1)
         X_val_sub.extend(X_val[key_][sample_idxs])
         Y_val_sub.extend(y_val[key_][sample_idxs])
     print(f"X_val_sub.shape is {len(X_val_sub)} \t y_val_sub is {len(Y_val_sub)}")
@@ -351,3 +366,29 @@ def make_plot(y_true, y_pred,
         plt.legend()
         plt.show()
         plt.close()
+        
+# class WeightDiffClippingDefense(Defense):
+#     def __init__(self, norm_bound, *args, **kwargs):
+#         self.norm_bound = norm_bound
+
+def norm_clipping(client_list, global_model, clipping_idxs=[], norm_bound=0.5):
+    """
+    global_model: the global model at iteration T, bcast from the PS
+    client_model: starting from `global_model`, the model on the clients after local retraining
+    """
+    # vectorized_client_net = vectorize_net(client_model)
+    # vectorized_global_net = vectorize_net(global_model)
+    results: List[Tuple[List[np.ndarray], int]] = []
+    for idx, vec_net in enumerate(client_list):
+        if idx not in clipping_idxs:
+            results.append(vec_net)
+            continue
+        vectorize_diff = vec_net - global_model
+        weight_diff_norm = torch.norm(vectorize_diff).item()
+        clipped_weight_diff = vectorize_diff/max(1, weight_diff_norm/norm_bound)
+        print("Norm Weight Diff: {}, Norm Clipped Weight Diff {}".format(weight_diff_norm,
+        torch.norm(clipped_weight_diff).item()))
+        vec_net = global_model + clipped_weight_diff
+        results.append(vec_net)
+    # vectorize_diff = vectorized_client_net - vectorized_global_net
+    return results
