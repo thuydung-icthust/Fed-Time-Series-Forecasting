@@ -23,7 +23,8 @@ def fit(model, X_train, y_train, X_val, y_val,
         use_carbontracker=True,
         args=None,
         wandb_ins=None,
-        subval_dataloader=None
+        subval_dataloader=None,
+        hier_dict={}
        ):
     # client creation definition
     if client_creation_fn is None:
@@ -104,7 +105,7 @@ def fit(model, X_train, y_train, X_val, y_val,
     cids = [k for k in X_train.keys() if k != "all"]
     clients = []
     
-    malicious_ids = ['LesCorts_0', 'LesCorts_3', 'LesCorts_1', 'ElBorn_0', 'ElBorn_3']
+    malicious_ids = ['LesCorts_0', 'LesCorts_1', 'ElBorn_0', 'PobleSec_0', 'PobleSec_1']
     malicious_enum = []
     if not args.has_attack:
         malicious_ids = []
@@ -131,14 +132,15 @@ def fit(model, X_train, y_train, X_val, y_val,
     
     # represent the server
     server = Server(
-        client_proxies=client_proxies, # the client representations
-        aggregation=args.aggregation, # the aggregation algorithm
-        aggregation_params=aggregation_params, # aggregation specific params
-        local_params_fn=None, # we can change the local params on demand
-        global_val_loaders=global_val_loaders,
-        model=copy.deepcopy(model),
-        subval_dataloader=subval_dataloader,
-        defense_on=args.defense_on
+        client_proxies = client_proxies, # the client representations
+        aggregation = args.aggregation, # the aggregation algorithm
+        aggregation_params = aggregation_params, # aggregation specific params
+        local_params_fn = None, # we can change the local params on demand
+        global_val_loaders = global_val_loaders,
+        model = copy.deepcopy(model),
+        subval_dataloader = subval_dataloader,
+        defense_on = args.defense_on,
+        hier_dict = hier_dict
     )
     # Note that the client manager instance will be initialized automatically. You can define your own client manager.
 

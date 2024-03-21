@@ -156,6 +156,7 @@ def split_data(args):
         exogenous_data_val = None
         
     return X_train, X_val, y_train, y_val, exogenous_data_train, exogenous_data_val, x_scalers, y_scalers
+
 def make_postprocessing(X_train, X_val, y_train, y_val, exogenous_data_train, exogenous_data_val, x_scalers, y_scalers, args):
     """Make data ready to be fed into ml algorithms"""
     # if there are more than one specified areas, get the data per area
@@ -366,12 +367,24 @@ def make_plot(y_true, y_pred,
         plt.legend()
         plt.show()
         plt.close()
+
+def get_hier_dict(all_client_keys):
+    # Create dictionaries for each station
+    stations = {}
+
+    for idx, key in enumerate(all_client_keys):
+        station_name = key.split('_')[0]
+        # station_index = int(key.split('_')[1])
+        if station_name not in stations:
+            stations[station_name] = []
+        stations[station_name].append(idx)
+    return stations
         
 # class WeightDiffClippingDefense(Defense):
 #     def __init__(self, norm_bound, *args, **kwargs):
 #         self.norm_bound = norm_bound
 
-def norm_clipping(client_list, global_model, clipping_idxs=[], norm_bound=0.5):
+def norm_clipping(client_list, global_model, clipping_idxs=[], norm_bound=0.25):
     """
     global_model: the global model at iteration T, bcast from the PS
     client_model: starting from `global_model`, the model on the clients after local retraining

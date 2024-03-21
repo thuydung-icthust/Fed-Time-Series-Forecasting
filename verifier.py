@@ -152,9 +152,9 @@ def sat_defense(net_list, val_loader, device):
 
 def sat_verifier(pred_list, y_true, atk_feature=0):
     preds = np.asarray(pred_list)
-    print(f"Preds shape is: {preds.shape}")
+    # print(f"Preds shape is: {preds.shape}")
     preds_by_feat = preds[:, :, atk_feature]
-    print(f"Preds shape by feat is: {preds_by_feat.shape}")
+    # print(f"Preds shape by feat is: {preds_by_feat.shape}")
     r_a = verify(preds_by_feat)
     # r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
     r_a = np.asarray(r_a)   
@@ -181,12 +181,12 @@ def sat_verifier(pred_list, y_true, atk_feature=0):
 
 def sat_verifier_all_feats(pred_list, y_true):
     preds = np.asarray(pred_list)
-    print(f"Preds shape is: {preds.shape}")
+    # print(f"Preds shape is: {preds.shape}")
     atk_features = y_true.shape[-1]
     rets = []
     for feat_idx in range(atk_features):
         preds_by_feat = preds[feat_idx, :, :]
-        print(f"Preds shape by feat is: {preds_by_feat.shape}")
+        # print(f"Preds shape by feat is: {preds_by_feat.shape}")
         r_a = verify(preds_by_feat)
         # r_a = verify_by_allowable(preds_by_feat, y_true[:, atk_feature])
         r_a = np.asarray(r_a)   
@@ -224,11 +224,11 @@ def trend_verifier(preds, malicious_idxs = [], flr=0, y_true=None):
     allfeat_trends = []
     for var_idx in range(total_variations):
         ts_list = preds[:,:, var_idx]
-        print(f"ts_list.shape: {ts_list.shape}")
+        # print(f"ts_list.shape: {ts_list.shape}")
         trend_list = decompose_ts(ts_list, malicious_idxs, flr, var_idx)
         trend_list = np.asarray(trend_list)
         trend_list = np.nan_to_num(trend_list)
-        print(f"trend_list.shape: {trend_list.shape}")
+        # print(f"trend_list.shape: {trend_list.shape}")
         allfeat_trends.append(trend_list)
     rets = sat_verifier_all_feats(allfeat_trends, y_true)
     return rets    

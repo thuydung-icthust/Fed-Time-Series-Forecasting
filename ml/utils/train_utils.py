@@ -84,6 +84,7 @@ def train(model: torch.nn.Module,
             optimizer.zero_grad()
             y_pred = model(x, exogenous, device, y_hist)
             loss = criterion(y_pred, y)
+            # print(f"fedprox_mu: {fedprox_mu}")
             if fedprox_mu > 0.:
                 fedprox_reg = 0.
                 for param_index, param in enumerate(model.parameters()):
@@ -116,22 +117,22 @@ def train(model: torch.nn.Module,
         test_loss_history.append(test_mse)
         test_rmse_history.append(test_rmse)
 
-        # Input to the model
-        rand_x = torch.randn(1, 10, 11, 1, requires_grad=True)
-        cp_model = copy.deepcopy(model)
-        cp_model = cp_model.to("cpu")
-        torch_out = cp_model(rand_x)
-        # Export the model
-        torch.onnx.export(cp_model,               # model being run
-                        rand_x,                         # model input (or a tuple for multiple inputs)
-                        "super_resolution.onnx",   # where to save the model (can be a file or file-like object)
-                        export_params=True,        # store the trained parameter weights inside the model file
-                        opset_version=10,          # the ONNX version to export the model to
-                        do_constant_folding=True,  # whether to execute constant folding for optimization
-                        input_names = ['input'],   # the model's input names
-                        output_names = ['output'], # the model's output names
-                        dynamic_axes={'input' : {0 : 'batch_size'},    # variable length axes
-                                        'output' : {0 : 'batch_size'}})
+        # # Input to the model
+        # rand_x = torch.randn(1, 10, 11, 1, requires_grad=True)
+        # cp_model = copy.deepcopy(model)
+        # cp_model = cp_model.to("cpu")
+        # torch_out = cp_model(rand_x)
+        # # Export the model
+        # torch.onnx.export(cp_model,               # model being run
+        #                 rand_x,                         # model input (or a tuple for multiple inputs)
+        #                 "super_resolution.onnx",   # where to save the model (can be a file or file-like object)
+        #                 export_params=True,        # store the trained parameter weights inside the model file
+        #                 opset_version=10,          # the ONNX version to export the model to
+        #                 do_constant_folding=True,  # whether to execute constant folding for optimization
+        #                 input_names = ['input'],   # the model's input names
+        #                 output_names = ['output'], # the model's output names
+        #                 dynamic_axes={'input' : {0 : 'batch_size'},    # variable length axes
+        #                                 'output' : {0 : 'batch_size'}})
         if early_stopping:
             monitor(test_loss, model)
             best_loss = abs(monitor.best_score)
@@ -170,7 +171,6 @@ def train(model: torch.nn.Module,
     else:
         log(INFO, f"Best Loss: {best_loss}")
     return best_model
-
 
 def test(model, data, criterion, device="cuda") -> Union[
     Tuple[float, float, float, float], List[torch.tensor], torch.tensor]:

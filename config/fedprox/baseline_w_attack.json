@@ -1,0 +1,7 @@
+{
+    "num_subset": 5,
+    "has_attack": 1,
+    "instance": "FedProx_w_attack_no_defense",
+    "aggregation": "fedprox",
+    "fedprox_mu": 0.01
+}

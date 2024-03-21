@@ -1,4 +1,5 @@
 wandb/*
+FHWA_dataset/**
 local/*
 stats/*
 *.onnx

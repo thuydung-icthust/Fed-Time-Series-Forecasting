@@ -11,7 +11,7 @@ from termcolor import colored
 
 from sklearn import preprocessing
 
-from helpers import norm_clipping
+from helpers import get_hier_dict, norm_clipping
 min_max_scaler = preprocessing.MinMaxScaler()
 
 import torch
@@ -53,7 +53,8 @@ class Server:
                  global_val_loaders: Optional[DataLoader] = None,
                  model=None,
                  subval_dataloader=None,
-                 defense_on=False):
+                 defense_on=False,
+                 hier_dict={}):
         
         self.model_in = model
         self.global_model = None
@@ -68,12 +69,18 @@ class Server:
         self.weighted_metrics = weighted_metrics_fn if weighted_metrics_fn is not None else weighted_metrics_avg
         self.global_val_loaders = global_val_loaders
         self.val_subset = subval_dataloader
+        self.hier_dict = hier_dict
         
         if aggregation is None:
             aggregation = "fedavg"
         self.aggregator = Aggregator(aggregation_alg=aggregation, params=aggregation_params)
         log(INFO, f"Aggregation algorithm: {repr(self.aggregator)}")
-
+        
+        # TODO: change it later
+        self.fedprox_mu = 0.0
+        if aggregation == "fedprox":
+            self.fedprox_mu = self.aggregator.mu
+            local_params_fn = lambda fl_round: {"fedprox_mu": self.fedprox_mu}
         self.val_loader = val_loader
         self.local_params_fn = local_params_fn
 
@@ -89,7 +96,6 @@ class Server:
         log(INFO, "Registering clients...")
         for client_proxy in self.client_proxies:  # register clients
             self.client_manager.register(client_proxy)
-
         log(INFO, "Client manager initialized!")
 
     def fit(self,
@@ -166,7 +172,9 @@ class Server:
 
         # STEP 1: Select a fraction of available clients
         selected_clients = self.sample_clients(fl_round, fraction, fraction_args)
-
+        client_keys = [client.cid for client in selected_clients]
+        self.hier_dict = get_hier_dict(client_keys)
+        # print(f"selected_clients: {client_keys}")
         # STEPS 2-3: Perform local training and receive updated parameters
         num_train_examples: List[int] = []
         num_test_examples: List[int] = []
@@ -196,37 +204,54 @@ class Server:
 
         # Conduct defense before aggregation
         verifier_w = []
+        # if self.defense_on:
+        #     print(colored("----------*----------\n CONDUCTING DEFENSE:", "green"))
+        #     verifier_w = self.conduct_defense(model_vec_list, fl_round, malicious_idxs).squeeze()
+        #     # print(f"Full features verifiers: {verifier_w}")
+        #     # import IPython
+        #     # IPython.embed()
+        #     v_scaled = np.mean(verifier_w, axis=0)
+        #     v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
+            
+            
+        #     # v_scaled = min_max_scaler.fit_transform(verifier_w.T).T
+        #     # v_scaled = np.mean(v_scaled, axis=0)
+            
+            
+        #     # v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
+        #     # import IPython
+        #     # IPython.embed()
+            
+        #     print(colored(f"Malicious ids: {malicious_idxs}", "green"))
+        #     good_idxes = [id_v for id_v, v in enumerate(v_scaled) if v >= np.median(v_scaled)]
+        #     clipping_idxs = [id_v for id_v, v in enumerate(v_scaled) if v < np.median(v_scaled)]
+        #     print(colored(f"Coffs ids: {v_scaled}, \tMedian is: {np.median(v_scaled)}\nGood idxs: {good_idxes}", "green"))
+        #     print(colored("----------*----------", "green"))
+        #     v_scaled = [0.0 if i in good_idxes else val for i, val in enumerate(v_scaled)]
+        #     print(colored(f"Malicious ids: {clipping_idxs}", "red"))
+            
+        #     prev_global_model = self.set_parameters(self.model_in, self.global_model).to("cuda")
+            
+        #     vec_prev_model = vectorize_net(prev_global_model)
+            
+        #     results_ = norm_clipping(model_vec_list, vec_prev_model, clipping_idxs)
+        #     results_ = [model_vec.cpu().detach().numpy() for model_vec in results_]
+        #     reconstructed_freq = [num_dpt for (_, num_dpt) in results]
+        #     reconstructed_freq = [freq/sum(reconstructed_freq) for freq in reconstructed_freq]
+        #     aggregated_grad = np.average(np.array(results_), weights=reconstructed_freq, axis=0).astype(np.float32)
+        #     aggregated_model = self.model_in # slicing which doesn't really matter
+        #     load_model_weight(aggregated_model, torch.from_numpy(aggregated_grad).to("cuda"))
+        #     results = [([val.cpu().numpy() for _, val in aggregated_model.state_dict().items()], 1.0)]
+        #     #TODO: change this stupid snippet later
+        
         if self.defense_on:
             print(colored("----------*----------\n CONDUCTING DEFENSE:", "green"))
-            verifier_w = self.conduct_defense(model_vec_list, fl_round, malicious_idxs).squeeze()
-            # print(f"Full features verifiers: {verifier_w}")
-            # import IPython
-            # IPython.embed()
-            v_scaled = np.mean(verifier_w, axis=0)
-            v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
-            
-            
-            # v_scaled = min_max_scaler.fit_transform(verifier_w.T).T
-            # v_scaled = np.mean(v_scaled, axis=0)
-            
-            
-            # v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
-            # import IPython
-            # IPython.embed()
-            
-            print(colored(f"Malicious ids: {malicious_idxs}", "green"))
-            good_idxes = [id_v for id_v, v in enumerate(v_scaled) if v >= np.median(v_scaled)]
-            clipping_idxs = [id_v for id_v, v in enumerate(v_scaled) if v < np.median(v_scaled)]
-            print(colored(f"Coffs ids: {v_scaled}, \tMedian is: {np.median(v_scaled)}\nGood idxs: {good_idxes}", "green"))
-            print(colored("----------*----------", "green"))
-            v_scaled = [0.0 if i in good_idxes else val for i, val in enumerate(v_scaled)]
-            print(colored(f"Malicious ids: {clipping_idxs}", "red"))
-            
+            malicious_idxs = self.conduct_hier_defense(model_vec_list, fl_round, malicious_idxs)
+            print(colored(f"Malicious IDs: {malicious_idxs}", "red"))
             prev_global_model = self.set_parameters(self.model_in, self.global_model).to("cuda")
-            
             vec_prev_model = vectorize_net(prev_global_model)
             
-            results_ = norm_clipping(model_vec_list, vec_prev_model, clipping_idxs)
+            results_ = norm_clipping(model_vec_list, vec_prev_model, malicious_idxs)
             results_ = [model_vec.cpu().detach().numpy() for model_vec in results_]
             reconstructed_freq = [num_dpt for (_, num_dpt) in results]
             reconstructed_freq = [freq/sum(reconstructed_freq) for freq in reconstructed_freq]
@@ -234,7 +259,7 @@ class Server:
             aggregated_model = self.model_in # slicing which doesn't really matter
             load_model_weight(aggregated_model, torch.from_numpy(aggregated_grad).to("cuda"))
             results = [([val.cpu().numpy() for _, val in aggregated_model.state_dict().items()], 1.0)]
-            #TODO: change this stupid snippet later
+            print(colored("----------*----------", "green"))
         else:
             v_scaled = []
         # STEP 4: Aggregate local models
@@ -277,7 +302,32 @@ class Server:
         # verifier_w = sat_verifier(preds, y_true, 0)
         verifier_w = trend_verifier(preds, malicious_idxs, fl_round, y_true)
         return verifier_w      
+    
+    def conduct_hier_defense(self, local_weights, fl_round=0, malicious_idxs=[]):
+        # This function conducts hierarchical FL defense, each station will verify their children.
+        final_clipping_idxs = []
+        for idx, station_name in enumerate(self.hier_dict.keys()):
+            children_idxs = self.hier_dict[station_name]
+            children_models = [local_weights[id_] for id_ in children_idxs]
+            verifier_w = self.conduct_defense(children_models, fl_round, malicious_idxs)
+            v_scaled = np.mean(verifier_w, axis=0)
+            v_scaled = min_max_scaler.fit_transform(v_scaled.reshape(-1, 1))
+            clipping_idxs = [id_v for id_v, v in enumerate(v_scaled) if v < np.median(v_scaled)]
+            # import IPython
+            # IPython.embed()
+            children_idxs = np.asarray(children_idxs)
+            
+            # for id_v in clipping_idxs:
+            final_clipping_idxs.extend(children_idxs[clipping_idxs].tolist())
+
+            # global_clipping_idxs.extend(children_idxs[id_v] for id_v in clipping_idxs)
+            # clipping_idxs = [children_idxs[id_v] for id_, id_v in enumerate(clipping_idxs)]
+            # final_clipping_idxs.extend(clipping_idxs)
         
+        # import IPython
+        # IPython.embed()
+        return final_clipping_idxs
+    
     def fit_client(self,
                    fl_round: int,
                    client: ClientProxy) -> Tuple[

@@ -52,6 +52,8 @@ def main(args):
                         "criterion": args.criterion, "early_stopping": args.local_early_stopping,
                         "patience": args.local_patience, "device": args.device
                         }
+    hier_dict = get_hier_dict(client_X_train.keys())
+    
     global_model, history = fit(
                                 model,
                                 client_X_train,
@@ -60,8 +62,9 @@ def main(args):
                                 client_y_val, 
                                 local_train_params=local_train_params,
                                 args = args, 
-                                wandb_ins=wandb_instance,
-                                subval_dataloader=subval_dataloader)
+                                wandb_ins = wandb_instance,
+                                subval_dataloader = subval_dataloader,
+                                hier_dict = hier_dict)
     
     # validation_dict = inference(
     #                 global_model,
@@ -176,7 +179,6 @@ if __name__ == "__main__":
         outlier_kwargs = {"ElBorn": (10, 90), "LesCorts": (10, 90), "PobleSec": (5, 95)}
         args.outlier_columns = outlier_columns
         args.outlier_kwargs = outlier_kwargs
-        
     main(args)
 
 
